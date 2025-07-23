@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="492c22ea0e854ca0943465cec0571dd3" Name="Diagram1" ZoomLevel="14">
+        <EntityTypeShape EntityType="EscuelasSandersonSatoriModel.Alumnos" Width="1.5" PointX="3" PointY="25" />
+        <EntityTypeShape EntityType="EscuelasSandersonSatoriModel.AlumnosBecas" Width="1.5" PointX="8.25" PointY="38.125" />
+        <EntityTypeShape EntityType="EscuelasSandersonSatoriModel.AlumnosFutbol" Width="1.5" PointX="8.25" PointY="22.75" />
+        <EntityTypeShape EntityType="EscuelasSandersonSatoriModel.AsistenciaPartidos" Width="1.5" PointX="10.5" PointY="28.375" />
+        <EntityTypeShape EntityType="EscuelasSandersonSatoriModel.Becas" Width="1.5" PointX="3" PointY="45.625" />
+        <EntityTypeShape EntityType="EscuelasSandersonSatoriModel.CiclosEscolares" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="EscuelasSandersonSatoriModel.ConceptosPago" Width="1.5" PointX="3" PointY="20.25" />
+        <EntityTypeShape EntityType="EscuelasSandersonSatoriModel.EscuelaConceptosPago" Width="1.5" PointX="5.25" PointY="23.125" />
+        <EntityTypeShape EntityType="EscuelasSandersonSatoriModel.Escuelas" Width="1.5" PointX="0.75" PointY="24.375" />
+        <EntityTypeShape EntityType="EscuelasSandersonSatoriModel.EvidenciaGasto" Width="1.5" PointX="5.25" PointY="38.75" />
+        <EntityTypeShape EntityType="EscuelasSandersonSatoriModel.Gastos" Width="1.5" PointX="3" PointY="38.25" />
+        <EntityTypeShape EntityType="EscuelasSandersonSatoriModel.Grados" Width="1.5" PointX="0.75" PointY="29.125" />
+        <EntityTypeShape EntityType="EscuelasSandersonSatoriModel.HistorialPlanesPago" Width="1.5" PointX="5.25" PointY="19.75" />
+        <EntityTypeShape EntityType="EscuelasSandersonSatoriModel.HistorialRepitencias" Width="1.5" PointX="5.25" PointY="32.625" />
+        <EntityTypeShape EntityType="EscuelasSandersonSatoriModel.InscripcionesTalleres" Width="1.5" PointX="8.25" PointY="26.875" />
+        <EntityTypeShape EntityType="EscuelasSandersonSatoriModel.NivelesEducativos" Width="1.5" PointX="1.5" PointY="32.125" />
+        <EntityTypeShape EntityType="EscuelasSandersonSatoriModel.Pagos" Width="1.5" PointX="8.25" PointY="30.375" />
+        <EntityTypeShape EntityType="EscuelasSandersonSatoriModel.ParametrosSistema" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="EscuelasSandersonSatoriModel.PartidosFutbol" Width="1.5" PointX="8.25" PointY="19.5" />
+        <EntityTypeShape EntityType="EscuelasSandersonSatoriModel.Permisos" Width="1.5" PointX="1.5" PointY="13.25" />
+        <EntityTypeShape EntityType="EscuelasSandersonSatoriModel.PersonasAutorizadas" Width="1.5" PointX="5.25" PointY="29.125" />
+        <EntityTypeShape EntityType="EscuelasSandersonSatoriModel.RecargosConfig" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="EscuelasSandersonSatoriModel.Roles" Width="1.5" PointX="1.5" PointY="16.125" />
+        <EntityTypeShape EntityType="EscuelasSandersonSatoriModel.Talleres" Width="1.5" PointX="6" PointY="16" />
+        <EntityTypeShape EntityType="EscuelasSandersonSatoriModel.TiposGasto" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="EscuelasSandersonSatoriModel.Tutores" Width="1.5" PointX="5.25" PointY="49.125" />
+        <EntityTypeShape EntityType="EscuelasSandersonSatoriModel.Uniformes" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="EscuelasSandersonSatoriModel.Usuarios" Width="1.5" PointX="3.75" PointY="15.625" />
+        <EntityTypeShape EntityType="EscuelasSandersonSatoriModel.UsuariosEscuelas" Width="1.5" PointX="6" PointY="26.125" />
+        <EntityTypeShape EntityType="EscuelasSandersonSatoriModel.VAlumnos" Width="1.5" PointX="4.75" PointY="3.75" />
+        <EntityTypeShape EntityType="EscuelasSandersonSatoriModel.VistaEstadoCuenta" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="EscuelasSandersonSatoriModel.VistaPagosAlumno" Width="1.5" PointX="6.75" PointY="4.75" />
+        <EntityTypeShape EntityType="EscuelasSandersonSatoriModel.VistaPagosConRecargos" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="EscuelasSandersonSatoriModel.VNivelGrado" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="EscuelasSandersonSatoriModel.VW_AlumnosBecasActivas" Width="1.5" PointX="8.75" PointY="3.75" />
+        <EntityTypeShape EntityType="EscuelasSandersonSatoriModel.VW_ComparacionPlanesPago" Width="1.5" PointX="8.75" PointY="6.75" />
+        <EntityTypeShape EntityType="EscuelasSandersonSatoriModel.VW_SeguimientoCambiosCiclo" Width="1.5" PointX="3.75" PointY="9.75" />
+        <AssociationConnector Association="EscuelasSandersonSatoriModel.FK__Alumnos__grado_i__75A278F5" />
+        <AssociationConnector Association="EscuelasSandersonSatoriModel.FK__Alumnos__nivel_i__76969D2E" />
+        <AssociationConnector Association="EscuelasSandersonSatoriModel.FK__AlumnosFu__alumn__797309D9" />
+        <AssociationConnector Association="EscuelasSandersonSatoriModel.FK__Historial__alumn__208CD6FA" />
+        <AssociationConnector Association="EscuelasSandersonSatoriModel.FK__Historial__alumn__2FCF1A8A" />
+        <AssociationConnector Association="EscuelasSandersonSatoriModel.FK__Inscripci__alumn__7F2BE32F" />
+        <AssociationConnector Association="EscuelasSandersonSatoriModel.FK__Pagos__alumno_id__02084FDA" />
+        <AssociationConnector Association="EscuelasSandersonSatoriModel.FK__PersonasA__alumn__04E4BC85" />
+        <AssociationConnector Association="EscuelasSandersonSatoriModel.FK__Tutores__alumno___07C12930" />
+        <AssociationConnector Association="EscuelasSandersonSatoriModel.FK_Alumnos_Escuelas" />
+        <AssociationConnector Association="EscuelasSandersonSatoriModel.FK_AlumnosBecas_Alumnos" />
+        <AssociationConnector Association="EscuelasSandersonSatoriModel.FK_AlumnosBecas_Becas" />
+        <AssociationConnector Association="EscuelasSandersonSatoriModel.FK__AlumnosFu__pago___32AB8735" />
+        <AssociationConnector Association="EscuelasSandersonSatoriModel.FK__Asistenci__alumn__339FAB6E" />
+        <AssociationConnector Association="EscuelasSandersonSatoriModel.FK__Asistenci__pago___3493CFA7" />
+        <AssociationConnector Association="EscuelasSandersonSatoriModel.FK__Asistenci__parti__3587F3E0" />
+        <AssociationConnector Association="EscuelasSandersonSatoriModel.FK__Pagos__beca_id__42E1EEFE" />
+        <AssociationConnector Association="EscuelasSandersonSatoriModel.FK_Becas_Escuelas" />
+        <AssociationConnector Association="EscuelasSandersonSatoriModel.FK__EscuelaCo__conce__3864608B" />
+        <AssociationConnector Association="EscuelasSandersonSatoriModel.FK__Pagos__concepto___43D61337" />
+        <AssociationConnector Association="EscuelasSandersonSatoriModel.FK_ConceptosPago_Escuelas" />
+        <AssociationConnector Association="EscuelasSandersonSatoriModel.FK__EscuelaCo__escue__395884C4" />
+        <AssociationConnector Association="EscuelasSandersonSatoriModel.FK_Gastos_Escuelas" />
+        <AssociationConnector Association="EscuelasSandersonSatoriModel.FK_Pagos_Escuelas" />
+        <AssociationConnector Association="EscuelasSandersonSatoriModel.FK_UsuariosEscuelas_Escuelas" />
+        <AssociationConnector Association="EscuelasSandersonSatoriModel.FK_EvidenciaGasto_Gastos" />
+        <AssociationConnector Association="EscuelasSandersonSatoriModel.FK__Grados__nivel_id__3C34F16F" />
+        <AssociationConnector Association="EscuelasSandersonSatoriModel.FK__Inscripci__pago___40058253" />
+        <AssociationConnector Association="EscuelasSandersonSatoriModel.FK__Inscripci__talle__40F9A68C" />
+        <AssociationConnector Association="EscuelasSandersonSatoriModel.FK__Usuarios__rol_id__498EEC8D" />
+        <AssociationConnector Association="EscuelasSandersonSatoriModel.FK_UsuariosEscuelas_Usuarios" />
+        <AssociationConnector Association="EscuelasSandersonSatoriModel.RolesPermisos" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

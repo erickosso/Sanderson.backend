@@ -1,0 +1,419 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBSandersonSchoolModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="DBSandersonSchoolEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(DBSandersonSchoolModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(DBSandersonSchoolModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <EntitySet Name="C_CicloEscolar" EntityType="DBSandersonSchoolModel.C_CicloEscolar" />
+    <EntitySet Name="C_PlanesPago" EntityType="DBSandersonSchoolModel.C_PlanesPago" />
+    <EntitySet Name="C_Rol" EntityType="DBSandersonSchoolModel.C_Rol" />
+    <EntitySet Name="C_Talleres" EntityType="DBSandersonSchoolModel.C_Talleres" />
+    <EntitySet Name="C_TiposBeca" EntityType="DBSandersonSchoolModel.C_TiposBeca" />
+    <EntitySet Name="C_TiposGasto" EntityType="DBSandersonSchoolModel.C_TiposGasto" />
+    <EntitySet Name="sysdiagrams" EntityType="DBSandersonSchoolModel.sysdiagrams" />
+    <EntitySet Name="T_Alumnos" EntityType="DBSandersonSchoolModel.T_Alumnos" />
+    <EntitySet Name="T_BecasAlumno" EntityType="DBSandersonSchoolModel.T_BecasAlumno" />
+    <EntitySet Name="T_Escuela" EntityType="DBSandersonSchoolModel.T_Escuela" />
+    <EntitySet Name="T_Gastos" EntityType="DBSandersonSchoolModel.T_Gastos" />
+    <EntitySet Name="T_Inscripciones" EntityType="DBSandersonSchoolModel.T_Inscripciones" />
+    <EntitySet Name="T_NivelesAcademicos" EntityType="DBSandersonSchoolModel.T_NivelesAcademicos" />
+    <EntitySet Name="T_Usuario" EntityType="DBSandersonSchoolModel.T_Usuario" />
+    <AssociationSet Name="FK_C_CicloEscolar_T_Escuela" Association="DBSandersonSchoolModel.FK_C_CicloEscolar_T_Escuela">
+      <End Role="T_Escuela" EntitySet="T_Escuela" />
+      <End Role="C_CicloEscolar" EntitySet="C_CicloEscolar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_Alumno_C_CicloEscolar" Association="DBSandersonSchoolModel.FK_T_Alumno_C_CicloEscolar">
+      <End Role="C_CicloEscolar" EntitySet="C_CicloEscolar" />
+      <End Role="T_Alumnos" EntitySet="T_Alumnos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_Beca_C_CicloEscolar" Association="DBSandersonSchoolModel.FK_T_Beca_C_CicloEscolar">
+      <End Role="C_CicloEscolar" EntitySet="C_CicloEscolar" />
+      <End Role="T_BecasAlumno" EntitySet="T_BecasAlumno" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_Inscripcion_C_CicloEscolar" Association="DBSandersonSchoolModel.FK_T_Inscripcion_C_CicloEscolar">
+      <End Role="C_CicloEscolar" EntitySet="C_CicloEscolar" />
+      <End Role="T_Inscripciones" EntitySet="T_Inscripciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_Usuario_C_Rol" Association="DBSandersonSchoolModel.FK_T_Usuario_C_Rol">
+      <End Role="C_Rol" EntitySet="C_Rol" />
+      <End Role="T_Usuario" EntitySet="T_Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK__T_BecasAl__IdBec__4CA06362" Association="DBSandersonSchoolModel.FK__T_BecasAl__IdBec__4CA06362">
+      <End Role="C_TiposBeca" EntitySet="C_TiposBeca" />
+      <End Role="T_BecasAlumno" EntitySet="T_BecasAlumno" />
+    </AssociationSet>
+    <AssociationSet Name="FK__T_Gastos__IdTipo__6FE99F9F" Association="DBSandersonSchoolModel.FK__T_Gastos__IdTipo__6FE99F9F">
+      <End Role="C_TiposGasto" EntitySet="C_TiposGasto" />
+      <End Role="T_Gastos" EntitySet="T_Gastos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__T_Alumnos__Nivel__3B75D760" Association="DBSandersonSchoolModel.FK__T_Alumnos__Nivel__3B75D760">
+      <End Role="T_NivelesAcademicos" EntitySet="T_NivelesAcademicos" />
+      <End Role="T_Alumnos" EntitySet="T_Alumnos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__T_BecasAl__IdAlu__4BAC3F29" Association="DBSandersonSchoolModel.FK__T_BecasAl__IdAlu__4BAC3F29">
+      <End Role="T_Alumnos" EntitySet="T_Alumnos" />
+      <End Role="T_BecasAlumno" EntitySet="T_BecasAlumno" />
+    </AssociationSet>
+    <AssociationSet Name="FK__T_Inscrip__IdAlu__5070F446" Association="DBSandersonSchoolModel.FK__T_Inscrip__IdAlu__5070F446">
+      <End Role="T_Alumnos" EntitySet="T_Alumnos" />
+      <End Role="T_Inscripciones" EntitySet="T_Inscripciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_Alumno_T_Escuela" Association="DBSandersonSchoolModel.FK_T_Alumno_T_Escuela">
+      <End Role="T_Escuela" EntitySet="T_Escuela" />
+      <End Role="T_Alumnos" EntitySet="T_Alumnos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_Usuario_T_Escuela" Association="DBSandersonSchoolModel.FK_T_Usuario_T_Escuela">
+      <End Role="T_Escuela" EntitySet="T_Escuela" />
+      <End Role="T_Usuario" EntitySet="T_Usuario" />
+    </AssociationSet>
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <EntityType Name="C_CicloEscolar">
+    <Key>
+      <PropertyRef Name="IdCicloEscolar" />
+    </Key>
+    <Property Name="IdCicloEscolar" Type="Guid" Nullable="false" />
+    <Property Name="IdEscuela" Type="Guid" Nullable="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FechaInicio" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FechaFin" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Activo" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="T_Escuela" Relationship="DBSandersonSchoolModel.FK_C_CicloEscolar_T_Escuela" FromRole="C_CicloEscolar" ToRole="T_Escuela" />
+    <NavigationProperty Name="T_Alumnos" Relationship="DBSandersonSchoolModel.FK_T_Alumno_C_CicloEscolar" FromRole="C_CicloEscolar" ToRole="T_Alumnos" />
+    <NavigationProperty Name="T_BecasAlumno" Relationship="DBSandersonSchoolModel.FK_T_Beca_C_CicloEscolar" FromRole="C_CicloEscolar" ToRole="T_BecasAlumno" />
+    <NavigationProperty Name="T_Inscripciones" Relationship="DBSandersonSchoolModel.FK_T_Inscripcion_C_CicloEscolar" FromRole="C_CicloEscolar" ToRole="T_Inscripciones" />
+  </EntityType>
+  <EntityType Name="C_PlanesPago">
+    <Key>
+      <PropertyRef Name="IdPlan" />
+    </Key>
+    <Property Name="IdPlan" Type="Guid" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NumMeses" Type="Int32" />
+  </EntityType>
+  <EntityType Name="C_Rol">
+    <Key>
+      <PropertyRef Name="IdRol" />
+    </Key>
+    <Property Name="IdRol" Type="Guid" Nullable="false" />
+    <Property Name="NombreRol" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="T_Usuario" Relationship="DBSandersonSchoolModel.FK_T_Usuario_C_Rol" FromRole="C_Rol" ToRole="T_Usuario" />
+  </EntityType>
+  <EntityType Name="C_Talleres">
+    <Key>
+      <PropertyRef Name="IdTaller" />
+    </Key>
+    <Property Name="IdTaller" Type="Guid" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CostoMensual" Type="Decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="C_TiposBeca">
+    <Key>
+      <PropertyRef Name="IdBeca" />
+    </Key>
+    <Property Name="IdBeca" Type="Guid" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PorcentajeDescuento" Type="Int32" />
+    <NavigationProperty Name="T_BecasAlumno" Relationship="DBSandersonSchoolModel.FK__T_BecasAl__IdBec__4CA06362" FromRole="C_TiposBeca" ToRole="T_BecasAlumno" />
+  </EntityType>
+  <EntityType Name="C_TiposGasto">
+    <Key>
+      <PropertyRef Name="IdTipoGasto" />
+    </Key>
+    <Property Name="IdTipoGasto" Type="Guid" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="T_Gastos" Relationship="DBSandersonSchoolModel.FK__T_Gastos__IdTipo__6FE99F9F" FromRole="C_TiposGasto" ToRole="T_Gastos" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="T_Alumnos">
+    <Key>
+      <PropertyRef Name="IdAlumno" />
+    </Key>
+    <Property Name="IdAlumno" Type="Guid" Nullable="false" />
+    <Property Name="NombreCompleto" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FechaNacimiento" Type="DateTime" Precision="3" />
+    <Property Name="CURP" Type="String" MaxLength="18" FixedLength="false" Unicode="true" />
+    <Property Name="IdNivel" Type="Guid" />
+    <Property Name="Grado" Type="Int32" />
+    <Property Name="Alergias" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Observaciones" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="IdEscuela" Type="Guid" />
+    <Property Name="IdCicloEscolar" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="C_CicloEscolar" Relationship="DBSandersonSchoolModel.FK_T_Alumno_C_CicloEscolar" FromRole="T_Alumnos" ToRole="C_CicloEscolar" />
+    <NavigationProperty Name="T_NivelesAcademicos" Relationship="DBSandersonSchoolModel.FK__T_Alumnos__Nivel__3B75D760" FromRole="T_Alumnos" ToRole="T_NivelesAcademicos" />
+    <NavigationProperty Name="T_BecasAlumno" Relationship="DBSandersonSchoolModel.FK__T_BecasAl__IdAlu__4BAC3F29" FromRole="T_Alumnos" ToRole="T_BecasAlumno" />
+    <NavigationProperty Name="T_Inscripciones" Relationship="DBSandersonSchoolModel.FK__T_Inscrip__IdAlu__5070F446" FromRole="T_Alumnos" ToRole="T_Inscripciones" />
+    <NavigationProperty Name="T_Escuela" Relationship="DBSandersonSchoolModel.FK_T_Alumno_T_Escuela" FromRole="T_Alumnos" ToRole="T_Escuela" />
+    <Property Name="Activo" Type="Boolean" />
+    <Property Name="FechaEliminacion" Type="DateTime" Precision="0" />
+    <Property Name="UsuarioElimina" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="T_BecasAlumno">
+    <Key>
+      <PropertyRef Name="IdAlumno" />
+      <PropertyRef Name="IdBeca" />
+      <PropertyRef Name="IdCicloEscolar" />
+    </Key>
+    <Property Name="IdAlumno" Type="Guid" Nullable="false" />
+    <Property Name="IdBeca" Type="Guid" Nullable="false" />
+    <Property Name="IdCicloEscolar" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="C_CicloEscolar" Relationship="DBSandersonSchoolModel.FK_T_Beca_C_CicloEscolar" FromRole="T_BecasAlumno" ToRole="C_CicloEscolar" />
+    <NavigationProperty Name="C_TiposBeca" Relationship="DBSandersonSchoolModel.FK__T_BecasAl__IdBec__4CA06362" FromRole="T_BecasAlumno" ToRole="C_TiposBeca" />
+    <NavigationProperty Name="T_Alumnos" Relationship="DBSandersonSchoolModel.FK__T_BecasAl__IdAlu__4BAC3F29" FromRole="T_BecasAlumno" ToRole="T_Alumnos" />
+  </EntityType>
+  <EntityType Name="T_Escuela">
+    <Key>
+      <PropertyRef Name="IdEscuela" />
+    </Key>
+    <Property Name="IdEscuela" Type="Guid" Nullable="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TipoEscuela" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Activa" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="C_CicloEscolar" Relationship="DBSandersonSchoolModel.FK_C_CicloEscolar_T_Escuela" FromRole="T_Escuela" ToRole="C_CicloEscolar" />
+    <NavigationProperty Name="T_Alumnos" Relationship="DBSandersonSchoolModel.FK_T_Alumno_T_Escuela" FromRole="T_Escuela" ToRole="T_Alumnos" />
+    <NavigationProperty Name="T_Usuario" Relationship="DBSandersonSchoolModel.FK_T_Usuario_T_Escuela" FromRole="T_Escuela" ToRole="T_Usuario" />
+  </EntityType>
+  <EntityType Name="T_Gastos">
+    <Key>
+      <PropertyRef Name="IdGasto" />
+    </Key>
+    <Property Name="IdGasto" Type="Guid" Nullable="false" />
+    <Property Name="IdTipoGasto" Type="Guid" />
+    <Property Name="Descripcion" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Monto" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="Fecha" Type="DateTime" Precision="3" />
+    <Property Name="SoloVisibleDirector" Type="Boolean" />
+    <NavigationProperty Name="C_TiposGasto" Relationship="DBSandersonSchoolModel.FK__T_Gastos__IdTipo__6FE99F9F" FromRole="T_Gastos" ToRole="C_TiposGasto" />
+  </EntityType>
+  <EntityType Name="T_Inscripciones">
+    <Key>
+      <PropertyRef Name="IdInscripcion" />
+    </Key>
+    <Property Name="IdInscripcion" Type="Guid" Nullable="false" />
+    <Property Name="IdAlumno" Type="Guid" />
+    <Property Name="AñoEscolar" Type="Int32" />
+    <Property Name="MontoBase" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="DescuentoAplicado" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="FechaInscripcion" Type="DateTime" Precision="3" />
+    <Property Name="IdCicloEscolar" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="C_CicloEscolar" Relationship="DBSandersonSchoolModel.FK_T_Inscripcion_C_CicloEscolar" FromRole="T_Inscripciones" ToRole="C_CicloEscolar" />
+    <NavigationProperty Name="T_Alumnos" Relationship="DBSandersonSchoolModel.FK__T_Inscrip__IdAlu__5070F446" FromRole="T_Inscripciones" ToRole="T_Alumnos" />
+  </EntityType>
+  <EntityType Name="T_NivelesAcademicos">
+    <Key>
+      <PropertyRef Name="IdNivel" />
+    </Key>
+    <Property Name="IdNivel" Type="Guid" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IdEscuela" Type="Guid" />
+    <NavigationProperty Name="T_Alumnos" Relationship="DBSandersonSchoolModel.FK__T_Alumnos__Nivel__3B75D760" FromRole="T_NivelesAcademicos" ToRole="T_Alumnos" />
+  </EntityType>
+  <EntityType Name="T_Usuario">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="Guid" Nullable="false" />
+    <Property Name="IdRol" Type="Guid" Nullable="false" />
+    <Property Name="IdEscuela" Type="Guid" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Usuario" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ContraseñaHash" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="Correo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Telefono" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Activo" Type="Boolean" Nullable="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Cargo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="C_Rol" Relationship="DBSandersonSchoolModel.FK_T_Usuario_C_Rol" FromRole="T_Usuario" ToRole="C_Rol" />
+    <NavigationProperty Name="T_Escuela" Relationship="DBSandersonSchoolModel.FK_T_Usuario_T_Escuela" FromRole="T_Usuario" ToRole="T_Escuela" />
+  </EntityType>
+  <Association Name="FK_C_CicloEscolar_T_Escuela">
+    <End Type="DBSandersonSchoolModel.T_Escuela" Role="T_Escuela" Multiplicity="1" />
+    <End Type="DBSandersonSchoolModel.C_CicloEscolar" Role="C_CicloEscolar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Escuela">
+        <PropertyRef Name="IdEscuela" />
+      </Principal>
+      <Dependent Role="C_CicloEscolar">
+        <PropertyRef Name="IdEscuela" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_Alumno_C_CicloEscolar">
+    <End Type="DBSandersonSchoolModel.C_CicloEscolar" Role="C_CicloEscolar" Multiplicity="1" />
+    <End Type="DBSandersonSchoolModel.T_Alumnos" Role="T_Alumnos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="C_CicloEscolar">
+        <PropertyRef Name="IdCicloEscolar" />
+      </Principal>
+      <Dependent Role="T_Alumnos">
+        <PropertyRef Name="IdCicloEscolar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_Beca_C_CicloEscolar">
+    <End Type="DBSandersonSchoolModel.C_CicloEscolar" Role="C_CicloEscolar" Multiplicity="1" />
+    <End Type="DBSandersonSchoolModel.T_BecasAlumno" Role="T_BecasAlumno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="C_CicloEscolar">
+        <PropertyRef Name="IdCicloEscolar" />
+      </Principal>
+      <Dependent Role="T_BecasAlumno">
+        <PropertyRef Name="IdCicloEscolar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_Inscripcion_C_CicloEscolar">
+    <End Type="DBSandersonSchoolModel.C_CicloEscolar" Role="C_CicloEscolar" Multiplicity="1" />
+    <End Type="DBSandersonSchoolModel.T_Inscripciones" Role="T_Inscripciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="C_CicloEscolar">
+        <PropertyRef Name="IdCicloEscolar" />
+      </Principal>
+      <Dependent Role="T_Inscripciones">
+        <PropertyRef Name="IdCicloEscolar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_Usuario_C_Rol">
+    <End Type="DBSandersonSchoolModel.C_Rol" Role="C_Rol" Multiplicity="1" />
+    <End Type="DBSandersonSchoolModel.T_Usuario" Role="T_Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="C_Rol">
+        <PropertyRef Name="IdRol" />
+      </Principal>
+      <Dependent Role="T_Usuario">
+        <PropertyRef Name="IdRol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__T_BecasAl__IdBec__4CA06362">
+    <End Type="DBSandersonSchoolModel.C_TiposBeca" Role="C_TiposBeca" Multiplicity="1" />
+    <End Type="DBSandersonSchoolModel.T_BecasAlumno" Role="T_BecasAlumno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="C_TiposBeca">
+        <PropertyRef Name="IdBeca" />
+      </Principal>
+      <Dependent Role="T_BecasAlumno">
+        <PropertyRef Name="IdBeca" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__T_Gastos__IdTipo__6FE99F9F">
+    <End Type="DBSandersonSchoolModel.C_TiposGasto" Role="C_TiposGasto" Multiplicity="0..1" />
+    <End Type="DBSandersonSchoolModel.T_Gastos" Role="T_Gastos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="C_TiposGasto">
+        <PropertyRef Name="IdTipoGasto" />
+      </Principal>
+      <Dependent Role="T_Gastos">
+        <PropertyRef Name="IdTipoGasto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__T_Alumnos__Nivel__3B75D760">
+    <End Type="DBSandersonSchoolModel.T_NivelesAcademicos" Role="T_NivelesAcademicos" Multiplicity="0..1" />
+    <End Type="DBSandersonSchoolModel.T_Alumnos" Role="T_Alumnos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_NivelesAcademicos">
+        <PropertyRef Name="IdNivel" />
+      </Principal>
+      <Dependent Role="T_Alumnos">
+        <PropertyRef Name="IdNivel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__T_BecasAl__IdAlu__4BAC3F29">
+    <End Type="DBSandersonSchoolModel.T_Alumnos" Role="T_Alumnos" Multiplicity="1" />
+    <End Type="DBSandersonSchoolModel.T_BecasAlumno" Role="T_BecasAlumno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Alumnos">
+        <PropertyRef Name="IdAlumno" />
+      </Principal>
+      <Dependent Role="T_BecasAlumno">
+        <PropertyRef Name="IdAlumno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__T_Inscrip__IdAlu__5070F446">
+    <End Type="DBSandersonSchoolModel.T_Alumnos" Role="T_Alumnos" Multiplicity="0..1" />
+    <End Type="DBSandersonSchoolModel.T_Inscripciones" Role="T_Inscripciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Alumnos">
+        <PropertyRef Name="IdAlumno" />
+      </Principal>
+      <Dependent Role="T_Inscripciones">
+        <PropertyRef Name="IdAlumno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_Alumno_T_Escuela">
+    <End Type="DBSandersonSchoolModel.T_Escuela" Role="T_Escuela" Multiplicity="0..1" />
+    <End Type="DBSandersonSchoolModel.T_Alumnos" Role="T_Alumnos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Escuela">
+        <PropertyRef Name="IdEscuela" />
+      </Principal>
+      <Dependent Role="T_Alumnos">
+        <PropertyRef Name="IdEscuela" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_Usuario_T_Escuela">
+    <End Type="DBSandersonSchoolModel.T_Escuela" Role="T_Escuela" Multiplicity="0..1" />
+    <End Type="DBSandersonSchoolModel.T_Usuario" Role="T_Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Escuela">
+        <PropertyRef Name="IdEscuela" />
+      </Principal>
+      <Dependent Role="T_Usuario">
+        <PropertyRef Name="IdEscuela" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

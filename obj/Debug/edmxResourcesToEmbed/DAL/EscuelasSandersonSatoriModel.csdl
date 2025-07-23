@@ -1,0 +1,1618 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EscuelasSandersonSatoriModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="EscuelasSandersonSatoriEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="sp_RegistrarPago" ReturnType="Collection(Guid)">
+      <Parameter Name="alumno_id" Mode="In" Type="Guid" />
+      <Parameter Name="concepto_id" Mode="In" Type="Guid" />
+      <Parameter Name="monto" Mode="In" Type="Decimal" />
+      <Parameter Name="fecha_aplicacion" Mode="In" Type="DateTime" />
+      <Parameter Name="usuario_registro" Mode="In" Type="String" />
+      <Parameter Name="metodo_pago" Mode="In" Type="String" />
+      <Parameter Name="descuento" Mode="In" Type="Decimal" />
+      <Parameter Name="beca_id" Mode="In" Type="Guid" />
+      <Parameter Name="observaciones" Mode="In" Type="String" />
+      <Parameter Name="referencia" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_CambiarPlanPago">
+      <Parameter Name="alumno_id" Mode="In" Type="Guid" />
+      <Parameter Name="nuevo_plan" Mode="In" Type="String" />
+      <Parameter Name="mes_sin_pago" Mode="In" Type="Int32" />
+      <Parameter Name="usuario_registro" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_GenerarColegiaturasMensuales">
+      <Parameter Name="escuela_id" Mode="In" Type="Guid" />
+      <Parameter Name="anio" Mode="In" Type="Int32" />
+      <Parameter Name="usuario_registro" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_MarcarRepitencia">
+      <Parameter Name="alumno_id" Mode="In" Type="Guid" />
+      <Parameter Name="usuario_registro" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_ProcesarCambioCiclo">
+      <Parameter Name="nuevo_ciclo" Mode="In" Type="String" />
+      <Parameter Name="usuario_registro" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="Alumnos" EntityType="EscuelasSandersonSatoriModel.Alumnos" />
+    <EntitySet Name="AlumnosBecas" EntityType="EscuelasSandersonSatoriModel.AlumnosBecas" />
+    <EntitySet Name="AlumnosFutbol" EntityType="EscuelasSandersonSatoriModel.AlumnosFutbol" />
+    <EntitySet Name="AsistenciaPartidos" EntityType="EscuelasSandersonSatoriModel.AsistenciaPartidos" />
+    <EntitySet Name="Becas" EntityType="EscuelasSandersonSatoriModel.Becas" />
+    <EntitySet Name="CiclosEscolares" EntityType="EscuelasSandersonSatoriModel.CiclosEscolares" />
+    <EntitySet Name="ConceptosPago" EntityType="EscuelasSandersonSatoriModel.ConceptosPago" />
+    <EntitySet Name="CorteCajaGastos" EntityType="EscuelasSandersonSatoriModel.CorteCajaGastos" />
+    <EntitySet Name="CorteCajaIngresos" EntityType="EscuelasSandersonSatoriModel.CorteCajaIngresos" />
+    <EntitySet Name="CortesCaja" EntityType="EscuelasSandersonSatoriModel.CortesCaja" />
+    <EntitySet Name="EscuelaConceptosPago" EntityType="EscuelasSandersonSatoriModel.EscuelaConceptosPago" />
+    <EntitySet Name="Escuelas" EntityType="EscuelasSandersonSatoriModel.Escuelas" />
+    <EntitySet Name="EvidenciaGasto" EntityType="EscuelasSandersonSatoriModel.EvidenciaGasto" />
+    <EntitySet Name="Gastos" EntityType="EscuelasSandersonSatoriModel.Gastos" />
+    <EntitySet Name="Grados" EntityType="EscuelasSandersonSatoriModel.Grados" />
+    <EntitySet Name="HistorialPlanesPago" EntityType="EscuelasSandersonSatoriModel.HistorialPlanesPago" />
+    <EntitySet Name="HistorialRepitencias" EntityType="EscuelasSandersonSatoriModel.HistorialRepitencias" />
+    <EntitySet Name="InscripcionesTalleres" EntityType="EscuelasSandersonSatoriModel.InscripcionesTalleres" />
+    <EntitySet Name="NivelesEducativos" EntityType="EscuelasSandersonSatoriModel.NivelesEducativos" />
+    <EntitySet Name="Pagos" EntityType="EscuelasSandersonSatoriModel.Pagos" />
+    <EntitySet Name="ParametrosSistema" EntityType="EscuelasSandersonSatoriModel.ParametrosSistema" />
+    <EntitySet Name="PartidosFutbol" EntityType="EscuelasSandersonSatoriModel.PartidosFutbol" />
+    <EntitySet Name="Permisos" EntityType="EscuelasSandersonSatoriModel.Permisos" />
+    <EntitySet Name="PersonasAutorizadas" EntityType="EscuelasSandersonSatoriModel.PersonasAutorizadas" />
+    <EntitySet Name="RecargosConfig" EntityType="EscuelasSandersonSatoriModel.RecargosConfig" />
+    <EntitySet Name="ResumenDiario" EntityType="EscuelasSandersonSatoriModel.ResumenDiario" />
+    <EntitySet Name="Roles" EntityType="EscuelasSandersonSatoriModel.Roles" />
+    <EntitySet Name="sysdiagrams" EntityType="EscuelasSandersonSatoriModel.sysdiagrams" />
+    <EntitySet Name="Talleres" EntityType="EscuelasSandersonSatoriModel.Talleres" />
+    <EntitySet Name="TiposGasto" EntityType="EscuelasSandersonSatoriModel.TiposGasto" />
+    <EntitySet Name="Tutores" EntityType="EscuelasSandersonSatoriModel.Tutores" />
+    <EntitySet Name="Uniformes" EntityType="EscuelasSandersonSatoriModel.Uniformes" />
+    <EntitySet Name="Usuarios" EntityType="EscuelasSandersonSatoriModel.Usuarios" />
+    <EntitySet Name="UsuariosEscuelas" EntityType="EscuelasSandersonSatoriModel.UsuariosEscuelas" />
+    <EntitySet Name="GastosNoRegistrados" EntityType="EscuelasSandersonSatoriModel.GastosNoRegistrados" />
+    <EntitySet Name="IngresosNoRegistrados" EntityType="EscuelasSandersonSatoriModel.IngresosNoRegistrados" />
+    <EntitySet Name="V_CorteCaja" EntityType="EscuelasSandersonSatoriModel.V_CorteCaja" />
+    <EntitySet Name="VAlumnos" EntityType="EscuelasSandersonSatoriModel.VAlumnos" />
+    <EntitySet Name="VistaEstadoCuenta" EntityType="EscuelasSandersonSatoriModel.VistaEstadoCuenta" />
+    <EntitySet Name="VistaPagosAlumno" EntityType="EscuelasSandersonSatoriModel.VistaPagosAlumno" />
+    <EntitySet Name="VistaPagosConRecargos" EntityType="EscuelasSandersonSatoriModel.VistaPagosConRecargos" />
+    <EntitySet Name="VNivelGrado" EntityType="EscuelasSandersonSatoriModel.VNivelGrado" />
+    <EntitySet Name="VW_AlumnosBecasActivas" EntityType="EscuelasSandersonSatoriModel.VW_AlumnosBecasActivas" />
+    <EntitySet Name="VW_CapitalActual" EntityType="EscuelasSandersonSatoriModel.VW_CapitalActual" />
+    <EntitySet Name="VW_ComparacionPlanesPago" EntityType="EscuelasSandersonSatoriModel.VW_ComparacionPlanesPago" />
+    <EntitySet Name="VW_DetalleIngresos" EntityType="EscuelasSandersonSatoriModel.VW_DetalleIngresos" />
+    <EntitySet Name="VW_ResumenCortes" EntityType="EscuelasSandersonSatoriModel.VW_ResumenCortes" />
+    <EntitySet Name="VW_SeguimientoCambiosCiclo" EntityType="EscuelasSandersonSatoriModel.VW_SeguimientoCambiosCiclo" />
+    <AssociationSet Name="FK__Alumnos__grado_i__75A278F5" Association="EscuelasSandersonSatoriModel.FK__Alumnos__grado_i__75A278F5">
+      <End Role="Grados" EntitySet="Grados" />
+      <End Role="Alumnos" EntitySet="Alumnos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Alumnos__nivel_i__76969D2E" Association="EscuelasSandersonSatoriModel.FK__Alumnos__nivel_i__76969D2E">
+      <End Role="NivelesEducativos" EntitySet="NivelesEducativos" />
+      <End Role="Alumnos" EntitySet="Alumnos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__AlumnosFu__alumn__797309D9" Association="EscuelasSandersonSatoriModel.FK__AlumnosFu__alumn__797309D9">
+      <End Role="Alumnos" EntitySet="Alumnos" />
+      <End Role="AlumnosFutbol" EntitySet="AlumnosFutbol" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Historial__alumn__208CD6FA" Association="EscuelasSandersonSatoriModel.FK__Historial__alumn__208CD6FA">
+      <End Role="Alumnos" EntitySet="Alumnos" />
+      <End Role="HistorialPlanesPago" EntitySet="HistorialPlanesPago" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Historial__alumn__2FCF1A8A" Association="EscuelasSandersonSatoriModel.FK__Historial__alumn__2FCF1A8A">
+      <End Role="Alumnos" EntitySet="Alumnos" />
+      <End Role="HistorialRepitencias" EntitySet="HistorialRepitencias" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Inscripci__alumn__7F2BE32F" Association="EscuelasSandersonSatoriModel.FK__Inscripci__alumn__7F2BE32F">
+      <End Role="Alumnos" EntitySet="Alumnos" />
+      <End Role="InscripcionesTalleres" EntitySet="InscripcionesTalleres" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Pagos__alumno_id__02084FDA" Association="EscuelasSandersonSatoriModel.FK__Pagos__alumno_id__02084FDA">
+      <End Role="Alumnos" EntitySet="Alumnos" />
+      <End Role="Pagos" EntitySet="Pagos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PersonasA__alumn__04E4BC85" Association="EscuelasSandersonSatoriModel.FK__PersonasA__alumn__04E4BC85">
+      <End Role="Alumnos" EntitySet="Alumnos" />
+      <End Role="PersonasAutorizadas" EntitySet="PersonasAutorizadas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tutores__alumno___07C12930" Association="EscuelasSandersonSatoriModel.FK__Tutores__alumno___07C12930">
+      <End Role="Alumnos" EntitySet="Alumnos" />
+      <End Role="Tutores" EntitySet="Tutores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Alumnos_Escuelas" Association="EscuelasSandersonSatoriModel.FK_Alumnos_Escuelas">
+      <End Role="Escuelas" EntitySet="Escuelas" />
+      <End Role="Alumnos" EntitySet="Alumnos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AlumnosBecas_Alumnos" Association="EscuelasSandersonSatoriModel.FK_AlumnosBecas_Alumnos">
+      <End Role="Alumnos" EntitySet="Alumnos" />
+      <End Role="AlumnosBecas" EntitySet="AlumnosBecas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CorteCajaIngresos_Alumno" Association="EscuelasSandersonSatoriModel.FK_CorteCajaIngresos_Alumno">
+      <End Role="Alumnos" EntitySet="Alumnos" />
+      <End Role="CorteCajaIngresos" EntitySet="CorteCajaIngresos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AlumnosBecas_Becas" Association="EscuelasSandersonSatoriModel.FK_AlumnosBecas_Becas">
+      <End Role="Becas" EntitySet="Becas" />
+      <End Role="AlumnosBecas" EntitySet="AlumnosBecas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__AlumnosFu__pago___32AB8735" Association="EscuelasSandersonSatoriModel.FK__AlumnosFu__pago___32AB8735">
+      <End Role="Pagos" EntitySet="Pagos" />
+      <End Role="AlumnosFutbol" EntitySet="AlumnosFutbol" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Asistenci__alumn__339FAB6E" Association="EscuelasSandersonSatoriModel.FK__Asistenci__alumn__339FAB6E">
+      <End Role="AlumnosFutbol" EntitySet="AlumnosFutbol" />
+      <End Role="AsistenciaPartidos" EntitySet="AsistenciaPartidos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Asistenci__pago___3493CFA7" Association="EscuelasSandersonSatoriModel.FK__Asistenci__pago___3493CFA7">
+      <End Role="Pagos" EntitySet="Pagos" />
+      <End Role="AsistenciaPartidos" EntitySet="AsistenciaPartidos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Asistenci__parti__3587F3E0" Association="EscuelasSandersonSatoriModel.FK__Asistenci__parti__3587F3E0">
+      <End Role="PartidosFutbol" EntitySet="PartidosFutbol" />
+      <End Role="AsistenciaPartidos" EntitySet="AsistenciaPartidos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Pagos__beca_id__42E1EEFE" Association="EscuelasSandersonSatoriModel.FK__Pagos__beca_id__42E1EEFE">
+      <End Role="Becas" EntitySet="Becas" />
+      <End Role="Pagos" EntitySet="Pagos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Becas_Escuelas" Association="EscuelasSandersonSatoriModel.FK_Becas_Escuelas">
+      <End Role="Escuelas" EntitySet="Escuelas" />
+      <End Role="Becas" EntitySet="Becas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__EscuelaCo__conce__3864608B" Association="EscuelasSandersonSatoriModel.FK__EscuelaCo__conce__3864608B">
+      <End Role="ConceptosPago" EntitySet="ConceptosPago" />
+      <End Role="EscuelaConceptosPago" EntitySet="EscuelaConceptosPago" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Pagos__concepto___43D61337" Association="EscuelasSandersonSatoriModel.FK__Pagos__concepto___43D61337">
+      <End Role="ConceptosPago" EntitySet="ConceptosPago" />
+      <End Role="Pagos" EntitySet="Pagos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ConceptosPago_Escuelas" Association="EscuelasSandersonSatoriModel.FK_ConceptosPago_Escuelas">
+      <End Role="Escuelas" EntitySet="Escuelas" />
+      <End Role="ConceptosPago" EntitySet="ConceptosPago" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CorteCajaIngresos_Concepto" Association="EscuelasSandersonSatoriModel.FK_CorteCajaIngresos_Concepto">
+      <End Role="ConceptosPago" EntitySet="ConceptosPago" />
+      <End Role="CorteCajaIngresos" EntitySet="CorteCajaIngresos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CorteCajaGastos_Corte" Association="EscuelasSandersonSatoriModel.FK_CorteCajaGastos_Corte">
+      <End Role="CortesCaja" EntitySet="CortesCaja" />
+      <End Role="CorteCajaGastos" EntitySet="CorteCajaGastos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CorteCajaGastos_Gasto" Association="EscuelasSandersonSatoriModel.FK_CorteCajaGastos_Gasto">
+      <End Role="Gastos" EntitySet="Gastos" />
+      <End Role="CorteCajaGastos" EntitySet="CorteCajaGastos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CorteCajaIngresos_Corte" Association="EscuelasSandersonSatoriModel.FK_CorteCajaIngresos_Corte">
+      <End Role="CortesCaja" EntitySet="CortesCaja" />
+      <End Role="CorteCajaIngresos" EntitySet="CorteCajaIngresos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CorteCajaIngresos_Pago" Association="EscuelasSandersonSatoriModel.FK_CorteCajaIngresos_Pago">
+      <End Role="Pagos" EntitySet="Pagos" />
+      <End Role="CorteCajaIngresos" EntitySet="CorteCajaIngresos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CortesCaja_Escuelas" Association="EscuelasSandersonSatoriModel.FK_CortesCaja_Escuelas">
+      <End Role="Escuelas" EntitySet="Escuelas" />
+      <End Role="CortesCaja" EntitySet="CortesCaja" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CortesCaja_Usuarios" Association="EscuelasSandersonSatoriModel.FK_CortesCaja_Usuarios">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="CortesCaja" EntitySet="CortesCaja" />
+    </AssociationSet>
+    <AssociationSet Name="FK__EscuelaCo__escue__395884C4" Association="EscuelasSandersonSatoriModel.FK__EscuelaCo__escue__395884C4">
+      <End Role="Escuelas" EntitySet="Escuelas" />
+      <End Role="EscuelaConceptosPago" EntitySet="EscuelaConceptosPago" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Gastos_Escuelas" Association="EscuelasSandersonSatoriModel.FK_Gastos_Escuelas">
+      <End Role="Escuelas" EntitySet="Escuelas" />
+      <End Role="Gastos" EntitySet="Gastos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pagos_Escuelas" Association="EscuelasSandersonSatoriModel.FK_Pagos_Escuelas">
+      <End Role="Escuelas" EntitySet="Escuelas" />
+      <End Role="Pagos" EntitySet="Pagos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ResumenDiario_Escuela" Association="EscuelasSandersonSatoriModel.FK_ResumenDiario_Escuela">
+      <End Role="Escuelas" EntitySet="Escuelas" />
+      <End Role="ResumenDiario" EntitySet="ResumenDiario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuariosEscuelas_Escuelas" Association="EscuelasSandersonSatoriModel.FK_UsuariosEscuelas_Escuelas">
+      <End Role="Escuelas" EntitySet="Escuelas" />
+      <End Role="UsuariosEscuelas" EntitySet="UsuariosEscuelas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EvidenciaGasto_Gastos" Association="EscuelasSandersonSatoriModel.FK_EvidenciaGasto_Gastos">
+      <End Role="Gastos" EntitySet="Gastos" />
+      <End Role="EvidenciaGasto" EntitySet="EvidenciaGasto" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Grados__nivel_id__3C34F16F" Association="EscuelasSandersonSatoriModel.FK__Grados__nivel_id__3C34F16F">
+      <End Role="NivelesEducativos" EntitySet="NivelesEducativos" />
+      <End Role="Grados" EntitySet="Grados" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Inscripci__pago___40058253" Association="EscuelasSandersonSatoriModel.FK__Inscripci__pago___40058253">
+      <End Role="Pagos" EntitySet="Pagos" />
+      <End Role="InscripcionesTalleres" EntitySet="InscripcionesTalleres" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Inscripci__talle__40F9A68C" Association="EscuelasSandersonSatoriModel.FK__Inscripci__talle__40F9A68C">
+      <End Role="Talleres" EntitySet="Talleres" />
+      <End Role="InscripcionesTalleres" EntitySet="InscripcionesTalleres" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Usuarios__rol_id__498EEC8D" Association="EscuelasSandersonSatoriModel.FK__Usuarios__rol_id__498EEC8D">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Usuarios" EntitySet="Usuarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuariosEscuelas_Usuarios" Association="EscuelasSandersonSatoriModel.FK_UsuariosEscuelas_Usuarios">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="UsuariosEscuelas" EntitySet="UsuariosEscuelas" />
+    </AssociationSet>
+    <AssociationSet Name="RolesPermisos" Association="EscuelasSandersonSatoriModel.RolesPermisos">
+      <End Role="Permisos" EntitySet="Permisos" />
+      <End Role="Roles" EntitySet="Roles" />
+    </AssociationSet>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(EscuelasSandersonSatoriModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(EscuelasSandersonSatoriModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+  </EntityContainer>
+  <EntityType Name="Alumnos">
+    <Key>
+      <PropertyRef Name="alumno_id" />
+    </Key>
+    <Property Name="alumno_id" Type="Guid" Nullable="false" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="apellido_paterno" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="apellido_materno" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="fecha_nacimiento" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="curp" Type="String" Nullable="false" MaxLength="18" FixedLength="false" Unicode="true" />
+    <Property Name="nivel_id" Type="Int32" Nullable="false" />
+    <Property Name="grado_id" Type="Int32" Nullable="false" />
+    <Property Name="alergias" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="observaciones" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="telefono_emergencia" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="contacto_emergencia" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="fecha_inscripcion" Type="DateTime" Precision="0" />
+    <Property Name="activo" Type="Boolean" />
+    <Property Name="escuela_id" Type="Guid" Nullable="false" />
+    <Property Name="plan_pagos" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="mes_sin_pago" Type="Int32" />
+    <NavigationProperty Name="Grados" Relationship="EscuelasSandersonSatoriModel.FK__Alumnos__grado_i__75A278F5" FromRole="Alumnos" ToRole="Grados" />
+    <NavigationProperty Name="NivelesEducativos" Relationship="EscuelasSandersonSatoriModel.FK__Alumnos__nivel_i__76969D2E" FromRole="Alumnos" ToRole="NivelesEducativos" />
+    <NavigationProperty Name="AlumnosFutbol" Relationship="EscuelasSandersonSatoriModel.FK__AlumnosFu__alumn__797309D9" FromRole="Alumnos" ToRole="AlumnosFutbol" />
+    <NavigationProperty Name="HistorialPlanesPago" Relationship="EscuelasSandersonSatoriModel.FK__Historial__alumn__208CD6FA" FromRole="Alumnos" ToRole="HistorialPlanesPago" />
+    <NavigationProperty Name="HistorialRepitencias" Relationship="EscuelasSandersonSatoriModel.FK__Historial__alumn__2FCF1A8A" FromRole="Alumnos" ToRole="HistorialRepitencias" />
+    <NavigationProperty Name="InscripcionesTalleres" Relationship="EscuelasSandersonSatoriModel.FK__Inscripci__alumn__7F2BE32F" FromRole="Alumnos" ToRole="InscripcionesTalleres" />
+    <NavigationProperty Name="Pagos" Relationship="EscuelasSandersonSatoriModel.FK__Pagos__alumno_id__02084FDA" FromRole="Alumnos" ToRole="Pagos" />
+    <NavigationProperty Name="PersonasAutorizadas" Relationship="EscuelasSandersonSatoriModel.FK__PersonasA__alumn__04E4BC85" FromRole="Alumnos" ToRole="PersonasAutorizadas" />
+    <NavigationProperty Name="Tutores" Relationship="EscuelasSandersonSatoriModel.FK__Tutores__alumno___07C12930" FromRole="Alumnos" ToRole="Tutores" />
+    <NavigationProperty Name="Escuelas" Relationship="EscuelasSandersonSatoriModel.FK_Alumnos_Escuelas" FromRole="Alumnos" ToRole="Escuelas" />
+    <NavigationProperty Name="AlumnosBecas" Relationship="EscuelasSandersonSatoriModel.FK_AlumnosBecas_Alumnos" FromRole="Alumnos" ToRole="AlumnosBecas" />
+    <NavigationProperty Name="CorteCajaIngresos" Relationship="EscuelasSandersonSatoriModel.FK_CorteCajaIngresos_Alumno" FromRole="Alumnos" ToRole="CorteCajaIngresos" />
+  </EntityType>
+  <EntityType Name="AlumnosBecas">
+    <Key>
+      <PropertyRef Name="alumno_beca_id" />
+    </Key>
+    <Property Name="alumno_beca_id" Type="Guid" Nullable="false" />
+    <Property Name="alumno_id" Type="Guid" Nullable="false" />
+    <Property Name="beca_id" Type="Guid" Nullable="false" />
+    <Property Name="fecha_asignacion" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="fecha_vencimiento" Type="DateTime" Precision="0" />
+    <Property Name="porcentaje_aplicado" Type="Decimal" Nullable="false" Precision="5" Scale="2" />
+    <Property Name="observaciones" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="activo" Type="Boolean" Nullable="false" />
+    <Property Name="usuario_registro" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="fecha_registro" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Alumnos" Relationship="EscuelasSandersonSatoriModel.FK_AlumnosBecas_Alumnos" FromRole="AlumnosBecas" ToRole="Alumnos" />
+    <NavigationProperty Name="Becas" Relationship="EscuelasSandersonSatoriModel.FK_AlumnosBecas_Becas" FromRole="AlumnosBecas" ToRole="Becas" />
+  </EntityType>
+  <EntityType Name="AlumnosFutbol">
+    <Key>
+      <PropertyRef Name="alumno_futbol_id" />
+    </Key>
+    <Property Name="alumno_futbol_id" Type="Guid" Nullable="false" />
+    <Property Name="alumno_id" Type="Guid" Nullable="false" />
+    <Property Name="fecha_inscripcion" Type="DateTime" Precision="0" />
+    <Property Name="pago_inscripcion_id" Type="Guid" />
+    <Property Name="uniforme_entregado" Type="Boolean" />
+    <Property Name="activo" Type="Boolean" />
+    <NavigationProperty Name="Alumnos" Relationship="EscuelasSandersonSatoriModel.FK__AlumnosFu__alumn__797309D9" FromRole="AlumnosFutbol" ToRole="Alumnos" />
+    <NavigationProperty Name="Pagos" Relationship="EscuelasSandersonSatoriModel.FK__AlumnosFu__pago___32AB8735" FromRole="AlumnosFutbol" ToRole="Pagos" />
+    <NavigationProperty Name="AsistenciaPartidos" Relationship="EscuelasSandersonSatoriModel.FK__Asistenci__alumn__339FAB6E" FromRole="AlumnosFutbol" ToRole="AsistenciaPartidos" />
+  </EntityType>
+  <EntityType Name="AsistenciaPartidos">
+    <Key>
+      <PropertyRef Name="asistencia_id" />
+    </Key>
+    <Property Name="asistencia_id" Type="Guid" Nullable="false" />
+    <Property Name="alumno_futbol_id" Type="Guid" Nullable="false" />
+    <Property Name="partido_id" Type="Guid" Nullable="false" />
+    <Property Name="asistio" Type="Boolean" />
+    <Property Name="pago_arbitraje_id" Type="Guid" />
+    <NavigationProperty Name="AlumnosFutbol" Relationship="EscuelasSandersonSatoriModel.FK__Asistenci__alumn__339FAB6E" FromRole="AsistenciaPartidos" ToRole="AlumnosFutbol" />
+    <NavigationProperty Name="Pagos" Relationship="EscuelasSandersonSatoriModel.FK__Asistenci__pago___3493CFA7" FromRole="AsistenciaPartidos" ToRole="Pagos" />
+    <NavigationProperty Name="PartidosFutbol" Relationship="EscuelasSandersonSatoriModel.FK__Asistenci__parti__3587F3E0" FromRole="AsistenciaPartidos" ToRole="PartidosFutbol" />
+  </EntityType>
+  <EntityType Name="Becas">
+    <Key>
+      <PropertyRef Name="beca_id" />
+    </Key>
+    <Property Name="beca_id" Type="Guid" Nullable="false" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="tipo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="porcentaje" Type="Decimal" Nullable="false" Precision="5" Scale="2" />
+    <Property Name="descripcion" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="activo" Type="Boolean" />
+    <Property Name="escuela_id" Type="Guid" />
+    <NavigationProperty Name="AlumnosBecas" Relationship="EscuelasSandersonSatoriModel.FK_AlumnosBecas_Becas" FromRole="Becas" ToRole="AlumnosBecas" />
+    <NavigationProperty Name="Pagos" Relationship="EscuelasSandersonSatoriModel.FK__Pagos__beca_id__42E1EEFE" FromRole="Becas" ToRole="Pagos" />
+    <NavigationProperty Name="Escuelas" Relationship="EscuelasSandersonSatoriModel.FK_Becas_Escuelas" FromRole="Becas" ToRole="Escuelas" />
+  </EntityType>
+  <EntityType Name="CiclosEscolares">
+    <Key>
+      <PropertyRef Name="ciclo_id" />
+    </Key>
+    <Property Name="ciclo_id" Type="Guid" Nullable="false" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="9" FixedLength="false" Unicode="true" />
+    <Property Name="fecha_inicio" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="fecha_fin" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="activo" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="ConceptosPago">
+    <Key>
+      <PropertyRef Name="concepto_id" />
+    </Key>
+    <Property Name="concepto_id" Type="Guid" Nullable="false" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="descripcion" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="tipo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="monto_base" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="aplica_descuento" Type="Boolean" />
+    <Property Name="aplica_beca" Type="Boolean" />
+    <Property Name="activo" Type="Boolean" />
+    <Property Name="escuela_id" Type="Guid" />
+    <Property Name="monto_11_meses" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="monto_12_meses" Type="Decimal" Precision="10" Scale="2" />
+    <NavigationProperty Name="EscuelaConceptosPago" Relationship="EscuelasSandersonSatoriModel.FK__EscuelaCo__conce__3864608B" FromRole="ConceptosPago" ToRole="EscuelaConceptosPago" />
+    <NavigationProperty Name="Pagos" Relationship="EscuelasSandersonSatoriModel.FK__Pagos__concepto___43D61337" FromRole="ConceptosPago" ToRole="Pagos" />
+    <NavigationProperty Name="Escuelas" Relationship="EscuelasSandersonSatoriModel.FK_ConceptosPago_Escuelas" FromRole="ConceptosPago" ToRole="Escuelas" />
+    <NavigationProperty Name="CorteCajaIngresos" Relationship="EscuelasSandersonSatoriModel.FK_CorteCajaIngresos_Concepto" FromRole="ConceptosPago" ToRole="CorteCajaIngresos" />
+  </EntityType>
+  <EntityType Name="CorteCajaGastos">
+    <Key>
+      <PropertyRef Name="detalle_id" />
+    </Key>
+    <Property Name="detalle_id" Type="Guid" Nullable="false" />
+    <Property Name="corte_id" Type="Guid" Nullable="false" />
+    <Property Name="gasto_id" Type="Guid" Nullable="false" />
+    <Property Name="concepto" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="monto" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="tipo_gasto" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="justificacion" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="es_gasto_general" Type="Boolean" Nullable="false" />
+    <Property Name="fecha_gasto" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="usuario_registro" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CortesCaja" Relationship="EscuelasSandersonSatoriModel.FK_CorteCajaGastos_Corte" FromRole="CorteCajaGastos" ToRole="CortesCaja" />
+    <NavigationProperty Name="Gastos" Relationship="EscuelasSandersonSatoriModel.FK_CorteCajaGastos_Gasto" FromRole="CorteCajaGastos" ToRole="Gastos" />
+  </EntityType>
+  <EntityType Name="CorteCajaIngresos">
+    <Key>
+      <PropertyRef Name="detalle_id" />
+    </Key>
+    <Property Name="detalle_id" Type="Guid" Nullable="false" />
+    <Property Name="corte_id" Type="Guid" Nullable="false" />
+    <Property Name="pago_id" Type="Guid" Nullable="false" />
+    <Property Name="alumno_id" Type="Guid" Nullable="false" />
+    <Property Name="concepto_id" Type="Guid" Nullable="false" />
+    <Property Name="alumno_nombre" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="concepto_nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="monto_original" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="descuento" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="recargo" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="monto_pagado" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="metodo_pago" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="periodo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="referencia" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="fecha_pago" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Alumnos" Relationship="EscuelasSandersonSatoriModel.FK_CorteCajaIngresos_Alumno" FromRole="CorteCajaIngresos" ToRole="Alumnos" />
+    <NavigationProperty Name="ConceptosPago" Relationship="EscuelasSandersonSatoriModel.FK_CorteCajaIngresos_Concepto" FromRole="CorteCajaIngresos" ToRole="ConceptosPago" />
+    <NavigationProperty Name="CortesCaja" Relationship="EscuelasSandersonSatoriModel.FK_CorteCajaIngresos_Corte" FromRole="CorteCajaIngresos" ToRole="CortesCaja" />
+    <NavigationProperty Name="Pagos" Relationship="EscuelasSandersonSatoriModel.FK_CorteCajaIngresos_Pago" FromRole="CorteCajaIngresos" ToRole="Pagos" />
+  </EntityType>
+  <EntityType Name="CortesCaja">
+    <Key>
+      <PropertyRef Name="corte_id" />
+    </Key>
+    <Property Name="corte_id" Type="Guid" Nullable="false" />
+    <Property Name="escuela_id" Type="Guid" Nullable="false" />
+    <Property Name="fecha_corte" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="hora_inicio" Type="Time" Precision="7" />
+    <Property Name="hora_fin" Type="Time" Precision="7" />
+    <Property Name="usuario_id" Type="Guid" Nullable="false" />
+    <Property Name="total_ingresos" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="total_gastos" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="saldo_inicial" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="saldo_final" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="observaciones" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="estado" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CorteCajaGastos" Relationship="EscuelasSandersonSatoriModel.FK_CorteCajaGastos_Corte" FromRole="CortesCaja" ToRole="CorteCajaGastos" />
+    <NavigationProperty Name="CorteCajaIngresos" Relationship="EscuelasSandersonSatoriModel.FK_CorteCajaIngresos_Corte" FromRole="CortesCaja" ToRole="CorteCajaIngresos" />
+    <NavigationProperty Name="Escuelas" Relationship="EscuelasSandersonSatoriModel.FK_CortesCaja_Escuelas" FromRole="CortesCaja" ToRole="Escuelas" />
+    <NavigationProperty Name="Usuarios" Relationship="EscuelasSandersonSatoriModel.FK_CortesCaja_Usuarios" FromRole="CortesCaja" ToRole="Usuarios" />
+  </EntityType>
+  <EntityType Name="EscuelaConceptosPago">
+    <Key>
+      <PropertyRef Name="escuela_id" />
+      <PropertyRef Name="concepto_id" />
+    </Key>
+    <Property Name="escuela_id" Type="Guid" Nullable="false" />
+    <Property Name="concepto_id" Type="Guid" Nullable="false" />
+    <Property Name="monto_base" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <NavigationProperty Name="ConceptosPago" Relationship="EscuelasSandersonSatoriModel.FK__EscuelaCo__conce__3864608B" FromRole="EscuelaConceptosPago" ToRole="ConceptosPago" />
+    <NavigationProperty Name="Escuelas" Relationship="EscuelasSandersonSatoriModel.FK__EscuelaCo__escue__395884C4" FromRole="EscuelaConceptosPago" ToRole="Escuelas" />
+  </EntityType>
+  <EntityType Name="Escuelas">
+    <Key>
+      <PropertyRef Name="escuela_id" />
+    </Key>
+    <Property Name="escuela_id" Type="Guid" Nullable="false" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="direccion" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="telefono" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="director" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="activo" Type="Boolean" />
+    <NavigationProperty Name="Alumnos" Relationship="EscuelasSandersonSatoriModel.FK_Alumnos_Escuelas" FromRole="Escuelas" ToRole="Alumnos" />
+    <NavigationProperty Name="Becas" Relationship="EscuelasSandersonSatoriModel.FK_Becas_Escuelas" FromRole="Escuelas" ToRole="Becas" />
+    <NavigationProperty Name="ConceptosPago" Relationship="EscuelasSandersonSatoriModel.FK_ConceptosPago_Escuelas" FromRole="Escuelas" ToRole="ConceptosPago" />
+    <NavigationProperty Name="CortesCaja" Relationship="EscuelasSandersonSatoriModel.FK_CortesCaja_Escuelas" FromRole="Escuelas" ToRole="CortesCaja" />
+    <NavigationProperty Name="EscuelaConceptosPago" Relationship="EscuelasSandersonSatoriModel.FK__EscuelaCo__escue__395884C4" FromRole="Escuelas" ToRole="EscuelaConceptosPago" />
+    <NavigationProperty Name="Gastos" Relationship="EscuelasSandersonSatoriModel.FK_Gastos_Escuelas" FromRole="Escuelas" ToRole="Gastos" />
+    <NavigationProperty Name="Pagos" Relationship="EscuelasSandersonSatoriModel.FK_Pagos_Escuelas" FromRole="Escuelas" ToRole="Pagos" />
+    <NavigationProperty Name="ResumenDiario" Relationship="EscuelasSandersonSatoriModel.FK_ResumenDiario_Escuela" FromRole="Escuelas" ToRole="ResumenDiario" />
+    <NavigationProperty Name="UsuariosEscuelas" Relationship="EscuelasSandersonSatoriModel.FK_UsuariosEscuelas_Escuelas" FromRole="Escuelas" ToRole="UsuariosEscuelas" />
+  </EntityType>
+  <EntityType Name="EvidenciaGasto">
+    <Key>
+      <PropertyRef Name="IdEvidencia" />
+    </Key>
+    <Property Name="IdEvidencia" Type="Guid" Nullable="false" />
+    <Property Name="IdGasto" Type="Guid" Nullable="false" />
+    <Property Name="NombreArchivo" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="RutaArchivo" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Tamanio" Type="Int32" Nullable="false" />
+    <Property Name="TipoArchivo" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="FechaCarga" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UsuarioCarga" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Gastos" Relationship="EscuelasSandersonSatoriModel.FK_EvidenciaGasto_Gastos" FromRole="EvidenciaGasto" ToRole="Gastos" />
+  </EntityType>
+  <EntityType Name="Gastos">
+    <Key>
+      <PropertyRef Name="IdGasto" />
+    </Key>
+    <Property Name="IdGasto" Type="Guid" Nullable="false" />
+    <Property Name="IdEscuela" Type="Guid" />
+    <Property Name="IdTipoGasto" Type="Int32" Nullable="false" />
+    <Property Name="Concepto" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Monto" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Justificacion" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="EsGastoGeneral" Type="Boolean" Nullable="false" />
+    <Property Name="FechaGasto" Type="DateTime" Precision="3" />
+    <Property Name="FechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UsuarioRegistro" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+    <Property Name="UsuarioModificacion" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CorteCajaGastos" Relationship="EscuelasSandersonSatoriModel.FK_CorteCajaGastos_Gasto" FromRole="Gastos" ToRole="CorteCajaGastos" />
+    <NavigationProperty Name="Escuelas" Relationship="EscuelasSandersonSatoriModel.FK_Gastos_Escuelas" FromRole="Gastos" ToRole="Escuelas" />
+    <NavigationProperty Name="EvidenciaGasto" Relationship="EscuelasSandersonSatoriModel.FK_EvidenciaGasto_Gastos" FromRole="Gastos" ToRole="EvidenciaGasto" />
+  </EntityType>
+  <EntityType Name="Grados">
+    <Key>
+      <PropertyRef Name="grado_id" />
+    </Key>
+    <Property Name="grado_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nivel_id" Type="Int32" Nullable="false" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="orden" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Alumnos" Relationship="EscuelasSandersonSatoriModel.FK__Alumnos__grado_i__75A278F5" FromRole="Grados" ToRole="Alumnos" />
+    <NavigationProperty Name="NivelesEducativos" Relationship="EscuelasSandersonSatoriModel.FK__Grados__nivel_id__3C34F16F" FromRole="Grados" ToRole="NivelesEducativos" />
+  </EntityType>
+  <EntityType Name="HistorialPlanesPago">
+    <Key>
+      <PropertyRef Name="historial_id" />
+    </Key>
+    <Property Name="historial_id" Type="Guid" Nullable="false" />
+    <Property Name="alumno_id" Type="Guid" Nullable="false" />
+    <Property Name="ciclo_escolar" Type="String" Nullable="false" MaxLength="9" FixedLength="false" Unicode="true" />
+    <Property Name="plan_pagos" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="mes_sin_pago" Type="Int32" />
+    <Property Name="fecha_registro" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Alumnos" Relationship="EscuelasSandersonSatoriModel.FK__Historial__alumn__208CD6FA" FromRole="HistorialPlanesPago" ToRole="Alumnos" />
+  </EntityType>
+  <EntityType Name="HistorialRepitencias">
+    <Key>
+      <PropertyRef Name="repitencia_id" />
+    </Key>
+    <Property Name="repitencia_id" Type="Guid" Nullable="false" />
+    <Property Name="alumno_id" Type="Guid" Nullable="false" />
+    <Property Name="ciclo_escolar" Type="String" Nullable="false" MaxLength="9" FixedLength="false" Unicode="true" />
+    <Property Name="grado_repetido" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fecha_registro" Type="DateTime" Precision="3" />
+    <Property Name="observaciones" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Alumnos" Relationship="EscuelasSandersonSatoriModel.FK__Historial__alumn__2FCF1A8A" FromRole="HistorialRepitencias" ToRole="Alumnos" />
+  </EntityType>
+  <EntityType Name="InscripcionesTalleres">
+    <Key>
+      <PropertyRef Name="inscripcion_id" />
+    </Key>
+    <Property Name="inscripcion_id" Type="Guid" Nullable="false" />
+    <Property Name="taller_id" Type="Guid" Nullable="false" />
+    <Property Name="alumno_id" Type="Guid" Nullable="false" />
+    <Property Name="fecha_inscripcion" Type="DateTime" Precision="0" />
+    <Property Name="pago_id" Type="Guid" />
+    <NavigationProperty Name="Alumnos" Relationship="EscuelasSandersonSatoriModel.FK__Inscripci__alumn__7F2BE32F" FromRole="InscripcionesTalleres" ToRole="Alumnos" />
+    <NavigationProperty Name="Pagos" Relationship="EscuelasSandersonSatoriModel.FK__Inscripci__pago___40058253" FromRole="InscripcionesTalleres" ToRole="Pagos" />
+    <NavigationProperty Name="Talleres" Relationship="EscuelasSandersonSatoriModel.FK__Inscripci__talle__40F9A68C" FromRole="InscripcionesTalleres" ToRole="Talleres" />
+  </EntityType>
+  <EntityType Name="NivelesEducativos">
+    <Key>
+      <PropertyRef Name="nivel_id" />
+    </Key>
+    <Property Name="nivel_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Alumnos" Relationship="EscuelasSandersonSatoriModel.FK__Alumnos__nivel_i__76969D2E" FromRole="NivelesEducativos" ToRole="Alumnos" />
+    <NavigationProperty Name="Grados" Relationship="EscuelasSandersonSatoriModel.FK__Grados__nivel_id__3C34F16F" FromRole="NivelesEducativos" ToRole="Grados" />
+  </EntityType>
+  <EntityType Name="Pagos">
+    <Key>
+      <PropertyRef Name="pago_id" />
+    </Key>
+    <Property Name="pago_id" Type="Guid" Nullable="false" />
+    <Property Name="alumno_id" Type="Guid" Nullable="false" />
+    <Property Name="concepto_id" Type="Guid" Nullable="false" />
+    <Property Name="monto" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="descuento" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="recargo" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="beca_id" Type="Guid" />
+    <Property Name="fecha_pago" Type="DateTime" Precision="3" />
+    <Property Name="fecha_aplicacion" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="fecha_vencimiento" Type="DateTime" Precision="0" />
+    <Property Name="periodo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="metodo_pago" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="referencia" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="observaciones" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="estado" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="usuario_registro" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="escuela_id" Type="Guid" />
+    <Property Name="ciclo_escolar" Type="String" Nullable="false" MaxLength="9" FixedLength="false" Unicode="true" />
+    <Property Name="monto_pagado" Type="Decimal" Precision="18" Scale="2" />
+    <NavigationProperty Name="Alumnos" Relationship="EscuelasSandersonSatoriModel.FK__Pagos__alumno_id__02084FDA" FromRole="Pagos" ToRole="Alumnos" />
+    <NavigationProperty Name="AlumnosFutbol" Relationship="EscuelasSandersonSatoriModel.FK__AlumnosFu__pago___32AB8735" FromRole="Pagos" ToRole="AlumnosFutbol" />
+    <NavigationProperty Name="AsistenciaPartidos" Relationship="EscuelasSandersonSatoriModel.FK__Asistenci__pago___3493CFA7" FromRole="Pagos" ToRole="AsistenciaPartidos" />
+    <NavigationProperty Name="Becas" Relationship="EscuelasSandersonSatoriModel.FK__Pagos__beca_id__42E1EEFE" FromRole="Pagos" ToRole="Becas" />
+    <NavigationProperty Name="ConceptosPago" Relationship="EscuelasSandersonSatoriModel.FK__Pagos__concepto___43D61337" FromRole="Pagos" ToRole="ConceptosPago" />
+    <NavigationProperty Name="CorteCajaIngresos" Relationship="EscuelasSandersonSatoriModel.FK_CorteCajaIngresos_Pago" FromRole="Pagos" ToRole="CorteCajaIngresos" />
+    <NavigationProperty Name="Escuelas" Relationship="EscuelasSandersonSatoriModel.FK_Pagos_Escuelas" FromRole="Pagos" ToRole="Escuelas" />
+    <NavigationProperty Name="InscripcionesTalleres" Relationship="EscuelasSandersonSatoriModel.FK__Inscripci__pago___40058253" FromRole="Pagos" ToRole="InscripcionesTalleres" />
+  </EntityType>
+  <EntityType Name="ParametrosSistema">
+    <Key>
+      <PropertyRef Name="parametro_id" />
+    </Key>
+    <Property Name="parametro_id" Type="Guid" Nullable="false" />
+    <Property Name="clave" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="valor" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="descripcion" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="PartidosFutbol">
+    <Key>
+      <PropertyRef Name="partido_id" />
+    </Key>
+    <Property Name="partido_id" Type="Guid" Nullable="false" />
+    <Property Name="fecha" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="descripcion" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="costo_arbitraje" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="realizado" Type="Boolean" />
+    <NavigationProperty Name="AsistenciaPartidos" Relationship="EscuelasSandersonSatoriModel.FK__Asistenci__parti__3587F3E0" FromRole="PartidosFutbol" ToRole="AsistenciaPartidos" />
+  </EntityType>
+  <EntityType Name="Permisos">
+    <Key>
+      <PropertyRef Name="permiso_id" />
+    </Key>
+    <Property Name="permiso_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="descripcion" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Roles" Relationship="EscuelasSandersonSatoriModel.RolesPermisos" FromRole="Permisos" ToRole="Roles" />
+  </EntityType>
+  <EntityType Name="PersonasAutorizadas">
+    <Key>
+      <PropertyRef Name="persona_id" />
+    </Key>
+    <Property Name="persona_id" Type="Guid" Nullable="false" />
+    <Property Name="alumno_id" Type="Guid" Nullable="false" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="apellido_paterno" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="apellido_materno" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="parentesco" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="telefono" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="fecha_registro" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Alumnos" Relationship="EscuelasSandersonSatoriModel.FK__PersonasA__alumn__04E4BC85" FromRole="PersonasAutorizadas" ToRole="Alumnos" />
+  </EntityType>
+  <EntityType Name="RecargosConfig">
+    <Key>
+      <PropertyRef Name="config_id" />
+    </Key>
+    <Property Name="config_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="dias_desde" Type="Int32" Nullable="false" />
+    <Property Name="porcentaje" Type="Decimal" Nullable="false" Precision="5" Scale="2" />
+    <Property Name="descripcion" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ResumenDiario">
+    <Key>
+      <PropertyRef Name="resumen_id" />
+    </Key>
+    <Property Name="resumen_id" Type="Guid" Nullable="false" />
+    <Property Name="escuela_id" Type="Guid" Nullable="false" />
+    <Property Name="fecha" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="total_ingresos" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="total_gastos" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="saldo_neto" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="ingresos_efectivo" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="ingresos_tarjeta" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="ingresos_transferencia" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="ingresos_cheque" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="ingresos_colegiatura" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="ingresos_inscripcion" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="ingresos_uniformes" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="ingresos_talleres" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="ingresos_otros" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="numero_pagos" Type="Int32" Nullable="false" />
+    <Property Name="numero_gastos" Type="Int32" Nullable="false" />
+    <Property Name="numero_cortes" Type="Int32" Nullable="false" />
+    <Property Name="fecha_actualizacion" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Escuelas" Relationship="EscuelasSandersonSatoriModel.FK_ResumenDiario_Escuela" FromRole="ResumenDiario" ToRole="Escuelas" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="rol_id" />
+    </Key>
+    <Property Name="rol_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="descripcion" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Usuarios" Relationship="EscuelasSandersonSatoriModel.FK__Usuarios__rol_id__498EEC8D" FromRole="Roles" ToRole="Usuarios" />
+    <NavigationProperty Name="Permisos" Relationship="EscuelasSandersonSatoriModel.RolesPermisos" FromRole="Roles" ToRole="Permisos" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Talleres">
+    <Key>
+      <PropertyRef Name="taller_id" />
+    </Key>
+    <Property Name="taller_id" Type="Guid" Nullable="false" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="costo_mensual" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="horario" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="activo" Type="Boolean" />
+    <NavigationProperty Name="InscripcionesTalleres" Relationship="EscuelasSandersonSatoriModel.FK__Inscripci__talle__40F9A68C" FromRole="Talleres" ToRole="InscripcionesTalleres" />
+  </EntityType>
+  <EntityType Name="TiposGasto">
+    <Key>
+      <PropertyRef Name="IdTipoGasto" />
+    </Key>
+    <Property Name="IdTipoGasto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Activo" Type="Boolean" Nullable="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UsuarioCreacion" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+    <Property Name="UsuarioModificacion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Tutores">
+    <Key>
+      <PropertyRef Name="tutor_id" />
+    </Key>
+    <Property Name="tutor_id" Type="Guid" Nullable="false" />
+    <Property Name="alumno_id" Type="Guid" Nullable="false" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="apellido_paterno" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="apellido_materno" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="parentesco" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="telefono" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="direccion" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="es_principal" Type="Boolean" />
+    <NavigationProperty Name="Alumnos" Relationship="EscuelasSandersonSatoriModel.FK__Tutores__alumno___07C12930" FromRole="Tutores" ToRole="Alumnos" />
+  </EntityType>
+  <EntityType Name="Uniformes">
+    <Key>
+      <PropertyRef Name="uniforme_id" />
+    </Key>
+    <Property Name="uniforme_id" Type="Guid" Nullable="false" />
+    <Property Name="tipo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="talla" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="precio" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="niveles_aplicables" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="inventario" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="usuario_id" />
+    </Key>
+    <Property Name="usuario_id" Type="Guid" Nullable="false" />
+    <Property Name="username" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="password_hash" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="rol_id" Type="Int32" Nullable="false" />
+    <Property Name="fecha_creacion" Type="DateTime" Precision="3" />
+    <Property Name="activo" Type="Boolean" />
+    <Property Name="temp_password" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="CortesCaja" Relationship="EscuelasSandersonSatoriModel.FK_CortesCaja_Usuarios" FromRole="Usuarios" ToRole="CortesCaja" />
+    <NavigationProperty Name="Roles" Relationship="EscuelasSandersonSatoriModel.FK__Usuarios__rol_id__498EEC8D" FromRole="Usuarios" ToRole="Roles" />
+    <NavigationProperty Name="UsuariosEscuelas" Relationship="EscuelasSandersonSatoriModel.FK_UsuariosEscuelas_Usuarios" FromRole="Usuarios" ToRole="UsuariosEscuelas" />
+  </EntityType>
+  <EntityType Name="UsuariosEscuelas">
+    <Key>
+      <PropertyRef Name="usuario_escuela_id" />
+    </Key>
+    <Property Name="usuario_escuela_id" Type="Guid" Nullable="false" />
+    <Property Name="usuario_id" Type="Guid" Nullable="false" />
+    <Property Name="escuela_id" Type="Guid" Nullable="false" />
+    <Property Name="fecha_asignacion" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Escuelas" Relationship="EscuelasSandersonSatoriModel.FK_UsuariosEscuelas_Escuelas" FromRole="UsuariosEscuelas" ToRole="Escuelas" />
+    <NavigationProperty Name="Usuarios" Relationship="EscuelasSandersonSatoriModel.FK_UsuariosEscuelas_Usuarios" FromRole="UsuariosEscuelas" ToRole="Usuarios" />
+  </EntityType>
+  <EntityType Name="GastosNoRegistrados">
+    <Key>
+      <PropertyRef Name="IdGasto" />
+      <PropertyRef Name="IdTipoGasto" />
+      <PropertyRef Name="Concepto" />
+      <PropertyRef Name="Monto" />
+      <PropertyRef Name="EsGastoGeneral" />
+      <PropertyRef Name="FechaRegistro" />
+      <PropertyRef Name="UsuarioRegistro" />
+    </Key>
+    <Property Name="IdGasto" Type="Guid" Nullable="false" />
+    <Property Name="IdEscuela" Type="Guid" />
+    <Property Name="IdTipoGasto" Type="Int32" Nullable="false" />
+    <Property Name="Concepto" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Monto" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Justificacion" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="EsGastoGeneral" Type="Boolean" Nullable="false" />
+    <Property Name="FechaGasto" Type="DateTime" Precision="3" />
+    <Property Name="FechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UsuarioRegistro" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+    <Property Name="UsuarioModificacion" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="corte_id" Type="Guid" />
+    <Property Name="detalle_id" Type="Guid" />
+    <Property Name="gasto_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="IngresosNoRegistrados">
+    <Key>
+      <PropertyRef Name="pago_id" />
+      <PropertyRef Name="alumno_id" />
+      <PropertyRef Name="concepto_id" />
+      <PropertyRef Name="monto" />
+      <PropertyRef Name="fecha_aplicacion" />
+      <PropertyRef Name="ciclo_escolar" />
+    </Key>
+    <Property Name="pago_id" Type="Guid" Nullable="false" />
+    <Property Name="alumno_id" Type="Guid" Nullable="false" />
+    <Property Name="concepto_id" Type="Guid" Nullable="false" />
+    <Property Name="monto" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="descuento" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="recargo" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="beca_id" Type="Guid" />
+    <Property Name="fecha_pago" Type="DateTime" Precision="3" />
+    <Property Name="fecha_aplicacion" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="fecha_vencimiento" Type="DateTime" Precision="0" />
+    <Property Name="periodo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="metodo_pago" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="referencia" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="observaciones" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="estado" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="usuario_registro" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="escuela_id" Type="Guid" />
+    <Property Name="ciclo_escolar" Type="String" Nullable="false" MaxLength="9" FixedLength="false" Unicode="true" />
+    <Property Name="monto_pagado" Type="Decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="V_CorteCaja">
+    <Key>
+      <PropertyRef Name="corte_id" />
+      <PropertyRef Name="fecha_corte" />
+      <PropertyRef Name="usuario_id" />
+      <PropertyRef Name="total_ingresos" />
+      <PropertyRef Name="total_gastos" />
+      <PropertyRef Name="saldo_inicial" />
+      <PropertyRef Name="saldo_final" />
+      <PropertyRef Name="estado" />
+      <PropertyRef Name="EscuelaNombre" />
+      <PropertyRef Name="username" />
+      <PropertyRef Name="NombreUsuario" />
+      <PropertyRef Name="email" />
+    </Key>
+    <Property Name="corte_id" Type="Guid" Nullable="false" />
+    <Property Name="fecha_corte" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="hora_inicio" Type="Time" Precision="7" />
+    <Property Name="hora_fin" Type="Time" Precision="7" />
+    <Property Name="usuario_id" Type="Guid" Nullable="false" />
+    <Property Name="total_ingresos" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="total_gastos" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="saldo_inicial" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="saldo_final" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="observaciones" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="estado" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="EscuelaNombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="direccion" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="telefono" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="director" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="activo" Type="Boolean" />
+    <Property Name="username" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NombreUsuario" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="VAlumnos">
+    <Key>
+      <PropertyRef Name="alumno_id" />
+      <PropertyRef Name="nombre" />
+      <PropertyRef Name="apellido_paterno" />
+      <PropertyRef Name="fecha_nacimiento" />
+      <PropertyRef Name="curp" />
+      <PropertyRef Name="nivel_id" />
+      <PropertyRef Name="Nivel" />
+      <PropertyRef Name="Grado" />
+      <PropertyRef Name="GradoNivel" />
+      <PropertyRef Name="grado_id" />
+      <PropertyRef Name="escuela_id" />
+    </Key>
+    <Property Name="alumno_id" Type="Guid" Nullable="false" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="apellido_paterno" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="apellido_materno" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="fecha_nacimiento" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="curp" Type="String" Nullable="false" MaxLength="18" FixedLength="false" Unicode="true" />
+    <Property Name="nivel_id" Type="Int32" Nullable="false" />
+    <Property Name="Nivel" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Grado" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GradoNivel" Type="String" Nullable="false" MaxLength="24" FixedLength="false" Unicode="false" />
+    <Property Name="grado_id" Type="Int32" Nullable="false" />
+    <Property Name="alergias" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="observaciones" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="telefono_emergencia" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="contacto_emergencia" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="fecha_inscripcion" Type="DateTime" Precision="0" />
+    <Property Name="activo" Type="Boolean" />
+    <Property Name="escuela_id" Type="Guid" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VistaEstadoCuenta">
+    <Key>
+      <PropertyRef Name="alumno_id" />
+      <PropertyRef Name="alumno" />
+      <PropertyRef Name="nivel" />
+      <PropertyRef Name="grado" />
+    </Key>
+    <Property Name="alumno_id" Type="Guid" Nullable="false" />
+    <Property Name="alumno" Type="String" Nullable="false" MaxLength="201" FixedLength="false" Unicode="true" />
+    <Property Name="nivel" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="grado" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="total_pagado" Type="Decimal" Precision="38" Scale="2" />
+    <Property Name="total_pendiente" Type="Decimal" Precision="38" Scale="2" />
+    <Property Name="ultimo_vencimiento" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="VistaPagosAlumno">
+    <Key>
+      <PropertyRef Name="pago_id" />
+      <PropertyRef Name="nivel" />
+      <PropertyRef Name="grado" />
+      <PropertyRef Name="monto" />
+    </Key>
+    <Property Name="pago_id" Type="Guid" Nullable="false" />
+    <Property Name="metodo_pago" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="fecha_pago" Type="DateTime" Precision="3" />
+    <Property Name="alumno_id" Type="Guid" />
+    <Property Name="alumno" Type="String" MaxLength="302" FixedLength="false" Unicode="true" />
+    <Property Name="nivel" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="grado" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="descuento" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="recargo" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="monto" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="descripcion" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="monto_pagado" Type="Decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="VistaPagosConRecargos">
+    <Key>
+      <PropertyRef Name="pago_id" />
+      <PropertyRef Name="alumno" />
+      <PropertyRef Name="nivel" />
+      <PropertyRef Name="grado" />
+      <PropertyRef Name="concepto" />
+      <PropertyRef Name="monto" />
+    </Key>
+    <Property Name="pago_id" Type="Guid" Nullable="false" />
+    <Property Name="alumno" Type="String" Nullable="false" MaxLength="201" FixedLength="false" Unicode="true" />
+    <Property Name="nivel" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="grado" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="concepto" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="monto" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="descuento" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="recargo" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="total" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="fecha_pago" Type="DateTime" Precision="3" />
+    <Property Name="fecha_vencimiento" Type="DateTime" Precision="0" />
+    <Property Name="dias_atraso" Type="Int32" />
+    <Property Name="estado" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="VNivelGrado">
+    <Key>
+      <PropertyRef Name="GradoNivel" />
+      <PropertyRef Name="grado_id" />
+      <PropertyRef Name="nivel_id" />
+      <PropertyRef Name="Nivel" />
+      <PropertyRef Name="Grado" />
+      <PropertyRef Name="orden" />
+    </Key>
+    <Property Name="GradoNivel" Type="String" Nullable="false" MaxLength="24" FixedLength="false" Unicode="false" />
+    <Property Name="grado_id" Type="Int32" Nullable="false" />
+    <Property Name="nivel_id" Type="Int32" Nullable="false" />
+    <Property Name="Nivel" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Grado" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="orden" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VW_AlumnosBecasActivas">
+    <Key>
+      <PropertyRef Name="alumno_id" />
+      <PropertyRef Name="alumno" />
+      <PropertyRef Name="beca" />
+      <PropertyRef Name="porcentaje_aplicado" />
+      <PropertyRef Name="fecha_asignacion" />
+    </Key>
+    <Property Name="alumno_id" Type="Guid" Nullable="false" />
+    <Property Name="alumno" Type="String" Nullable="false" MaxLength="201" FixedLength="false" Unicode="true" />
+    <Property Name="beca" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="porcentaje_aplicado" Type="Decimal" Nullable="false" Precision="5" Scale="2" />
+    <Property Name="fecha_asignacion" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="fecha_vencimiento" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="VW_CapitalActual">
+    <Key>
+      <PropertyRef Name="escuela_nombre" />
+      <PropertyRef Name="efectivo_disponible" />
+      <PropertyRef Name="bancos_disponible" />
+      <PropertyRef Name="total_disponible" />
+      <PropertyRef Name="fecha" />
+      <PropertyRef Name="fecha_actualizacion" />
+      <PropertyRef Name="usuario_actualizacion" />
+    </Key>
+    <Property Name="escuela_nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="efectivo_disponible" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="bancos_disponible" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="total_disponible" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="fecha" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="fecha_actualizacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="usuario_actualizacion" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="VW_ComparacionPlanesPago">
+    <Key>
+      <PropertyRef Name="alumno_id" />
+      <PropertyRef Name="alumno" />
+      <PropertyRef Name="nivel" />
+      <PropertyRef Name="grado" />
+      <PropertyRef Name="plan_actual" />
+    </Key>
+    <Property Name="alumno_id" Type="Guid" Nullable="false" />
+    <Property Name="alumno" Type="String" Nullable="false" MaxLength="201" FixedLength="false" Unicode="true" />
+    <Property Name="nivel" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="grado" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="plan_actual" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="total_11_meses" Type="Decimal" Precision="38" Scale="2" />
+    <Property Name="total_12_meses" Type="Decimal" Precision="38" Scale="2" />
+    <Property Name="mes_sin_pago" Type="Int32" />
+  </EntityType>
+  <EntityType Name="VW_DetalleIngresos">
+    <Key>
+      <PropertyRef Name="detalle_id" />
+      <PropertyRef Name="fecha_corte" />
+      <PropertyRef Name="escuela_nombre" />
+      <PropertyRef Name="alumno_nombre" />
+      <PropertyRef Name="concepto_nombre" />
+      <PropertyRef Name="monto_original" />
+      <PropertyRef Name="descuento" />
+      <PropertyRef Name="recargo" />
+      <PropertyRef Name="monto_pagado" />
+      <PropertyRef Name="metodo_pago" />
+      <PropertyRef Name="fecha_pago" />
+      <PropertyRef Name="estado_corte" />
+    </Key>
+    <Property Name="detalle_id" Type="Guid" Nullable="false" />
+    <Property Name="fecha_corte" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="escuela_nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="alumno_nombre" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="concepto_nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="monto_original" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="descuento" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="recargo" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="monto_pagado" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="metodo_pago" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="periodo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="referencia" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="fecha_pago" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="estado_corte" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="VW_ResumenCortes">
+    <Key>
+      <PropertyRef Name="corte_id" />
+      <PropertyRef Name="escuela_nombre" />
+      <PropertyRef Name="fecha_corte" />
+      <PropertyRef Name="usuario_nombre" />
+      <PropertyRef Name="total_ingresos" />
+      <PropertyRef Name="total_gastos" />
+      <PropertyRef Name="saldo_inicial" />
+      <PropertyRef Name="saldo_final" />
+      <PropertyRef Name="diferencia" />
+      <PropertyRef Name="estado" />
+    </Key>
+    <Property Name="corte_id" Type="Guid" Nullable="false" />
+    <Property Name="escuela_nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="fecha_corte" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="usuario_nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="total_ingresos" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="total_gastos" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="saldo_inicial" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="saldo_final" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="diferencia" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="estado" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="num_ingresos" Type="Int32" />
+    <Property Name="num_gastos" Type="Int32" />
+  </EntityType>
+  <EntityType Name="VW_SeguimientoCambiosCiclo">
+    <Key>
+      <PropertyRef Name="alumno_id" />
+      <PropertyRef Name="alumno" />
+      <PropertyRef Name="nivel" />
+      <PropertyRef Name="grado_anterior" />
+      <PropertyRef Name="grado_nuevo" />
+      <PropertyRef Name="ciclo_anterior" />
+      <PropertyRef Name="plan_anterior" />
+      <PropertyRef Name="plan_nuevo" />
+      <PropertyRef Name="tipo_cambio" />
+    </Key>
+    <Property Name="alumno_id" Type="Guid" Nullable="false" />
+    <Property Name="alumno" Type="String" Nullable="false" MaxLength="201" FixedLength="false" Unicode="true" />
+    <Property Name="nivel" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="grado_anterior" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="grado_nuevo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ciclo_anterior" Type="String" Nullable="false" MaxLength="9" FixedLength="false" Unicode="true" />
+    <Property Name="ciclo_nuevo" Type="String" MaxLength="9" FixedLength="false" Unicode="true" />
+    <Property Name="plan_anterior" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="plan_nuevo" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="tipo_cambio" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK__Alumnos__grado_i__75A278F5">
+    <End Type="EscuelasSandersonSatoriModel.Grados" Role="Grados" Multiplicity="1" />
+    <End Type="EscuelasSandersonSatoriModel.Alumnos" Role="Alumnos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grados">
+        <PropertyRef Name="grado_id" />
+      </Principal>
+      <Dependent Role="Alumnos">
+        <PropertyRef Name="grado_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Alumnos__nivel_i__76969D2E">
+    <End Type="EscuelasSandersonSatoriModel.NivelesEducativos" Role="NivelesEducativos" Multiplicity="1" />
+    <End Type="EscuelasSandersonSatoriModel.Alumnos" Role="Alumnos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NivelesEducativos">
+        <PropertyRef Name="nivel_id" />
+      </Principal>
+      <Dependent Role="Alumnos">
+        <PropertyRef Name="nivel_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__AlumnosFu__alumn__797309D9">
+    <End Type="EscuelasSandersonSatoriModel.Alumnos" Role="Alumnos" Multiplicity="1" />
+    <End Type="EscuelasSandersonSatoriModel.AlumnosFutbol" Role="AlumnosFutbol" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Alumnos">
+        <PropertyRef Name="alumno_id" />
+      </Principal>
+      <Dependent Role="AlumnosFutbol">
+        <PropertyRef Name="alumno_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Historial__alumn__208CD6FA">
+    <End Type="EscuelasSandersonSatoriModel.Alumnos" Role="Alumnos" Multiplicity="1" />
+    <End Type="EscuelasSandersonSatoriModel.HistorialPlanesPago" Role="HistorialPlanesPago" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Alumnos">
+        <PropertyRef Name="alumno_id" />
+      </Principal>
+      <Dependent Role="HistorialPlanesPago">
+        <PropertyRef Name="alumno_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Historial__alumn__2FCF1A8A">
+    <End Type="EscuelasSandersonSatoriModel.Alumnos" Role="Alumnos" Multiplicity="1" />
+    <End Type="EscuelasSandersonSatoriModel.HistorialRepitencias" Role="HistorialRepitencias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Alumnos">
+        <PropertyRef Name="alumno_id" />
+      </Principal>
+      <Dependent Role="HistorialRepitencias">
+        <PropertyRef Name="alumno_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Inscripci__alumn__7F2BE32F">
+    <End Type="EscuelasSandersonSatoriModel.Alumnos" Role="Alumnos" Multiplicity="1" />
+    <End Type="EscuelasSandersonSatoriModel.InscripcionesTalleres" Role="InscripcionesTalleres" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Alumnos">
+        <PropertyRef Name="alumno_id" />
+      </Principal>
+      <Dependent Role="InscripcionesTalleres">
+        <PropertyRef Name="alumno_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Pagos__alumno_id__02084FDA">
+    <End Type="EscuelasSandersonSatoriModel.Alumnos" Role="Alumnos" Multiplicity="1" />
+    <End Type="EscuelasSandersonSatoriModel.Pagos" Role="Pagos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Alumnos">
+        <PropertyRef Name="alumno_id" />
+      </Principal>
+      <Dependent Role="Pagos">
+        <PropertyRef Name="alumno_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PersonasA__alumn__04E4BC85">
+    <End Type="EscuelasSandersonSatoriModel.Alumnos" Role="Alumnos" Multiplicity="1" />
+    <End Type="EscuelasSandersonSatoriModel.PersonasAutorizadas" Role="PersonasAutorizadas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Alumnos">
+        <PropertyRef Name="alumno_id" />
+      </Principal>
+      <Dependent Role="PersonasAutorizadas">
+        <PropertyRef Name="alumno_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tutores__alumno___07C12930">
+    <End Type="EscuelasSandersonSatoriModel.Alumnos" Role="Alumnos" Multiplicity="1" />
+    <End Type="EscuelasSandersonSatoriModel.Tutores" Role="Tutores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Alumnos">
+        <PropertyRef Name="alumno_id" />
+      </Principal>
+      <Dependent Role="Tutores">
+        <PropertyRef Name="alumno_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Alumnos_Escuelas">
+    <End Type="EscuelasSandersonSatoriModel.Escuelas" Role="Escuelas" Multiplicity="1" />
+    <End Type="EscuelasSandersonSatoriModel.Alumnos" Role="Alumnos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Escuelas">
+        <PropertyRef Name="escuela_id" />
+      </Principal>
+      <Dependent Role="Alumnos">
+        <PropertyRef Name="escuela_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AlumnosBecas_Alumnos">
+    <End Type="EscuelasSandersonSatoriModel.Alumnos" Role="Alumnos" Multiplicity="1" />
+    <End Type="EscuelasSandersonSatoriModel.AlumnosBecas" Role="AlumnosBecas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Alumnos">
+        <PropertyRef Name="alumno_id" />
+      </Principal>
+      <Dependent Role="AlumnosBecas">
+        <PropertyRef Name="alumno_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CorteCajaIngresos_Alumno">
+    <End Type="EscuelasSandersonSatoriModel.Alumnos" Role="Alumnos" Multiplicity="1" />
+    <End Type="EscuelasSandersonSatoriModel.CorteCajaIngresos" Role="CorteCajaIngresos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Alumnos">
+        <PropertyRef Name="alumno_id" />
+      </Principal>
+      <Dependent Role="CorteCajaIngresos">
+        <PropertyRef Name="alumno_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AlumnosBecas_Becas">
+    <End Type="EscuelasSandersonSatoriModel.Becas" Role="Becas" Multiplicity="1" />
+    <End Type="EscuelasSandersonSatoriModel.AlumnosBecas" Role="AlumnosBecas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Becas">
+        <PropertyRef Name="beca_id" />
+      </Principal>
+      <Dependent Role="AlumnosBecas">
+        <PropertyRef Name="beca_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__AlumnosFu__pago___32AB8735">
+    <End Type="EscuelasSandersonSatoriModel.Pagos" Role="Pagos" Multiplicity="0..1" />
+    <End Type="EscuelasSandersonSatoriModel.AlumnosFutbol" Role="AlumnosFutbol" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pagos">
+        <PropertyRef Name="pago_id" />
+      </Principal>
+      <Dependent Role="AlumnosFutbol">
+        <PropertyRef Name="pago_inscripcion_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Asistenci__alumn__339FAB6E">
+    <End Type="EscuelasSandersonSatoriModel.AlumnosFutbol" Role="AlumnosFutbol" Multiplicity="1" />
+    <End Type="EscuelasSandersonSatoriModel.AsistenciaPartidos" Role="AsistenciaPartidos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AlumnosFutbol">
+        <PropertyRef Name="alumno_futbol_id" />
+      </Principal>
+      <Dependent Role="AsistenciaPartidos">
+        <PropertyRef Name="alumno_futbol_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Asistenci__pago___3493CFA7">
+    <End Type="EscuelasSandersonSatoriModel.Pagos" Role="Pagos" Multiplicity="0..1" />
+    <End Type="EscuelasSandersonSatoriModel.AsistenciaPartidos" Role="AsistenciaPartidos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pagos">
+        <PropertyRef Name="pago_id" />
+      </Principal>
+      <Dependent Role="AsistenciaPartidos">
+        <PropertyRef Name="pago_arbitraje_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Asistenci__parti__3587F3E0">
+    <End Type="EscuelasSandersonSatoriModel.PartidosFutbol" Role="PartidosFutbol" Multiplicity="1" />
+    <End Type="EscuelasSandersonSatoriModel.AsistenciaPartidos" Role="AsistenciaPartidos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PartidosFutbol">
+        <PropertyRef Name="partido_id" />
+      </Principal>
+      <Dependent Role="AsistenciaPartidos">
+        <PropertyRef Name="partido_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Pagos__beca_id__42E1EEFE">
+    <End Type="EscuelasSandersonSatoriModel.Becas" Role="Becas" Multiplicity="0..1" />
+    <End Type="EscuelasSandersonSatoriModel.Pagos" Role="Pagos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Becas">
+        <PropertyRef Name="beca_id" />
+      </Principal>
+      <Dependent Role="Pagos">
+        <PropertyRef Name="beca_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Becas_Escuelas">
+    <End Type="EscuelasSandersonSatoriModel.Escuelas" Role="Escuelas" Multiplicity="0..1" />
+    <End Type="EscuelasSandersonSatoriModel.Becas" Role="Becas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Escuelas">
+        <PropertyRef Name="escuela_id" />
+      </Principal>
+      <Dependent Role="Becas">
+        <PropertyRef Name="escuela_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__EscuelaCo__conce__3864608B">
+    <End Type="EscuelasSandersonSatoriModel.ConceptosPago" Role="ConceptosPago" Multiplicity="1" />
+    <End Type="EscuelasSandersonSatoriModel.EscuelaConceptosPago" Role="EscuelaConceptosPago" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ConceptosPago">
+        <PropertyRef Name="concepto_id" />
+      </Principal>
+      <Dependent Role="EscuelaConceptosPago">
+        <PropertyRef Name="concepto_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Pagos__concepto___43D61337">
+    <End Type="EscuelasSandersonSatoriModel.ConceptosPago" Role="ConceptosPago" Multiplicity="1" />
+    <End Type="EscuelasSandersonSatoriModel.Pagos" Role="Pagos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ConceptosPago">
+        <PropertyRef Name="concepto_id" />
+      </Principal>
+      <Dependent Role="Pagos">
+        <PropertyRef Name="concepto_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ConceptosPago_Escuelas">
+    <End Type="EscuelasSandersonSatoriModel.Escuelas" Role="Escuelas" Multiplicity="0..1" />
+    <End Type="EscuelasSandersonSatoriModel.ConceptosPago" Role="ConceptosPago" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Escuelas">
+        <PropertyRef Name="escuela_id" />
+      </Principal>
+      <Dependent Role="ConceptosPago">
+        <PropertyRef Name="escuela_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CorteCajaIngresos_Concepto">
+    <End Type="EscuelasSandersonSatoriModel.ConceptosPago" Role="ConceptosPago" Multiplicity="1" />
+    <End Type="EscuelasSandersonSatoriModel.CorteCajaIngresos" Role="CorteCajaIngresos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ConceptosPago">
+        <PropertyRef Name="concepto_id" />
+      </Principal>
+      <Dependent Role="CorteCajaIngresos">
+        <PropertyRef Name="concepto_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CorteCajaGastos_Corte">
+    <End Type="EscuelasSandersonSatoriModel.CortesCaja" Role="CortesCaja" Multiplicity="1" />
+    <End Type="EscuelasSandersonSatoriModel.CorteCajaGastos" Role="CorteCajaGastos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CortesCaja">
+        <PropertyRef Name="corte_id" />
+      </Principal>
+      <Dependent Role="CorteCajaGastos">
+        <PropertyRef Name="corte_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CorteCajaGastos_Gasto">
+    <End Type="EscuelasSandersonSatoriModel.Gastos" Role="Gastos" Multiplicity="1" />
+    <End Type="EscuelasSandersonSatoriModel.CorteCajaGastos" Role="CorteCajaGastos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Gastos">
+        <PropertyRef Name="IdGasto" />
+      </Principal>
+      <Dependent Role="CorteCajaGastos">
+        <PropertyRef Name="gasto_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CorteCajaIngresos_Corte">
+    <End Type="EscuelasSandersonSatoriModel.CortesCaja" Role="CortesCaja" Multiplicity="1" />
+    <End Type="EscuelasSandersonSatoriModel.CorteCajaIngresos" Role="CorteCajaIngresos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CortesCaja">
+        <PropertyRef Name="corte_id" />
+      </Principal>
+      <Dependent Role="CorteCajaIngresos">
+        <PropertyRef Name="corte_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CorteCajaIngresos_Pago">
+    <End Type="EscuelasSandersonSatoriModel.Pagos" Role="Pagos" Multiplicity="1" />
+    <End Type="EscuelasSandersonSatoriModel.CorteCajaIngresos" Role="CorteCajaIngresos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pagos">
+        <PropertyRef Name="pago_id" />
+      </Principal>
+      <Dependent Role="CorteCajaIngresos">
+        <PropertyRef Name="pago_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CortesCaja_Escuelas">
+    <End Type="EscuelasSandersonSatoriModel.Escuelas" Role="Escuelas" Multiplicity="1" />
+    <End Type="EscuelasSandersonSatoriModel.CortesCaja" Role="CortesCaja" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Escuelas">
+        <PropertyRef Name="escuela_id" />
+      </Principal>
+      <Dependent Role="CortesCaja">
+        <PropertyRef Name="escuela_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CortesCaja_Usuarios">
+    <End Type="EscuelasSandersonSatoriModel.Usuarios" Role="Usuarios" Multiplicity="1" />
+    <End Type="EscuelasSandersonSatoriModel.CortesCaja" Role="CortesCaja" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="usuario_id" />
+      </Principal>
+      <Dependent Role="CortesCaja">
+        <PropertyRef Name="usuario_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__EscuelaCo__escue__395884C4">
+    <End Type="EscuelasSandersonSatoriModel.Escuelas" Role="Escuelas" Multiplicity="1" />
+    <End Type="EscuelasSandersonSatoriModel.EscuelaConceptosPago" Role="EscuelaConceptosPago" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Escuelas">
+        <PropertyRef Name="escuela_id" />
+      </Principal>
+      <Dependent Role="EscuelaConceptosPago">
+        <PropertyRef Name="escuela_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Gastos_Escuelas">
+    <End Type="EscuelasSandersonSatoriModel.Escuelas" Role="Escuelas" Multiplicity="0..1" />
+    <End Type="EscuelasSandersonSatoriModel.Gastos" Role="Gastos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Escuelas">
+        <PropertyRef Name="escuela_id" />
+      </Principal>
+      <Dependent Role="Gastos">
+        <PropertyRef Name="IdEscuela" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pagos_Escuelas">
+    <End Type="EscuelasSandersonSatoriModel.Escuelas" Role="Escuelas" Multiplicity="0..1" />
+    <End Type="EscuelasSandersonSatoriModel.Pagos" Role="Pagos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Escuelas">
+        <PropertyRef Name="escuela_id" />
+      </Principal>
+      <Dependent Role="Pagos">
+        <PropertyRef Name="escuela_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ResumenDiario_Escuela">
+    <End Type="EscuelasSandersonSatoriModel.Escuelas" Role="Escuelas" Multiplicity="1" />
+    <End Type="EscuelasSandersonSatoriModel.ResumenDiario" Role="ResumenDiario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Escuelas">
+        <PropertyRef Name="escuela_id" />
+      </Principal>
+      <Dependent Role="ResumenDiario">
+        <PropertyRef Name="escuela_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuariosEscuelas_Escuelas">
+    <End Type="EscuelasSandersonSatoriModel.Escuelas" Role="Escuelas" Multiplicity="1" />
+    <End Type="EscuelasSandersonSatoriModel.UsuariosEscuelas" Role="UsuariosEscuelas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Escuelas">
+        <PropertyRef Name="escuela_id" />
+      </Principal>
+      <Dependent Role="UsuariosEscuelas">
+        <PropertyRef Name="escuela_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EvidenciaGasto_Gastos">
+    <End Type="EscuelasSandersonSatoriModel.Gastos" Role="Gastos" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="EscuelasSandersonSatoriModel.EvidenciaGasto" Role="EvidenciaGasto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Gastos">
+        <PropertyRef Name="IdGasto" />
+      </Principal>
+      <Dependent Role="EvidenciaGasto">
+        <PropertyRef Name="IdGasto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Grados__nivel_id__3C34F16F">
+    <End Type="EscuelasSandersonSatoriModel.NivelesEducativos" Role="NivelesEducativos" Multiplicity="1" />
+    <End Type="EscuelasSandersonSatoriModel.Grados" Role="Grados" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NivelesEducativos">
+        <PropertyRef Name="nivel_id" />
+      </Principal>
+      <Dependent Role="Grados">
+        <PropertyRef Name="nivel_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Inscripci__pago___40058253">
+    <End Type="EscuelasSandersonSatoriModel.Pagos" Role="Pagos" Multiplicity="0..1" />
+    <End Type="EscuelasSandersonSatoriModel.InscripcionesTalleres" Role="InscripcionesTalleres" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pagos">
+        <PropertyRef Name="pago_id" />
+      </Principal>
+      <Dependent Role="InscripcionesTalleres">
+        <PropertyRef Name="pago_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Inscripci__talle__40F9A68C">
+    <End Type="EscuelasSandersonSatoriModel.Talleres" Role="Talleres" Multiplicity="1" />
+    <End Type="EscuelasSandersonSatoriModel.InscripcionesTalleres" Role="InscripcionesTalleres" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Talleres">
+        <PropertyRef Name="taller_id" />
+      </Principal>
+      <Dependent Role="InscripcionesTalleres">
+        <PropertyRef Name="taller_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Usuarios__rol_id__498EEC8D">
+    <End Type="EscuelasSandersonSatoriModel.Roles" Role="Roles" Multiplicity="1" />
+    <End Type="EscuelasSandersonSatoriModel.Usuarios" Role="Usuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="rol_id" />
+      </Principal>
+      <Dependent Role="Usuarios">
+        <PropertyRef Name="rol_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuariosEscuelas_Usuarios">
+    <End Type="EscuelasSandersonSatoriModel.Usuarios" Role="Usuarios" Multiplicity="1" />
+    <End Type="EscuelasSandersonSatoriModel.UsuariosEscuelas" Role="UsuariosEscuelas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="usuario_id" />
+      </Principal>
+      <Dependent Role="UsuariosEscuelas">
+        <PropertyRef Name="usuario_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RolesPermisos">
+    <End Type="EscuelasSandersonSatoriModel.Permisos" Role="Permisos" Multiplicity="*" />
+    <End Type="EscuelasSandersonSatoriModel.Roles" Role="Roles" Multiplicity="*" />
+  </Association>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+</Schema>

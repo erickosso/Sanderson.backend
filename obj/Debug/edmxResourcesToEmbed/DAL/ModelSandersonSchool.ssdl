@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBSandersonSchoolModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="C_CicloEscolar">
+    <Key>
+      <PropertyRef Name="IdCicloEscolar" />
+    </Key>
+    <Property Name="IdCicloEscolar" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdEscuela" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FechaInicio" Type="datetime" Nullable="false" />
+    <Property Name="FechaFin" Type="datetime" Nullable="false" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="C_PlanesPago">
+    <Key>
+      <PropertyRef Name="IdPlan" />
+    </Key>
+    <Property Name="IdPlan" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="50" />
+    <Property Name="NumMeses" Type="int" />
+  </EntityType>
+  <EntityType Name="C_Rol">
+    <Key>
+      <PropertyRef Name="IdRol" />
+    </Key>
+    <Property Name="IdRol" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="NombreRol" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="C_Talleres">
+    <Key>
+      <PropertyRef Name="IdTaller" />
+    </Key>
+    <Property Name="IdTaller" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="100" />
+    <Property Name="CostoMensual" Type="decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="C_TiposBeca">
+    <Key>
+      <PropertyRef Name="IdBeca" />
+    </Key>
+    <Property Name="IdBeca" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="50" />
+    <Property Name="PorcentajeDescuento" Type="int" />
+  </EntityType>
+  <EntityType Name="C_TiposGasto">
+    <Key>
+      <PropertyRef Name="IdTipoGasto" />
+    </Key>
+    <Property Name="IdTipoGasto" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="T_Alumnos">
+    <Key>
+      <PropertyRef Name="IdAlumno" />
+    </Key>
+    <Property Name="IdAlumno" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="NombreCompleto" Type="nvarchar" MaxLength="100" />
+    <Property Name="FechaNacimiento" Type="datetime" />
+    <Property Name="CURP" Type="nvarchar" MaxLength="18" />
+    <Property Name="IdNivel" Type="uniqueidentifier" />
+    <Property Name="Grado" Type="int" />
+    <Property Name="Alergias" Type="nvarchar" MaxLength="255" />
+    <Property Name="Observaciones" Type="nvarchar" MaxLength="255" />
+    <Property Name="IdEscuela" Type="uniqueidentifier" />
+    <Property Name="IdCicloEscolar" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Activo" Type="bit" />
+    <Property Name="FechaEliminacion" Type="smalldatetime" />
+    <Property Name="UsuarioElimina" Type="varchar" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="T_BecasAlumno">
+    <Key>
+      <PropertyRef Name="IdAlumno" />
+      <PropertyRef Name="IdBeca" />
+      <PropertyRef Name="IdCicloEscolar" />
+    </Key>
+    <Property Name="IdAlumno" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdBeca" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdCicloEscolar" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_Escuela">
+    <Key>
+      <PropertyRef Name="IdEscuela" />
+    </Key>
+    <Property Name="IdEscuela" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="TipoEscuela" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Activa" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_Gastos">
+    <Key>
+      <PropertyRef Name="IdGasto" />
+    </Key>
+    <Property Name="IdGasto" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdTipoGasto" Type="uniqueidentifier" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="255" />
+    <Property Name="Monto" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="Fecha" Type="datetime" />
+    <Property Name="SoloVisibleDirector" Type="bit" />
+  </EntityType>
+  <EntityType Name="T_Inscripciones">
+    <Key>
+      <PropertyRef Name="IdInscripcion" />
+    </Key>
+    <Property Name="IdInscripcion" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdAlumno" Type="uniqueidentifier" />
+    <Property Name="AñoEscolar" Type="int" />
+    <Property Name="MontoBase" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="DescuentoAplicado" Type="decimal" Precision="5" Scale="2" />
+    <Property Name="FechaInscripcion" Type="datetime" />
+    <Property Name="IdCicloEscolar" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_NivelesAcademicos">
+    <Key>
+      <PropertyRef Name="IdNivel" />
+    </Key>
+    <Property Name="IdNivel" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="50" />
+    <Property Name="IdEscuela" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="T_Usuario">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdRol" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdEscuela" Type="uniqueidentifier" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Usuario" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ContraseñaHash" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="Correo" Type="nvarchar" MaxLength="100" />
+    <Property Name="Telefono" Type="nvarchar" MaxLength="20" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+    <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+    <Property Name="Cargo" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <Association Name="FK__T_Alumnos__Nivel__3B75D760">
+    <End Role="T_NivelesAcademicos" Type="Self.T_NivelesAcademicos" Multiplicity="0..1" />
+    <End Role="T_Alumnos" Type="Self.T_Alumnos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_NivelesAcademicos">
+        <PropertyRef Name="IdNivel" />
+      </Principal>
+      <Dependent Role="T_Alumnos">
+        <PropertyRef Name="IdNivel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__T_BecasAl__IdAlu__4BAC3F29">
+    <End Role="T_Alumnos" Type="Self.T_Alumnos" Multiplicity="1" />
+    <End Role="T_BecasAlumno" Type="Self.T_BecasAlumno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Alumnos">
+        <PropertyRef Name="IdAlumno" />
+      </Principal>
+      <Dependent Role="T_BecasAlumno">
+        <PropertyRef Name="IdAlumno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__T_BecasAl__IdBec__4CA06362">
+    <End Role="C_TiposBeca" Type="Self.C_TiposBeca" Multiplicity="1" />
+    <End Role="T_BecasAlumno" Type="Self.T_BecasAlumno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="C_TiposBeca">
+        <PropertyRef Name="IdBeca" />
+      </Principal>
+      <Dependent Role="T_BecasAlumno">
+        <PropertyRef Name="IdBeca" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__T_Gastos__IdTipo__6FE99F9F">
+    <End Role="C_TiposGasto" Type="Self.C_TiposGasto" Multiplicity="0..1" />
+    <End Role="T_Gastos" Type="Self.T_Gastos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="C_TiposGasto">
+        <PropertyRef Name="IdTipoGasto" />
+      </Principal>
+      <Dependent Role="T_Gastos">
+        <PropertyRef Name="IdTipoGasto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__T_Inscrip__IdAlu__5070F446">
+    <End Role="T_Alumnos" Type="Self.T_Alumnos" Multiplicity="0..1" />
+    <End Role="T_Inscripciones" Type="Self.T_Inscripciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Alumnos">
+        <PropertyRef Name="IdAlumno" />
+      </Principal>
+      <Dependent Role="T_Inscripciones">
+        <PropertyRef Name="IdAlumno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_C_CicloEscolar_T_Escuela">
+    <End Role="T_Escuela" Type="Self.T_Escuela" Multiplicity="1" />
+    <End Role="C_CicloEscolar" Type="Self.C_CicloEscolar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Escuela">
+        <PropertyRef Name="IdEscuela" />
+      </Principal>
+      <Dependent Role="C_CicloEscolar">
+        <PropertyRef Name="IdEscuela" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_Alumno_C_CicloEscolar">
+    <End Role="C_CicloEscolar" Type="Self.C_CicloEscolar" Multiplicity="1" />
+    <End Role="T_Alumnos" Type="Self.T_Alumnos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="C_CicloEscolar">
+        <PropertyRef Name="IdCicloEscolar" />
+      </Principal>
+      <Dependent Role="T_Alumnos">
+        <PropertyRef Name="IdCicloEscolar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_Alumno_T_Escuela">
+    <End Role="T_Escuela" Type="Self.T_Escuela" Multiplicity="0..1" />
+    <End Role="T_Alumnos" Type="Self.T_Alumnos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Escuela">
+        <PropertyRef Name="IdEscuela" />
+      </Principal>
+      <Dependent Role="T_Alumnos">
+        <PropertyRef Name="IdEscuela" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_Beca_C_CicloEscolar">
+    <End Role="C_CicloEscolar" Type="Self.C_CicloEscolar" Multiplicity="1" />
+    <End Role="T_BecasAlumno" Type="Self.T_BecasAlumno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="C_CicloEscolar">
+        <PropertyRef Name="IdCicloEscolar" />
+      </Principal>
+      <Dependent Role="T_BecasAlumno">
+        <PropertyRef Name="IdCicloEscolar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_Inscripcion_C_CicloEscolar">
+    <End Role="C_CicloEscolar" Type="Self.C_CicloEscolar" Multiplicity="1" />
+    <End Role="T_Inscripciones" Type="Self.T_Inscripciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="C_CicloEscolar">
+        <PropertyRef Name="IdCicloEscolar" />
+      </Principal>
+      <Dependent Role="T_Inscripciones">
+        <PropertyRef Name="IdCicloEscolar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_Usuario_C_Rol">
+    <End Role="C_Rol" Type="Self.C_Rol" Multiplicity="1" />
+    <End Role="T_Usuario" Type="Self.T_Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="C_Rol">
+        <PropertyRef Name="IdRol" />
+      </Principal>
+      <Dependent Role="T_Usuario">
+        <PropertyRef Name="IdRol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_Usuario_T_Escuela">
+    <End Role="T_Escuela" Type="Self.T_Escuela" Multiplicity="0..1" />
+    <End Role="T_Usuario" Type="Self.T_Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Escuela">
+        <PropertyRef Name="IdEscuela" />
+      </Principal>
+      <Dependent Role="T_Usuario">
+        <PropertyRef Name="IdEscuela" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DBSandersonSchoolModelStoreContainer">
+    <EntitySet Name="C_CicloEscolar" EntityType="Self.C_CicloEscolar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="C_PlanesPago" EntityType="Self.C_PlanesPago" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="C_Rol" EntityType="Self.C_Rol" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="C_Talleres" EntityType="Self.C_Talleres" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="C_TiposBeca" EntityType="Self.C_TiposBeca" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="C_TiposGasto" EntityType="Self.C_TiposGasto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Alumnos" EntityType="Self.T_Alumnos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_BecasAlumno" EntityType="Self.T_BecasAlumno" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Escuela" EntityType="Self.T_Escuela" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Gastos" EntityType="Self.T_Gastos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Inscripciones" EntityType="Self.T_Inscripciones" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_NivelesAcademicos" EntityType="Self.T_NivelesAcademicos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Usuario" EntityType="Self.T_Usuario" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__T_Alumnos__Nivel__3B75D760" Association="Self.FK__T_Alumnos__Nivel__3B75D760">
+      <End Role="T_NivelesAcademicos" EntitySet="T_NivelesAcademicos" />
+      <End Role="T_Alumnos" EntitySet="T_Alumnos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__T_BecasAl__IdAlu__4BAC3F29" Association="Self.FK__T_BecasAl__IdAlu__4BAC3F29">
+      <End Role="T_Alumnos" EntitySet="T_Alumnos" />
+      <End Role="T_BecasAlumno" EntitySet="T_BecasAlumno" />
+    </AssociationSet>
+    <AssociationSet Name="FK__T_BecasAl__IdBec__4CA06362" Association="Self.FK__T_BecasAl__IdBec__4CA06362">
+      <End Role="C_TiposBeca" EntitySet="C_TiposBeca" />
+      <End Role="T_BecasAlumno" EntitySet="T_BecasAlumno" />
+    </AssociationSet>
+    <AssociationSet Name="FK__T_Gastos__IdTipo__6FE99F9F" Association="Self.FK__T_Gastos__IdTipo__6FE99F9F">
+      <End Role="C_TiposGasto" EntitySet="C_TiposGasto" />
+      <End Role="T_Gastos" EntitySet="T_Gastos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__T_Inscrip__IdAlu__5070F446" Association="Self.FK__T_Inscrip__IdAlu__5070F446">
+      <End Role="T_Alumnos" EntitySet="T_Alumnos" />
+      <End Role="T_Inscripciones" EntitySet="T_Inscripciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_C_CicloEscolar_T_Escuela" Association="Self.FK_C_CicloEscolar_T_Escuela">
+      <End Role="T_Escuela" EntitySet="T_Escuela" />
+      <End Role="C_CicloEscolar" EntitySet="C_CicloEscolar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_Alumno_C_CicloEscolar" Association="Self.FK_T_Alumno_C_CicloEscolar">
+      <End Role="C_CicloEscolar" EntitySet="C_CicloEscolar" />
+      <End Role="T_Alumnos" EntitySet="T_Alumnos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_Alumno_T_Escuela" Association="Self.FK_T_Alumno_T_Escuela">
+      <End Role="T_Escuela" EntitySet="T_Escuela" />
+      <End Role="T_Alumnos" EntitySet="T_Alumnos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_Beca_C_CicloEscolar" Association="Self.FK_T_Beca_C_CicloEscolar">
+      <End Role="C_CicloEscolar" EntitySet="C_CicloEscolar" />
+      <End Role="T_BecasAlumno" EntitySet="T_BecasAlumno" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_Inscripcion_C_CicloEscolar" Association="Self.FK_T_Inscripcion_C_CicloEscolar">
+      <End Role="C_CicloEscolar" EntitySet="C_CicloEscolar" />
+      <End Role="T_Inscripciones" EntitySet="T_Inscripciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_Usuario_C_Rol" Association="Self.FK_T_Usuario_C_Rol">
+      <End Role="C_Rol" EntitySet="C_Rol" />
+      <End Role="T_Usuario" EntitySet="T_Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_Usuario_T_Escuela" Association="Self.FK_T_Usuario_T_Escuela">
+      <End Role="T_Escuela" EntitySet="T_Escuela" />
+      <End Role="T_Usuario" EntitySet="T_Usuario" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

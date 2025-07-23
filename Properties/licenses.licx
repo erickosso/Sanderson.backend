@@ -1,0 +1,14 @@
+DevExpress.Web.ASPxLabel, DevExpress.Web.v21.1, Version=21.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.Web.ASPxPopupControl, DevExpress.Web.v21.1, Version=21.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.Web.ASPxCallbackPanel, DevExpress.Web.v21.1, Version=21.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.Web.ASPxGridView, DevExpress.Web.v21.1, Version=21.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.Web.ASPxButton, DevExpress.Web.v21.1, Version=21.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.Web.ASPxMemo, DevExpress.Web.v21.1, Version=21.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.Web.ASPxSpinEdit, DevExpress.Web.v21.1, Version=21.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.Web.ASPxDateEdit, DevExpress.Web.v21.1, Version=21.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.Web.ASPxComboBox, DevExpress.Web.v21.1, Version=21.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.Web.ASPxFormLayout, DevExpress.Web.v21.1, Version=21.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.Web.ASPxPageControl, DevExpress.Web.v21.1, Version=21.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.Web.ASPxRoundPanel, DevExpress.Web.v21.1, Version=21.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.Data.Linq.EntityServerModeDataSource, DevExpress.Web.v21.1, Version=21.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v21.1, Version=21.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a

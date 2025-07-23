@@ -1,0 +1,262 @@
+﻿
+:root {
+    --main-purple: #9164cc; /* lila con más púrpura */
+    --dark-purple: #7542b5; /* púrpura más notorio */
+    --accent: #ffcb05;
+    --background: #f8f9fc;
+    --text-dark: #343a40;
+    --text-light: #ffffff;
+}
+
+/* Fondo principal del login */
+body.bg-gradient-primary {
+    background: linear-gradient(135deg, var(--main-purple), var(--dark-purple));
+}
+
+/* Tarjeta de login */
+.card {
+    border-radius: 1rem;
+    border: none;
+}
+
+/* Imagen lateral */
+.bg-login-image {
+    background: url('../img/login-side-theme.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Botón primario */
+.btn-primary {
+    background-color: var(--main-purple);
+    border-color: var(--main-purple);
+    color: #fff;
+}
+
+    .btn-primary:hover {
+        background-color: var(--dark-purple);
+        border-color: var(--dark-purple);
+    }
+
+/* Etiquetas y entradas */
+label, .form-control {
+    color: var(--text-dark);
+}
+
+.form-control {
+    border-radius: 0.5rem;
+}
+
+/* Título */
+h1 {
+    color: var(--main-purple);
+    font-weight: 700;
+}
+
+/* Error label */
+#lblError {
+    color: red;
+    margin-top: 0.5rem;
+}
+
+/* Sidebar en púrpura */
+.bg-gradient-primary {
+    background-color: var(--main-purple) !important;
+    background-image: linear-gradient(180deg, var(--main-purple) 10%, var(--dark-purple) 100%) !important;
+    background-size: cover;
+}
+
+/* Botones */
+.btn-primary {
+    background-color: var(--main-purple);
+    border-color: var(--main-purple);
+}
+
+    .btn-primary:hover {
+        background-color: var(--dark-purple);
+        border-color: #643aa4;
+    }
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-success {
+    background-color: #198754;
+    border-color: #198754;
+}
+
+.btn-info {
+    background-color: #0dcaf0;
+    border-color: #0dcaf0;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #000;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+/* Scroll-to-top button */
+.scroll-to-top {
+    background: var(--main-purple);
+}
+
+    .scroll-to-top:hover {
+        background: var(--dark-purple);
+    }
+
+/* Nav active link */
+.nav-item.active .nav-link,
+.nav-link:hover {
+    color: #fff !important;
+    background-color: var(--dark-purple) !important;
+}
+
+/* Badges */
+.badge-primary {
+    background-color: var(--main-purple);
+}
+
+.badge-success {
+    background-color: #198754;
+}
+
+.badge-info {
+    background-color: #0dcaf0;
+}
+
+.badge-warning {
+    background-color: #ffc107;
+    color: #000;
+}
+
+.badge-danger {
+    background-color: #dc3545;
+}
+
+/* Icon-circle */
+.icon-circle.bg-primary {
+    background-color: var(--main-purple) !important;
+}
+
+.icon-circle.bg-success {
+    background-color: #198754 !important;
+}
+
+.icon-circle.bg-info {
+    background-color: #0dcaf0 !important;
+}
+
+.icon-circle.bg-warning {
+    background-color: #ffc107 !important;
+}
+
+.icon-circle.bg-danger {
+    background-color: #dc3545 !important;
+}
+
+/* Texto y enlaces */
+.text-primary {
+    color: var(--main-purple) !important;
+}
+
+.text-success {
+    color: #198754 !important;
+}
+
+.text-info {
+    color: #0dcaf0 !important;
+}
+
+.text-warning {
+    color: #ffc107 !important;
+}
+
+.text-danger {
+    color: #dc3545 !important;
+}
+
+a {
+    color: var(--main-purple);
+}
+
+    a:hover {
+        color: var(--dark-purple);
+    }
+
+/* Footer */
+.sticky-footer {
+    background-color: #f8f9fc;
+    border-top: 1px solid #dee2e6;
+}
+
+/* Header y topbar */
+.bg-white {
+    background-color: #ffffff !important;
+}
+
+.topbar .nav-item .nav-link {
+    color: var(--main-purple);
+}
+
+    .topbar .nav-item .nav-link:hover {
+        color: var(--dark-purple);
+    }
+
+#content-wrapper {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+#content {
+    flex: 1;
+    width: 100%;
+    transition: all 0.3s;
+}
+
+.container-fluid {
+    padding: 0 15px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Sidebar colapsado */
+.sidebar-toggled #content {
+    width: 100%;
+}
+
+body #wrapper #content-wrapper {
+    background-color: #f8f9fc;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+    body #wrapper #content-wrapper #content {
+        flex: 1 0 auto;
+    }
+
+/* Botón lila adicional */
+.btn-lila {
+    background-color: #9164cc;
+    color: white;
+    border: none;
+}
+
+    .btn-lila:hover {
+        background-color: #7542b5;
+        color: white;
+    }
+
+.border-lila {
+    border-color: #9164cc !important;
+}
+
+

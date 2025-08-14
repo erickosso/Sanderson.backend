@@ -24,6 +24,12 @@ namespace sanderson.backend.Utils
             {
                 return System.Configuration.ConfigurationManager.AppSettings["FolderArchivos"];
             }
+        }  public static string BaseUrl
+        {
+            get
+            {
+                return System.Configuration.ConfigurationManager.AppSettings["BaseUrl"];
+            }
         }
     }
 }

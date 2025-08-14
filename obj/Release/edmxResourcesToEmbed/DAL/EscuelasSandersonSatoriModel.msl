@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="EscuelasSandersonSatoriModelStoreContainer" CdmEntityContainer="EscuelasSandersonSatoriEntities">
-    <FunctionImportMapping FunctionImportName="sp_RegistrarPago" FunctionName="EscuelasSandersonSatoriModel.Store.sp_RegistrarPago" />
     <FunctionImportMapping FunctionImportName="sp_CambiarPlanPago" FunctionName="EscuelasSandersonSatoriModel.Store.sp_CambiarPlanPago" />
     <FunctionImportMapping FunctionImportName="sp_GenerarColegiaturasMensuales" FunctionName="EscuelasSandersonSatoriModel.Store.sp_GenerarColegiaturasMensuales" />
     <FunctionImportMapping FunctionImportName="sp_MarcarRepitencia" FunctionName="EscuelasSandersonSatoriModel.Store.sp_MarcarRepitencia" />
@@ -106,6 +105,61 @@
           <ScalarProperty Name="descripcion" ColumnName="descripcion" />
           <ScalarProperty Name="nombre" ColumnName="nombre" />
           <ScalarProperty Name="concepto_id" ColumnName="concepto_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CorteCajaGastos">
+      <EntityTypeMapping TypeName="EscuelasSandersonSatoriModel.CorteCajaGastos">
+        <MappingFragment StoreEntitySet="CorteCajaGastos">
+          <ScalarProperty Name="usuario_registro" ColumnName="usuario_registro" />
+          <ScalarProperty Name="fecha_gasto" ColumnName="fecha_gasto" />
+          <ScalarProperty Name="es_gasto_general" ColumnName="es_gasto_general" />
+          <ScalarProperty Name="justificacion" ColumnName="justificacion" />
+          <ScalarProperty Name="tipo_gasto" ColumnName="tipo_gasto" />
+          <ScalarProperty Name="monto" ColumnName="monto" />
+          <ScalarProperty Name="concepto" ColumnName="concepto" />
+          <ScalarProperty Name="gasto_id" ColumnName="gasto_id" />
+          <ScalarProperty Name="corte_id" ColumnName="corte_id" />
+          <ScalarProperty Name="detalle_id" ColumnName="detalle_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CorteCajaIngresos">
+      <EntityTypeMapping TypeName="EscuelasSandersonSatoriModel.CorteCajaIngresos">
+        <MappingFragment StoreEntitySet="CorteCajaIngresos">
+          <ScalarProperty Name="fecha_pago" ColumnName="fecha_pago" />
+          <ScalarProperty Name="referencia" ColumnName="referencia" />
+          <ScalarProperty Name="periodo" ColumnName="periodo" />
+          <ScalarProperty Name="metodo_pago" ColumnName="metodo_pago" />
+          <ScalarProperty Name="monto_pagado" ColumnName="monto_pagado" />
+          <ScalarProperty Name="recargo" ColumnName="recargo" />
+          <ScalarProperty Name="descuento" ColumnName="descuento" />
+          <ScalarProperty Name="monto_original" ColumnName="monto_original" />
+          <ScalarProperty Name="concepto_nombre" ColumnName="concepto_nombre" />
+          <ScalarProperty Name="alumno_nombre" ColumnName="alumno_nombre" />
+          <ScalarProperty Name="concepto_id" ColumnName="concepto_id" />
+          <ScalarProperty Name="alumno_id" ColumnName="alumno_id" />
+          <ScalarProperty Name="pago_id" ColumnName="pago_id" />
+          <ScalarProperty Name="corte_id" ColumnName="corte_id" />
+          <ScalarProperty Name="detalle_id" ColumnName="detalle_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CortesCaja">
+      <EntityTypeMapping TypeName="EscuelasSandersonSatoriModel.CortesCaja">
+        <MappingFragment StoreEntitySet="CortesCaja">
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="observaciones" ColumnName="observaciones" />
+          <ScalarProperty Name="saldo_final" ColumnName="saldo_final" />
+          <ScalarProperty Name="saldo_inicial" ColumnName="saldo_inicial" />
+          <ScalarProperty Name="total_gastos" ColumnName="total_gastos" />
+          <ScalarProperty Name="total_ingresos" ColumnName="total_ingresos" />
+          <ScalarProperty Name="usuario_id" ColumnName="usuario_id" />
+          <ScalarProperty Name="hora_fin" ColumnName="hora_fin" />
+          <ScalarProperty Name="hora_inicio" ColumnName="hora_inicio" />
+          <ScalarProperty Name="fecha_corte" ColumnName="fecha_corte" />
+          <ScalarProperty Name="escuela_id" ColumnName="escuela_id" />
+          <ScalarProperty Name="corte_id" ColumnName="corte_id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -295,12 +349,48 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="ResumenDiario">
+      <EntityTypeMapping TypeName="EscuelasSandersonSatoriModel.ResumenDiario">
+        <MappingFragment StoreEntitySet="ResumenDiario">
+          <ScalarProperty Name="fecha_actualizacion" ColumnName="fecha_actualizacion" />
+          <ScalarProperty Name="numero_cortes" ColumnName="numero_cortes" />
+          <ScalarProperty Name="numero_gastos" ColumnName="numero_gastos" />
+          <ScalarProperty Name="numero_pagos" ColumnName="numero_pagos" />
+          <ScalarProperty Name="ingresos_otros" ColumnName="ingresos_otros" />
+          <ScalarProperty Name="ingresos_talleres" ColumnName="ingresos_talleres" />
+          <ScalarProperty Name="ingresos_uniformes" ColumnName="ingresos_uniformes" />
+          <ScalarProperty Name="ingresos_inscripcion" ColumnName="ingresos_inscripcion" />
+          <ScalarProperty Name="ingresos_colegiatura" ColumnName="ingresos_colegiatura" />
+          <ScalarProperty Name="ingresos_cheque" ColumnName="ingresos_cheque" />
+          <ScalarProperty Name="ingresos_transferencia" ColumnName="ingresos_transferencia" />
+          <ScalarProperty Name="ingresos_tarjeta" ColumnName="ingresos_tarjeta" />
+          <ScalarProperty Name="ingresos_efectivo" ColumnName="ingresos_efectivo" />
+          <ScalarProperty Name="saldo_neto" ColumnName="saldo_neto" />
+          <ScalarProperty Name="total_gastos" ColumnName="total_gastos" />
+          <ScalarProperty Name="total_ingresos" ColumnName="total_ingresos" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="escuela_id" ColumnName="escuela_id" />
+          <ScalarProperty Name="resumen_id" ColumnName="resumen_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Roles">
       <EntityTypeMapping TypeName="EscuelasSandersonSatoriModel.Roles">
         <MappingFragment StoreEntitySet="Roles">
           <ScalarProperty Name="descripcion" ColumnName="descripcion" />
           <ScalarProperty Name="nombre" ColumnName="nombre" />
           <ScalarProperty Name="rol_id" ColumnName="rol_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="EscuelasSandersonSatoriModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -380,6 +470,77 @@
           <ScalarProperty Name="escuela_id" ColumnName="escuela_id" />
           <ScalarProperty Name="usuario_id" ColumnName="usuario_id" />
           <ScalarProperty Name="usuario_escuela_id" ColumnName="usuario_escuela_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GastosNoRegistrados">
+      <EntityTypeMapping TypeName="EscuelasSandersonSatoriModel.GastosNoRegistrados">
+        <MappingFragment StoreEntitySet="GastosNoRegistrados">
+          <ScalarProperty Name="gasto_id" ColumnName="gasto_id" />
+          <ScalarProperty Name="detalle_id" ColumnName="detalle_id" />
+          <ScalarProperty Name="corte_id" ColumnName="corte_id" />
+          <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="UsuarioRegistro" ColumnName="UsuarioRegistro" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+          <ScalarProperty Name="FechaGasto" ColumnName="FechaGasto" />
+          <ScalarProperty Name="EsGastoGeneral" ColumnName="EsGastoGeneral" />
+          <ScalarProperty Name="Justificacion" ColumnName="Justificacion" />
+          <ScalarProperty Name="Monto" ColumnName="Monto" />
+          <ScalarProperty Name="Concepto" ColumnName="Concepto" />
+          <ScalarProperty Name="IdTipoGasto" ColumnName="IdTipoGasto" />
+          <ScalarProperty Name="IdEscuela" ColumnName="IdEscuela" />
+          <ScalarProperty Name="IdGasto" ColumnName="IdGasto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IngresosNoRegistrados">
+      <EntityTypeMapping TypeName="EscuelasSandersonSatoriModel.IngresosNoRegistrados">
+        <MappingFragment StoreEntitySet="IngresosNoRegistrados">
+          <ScalarProperty Name="monto_pagado" ColumnName="monto_pagado" />
+          <ScalarProperty Name="ciclo_escolar" ColumnName="ciclo_escolar" />
+          <ScalarProperty Name="escuela_id" ColumnName="escuela_id" />
+          <ScalarProperty Name="usuario_registro" ColumnName="usuario_registro" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="observaciones" ColumnName="observaciones" />
+          <ScalarProperty Name="referencia" ColumnName="referencia" />
+          <ScalarProperty Name="metodo_pago" ColumnName="metodo_pago" />
+          <ScalarProperty Name="periodo" ColumnName="periodo" />
+          <ScalarProperty Name="fecha_vencimiento" ColumnName="fecha_vencimiento" />
+          <ScalarProperty Name="fecha_aplicacion" ColumnName="fecha_aplicacion" />
+          <ScalarProperty Name="fecha_pago" ColumnName="fecha_pago" />
+          <ScalarProperty Name="beca_id" ColumnName="beca_id" />
+          <ScalarProperty Name="recargo" ColumnName="recargo" />
+          <ScalarProperty Name="descuento" ColumnName="descuento" />
+          <ScalarProperty Name="monto" ColumnName="monto" />
+          <ScalarProperty Name="concepto_id" ColumnName="concepto_id" />
+          <ScalarProperty Name="alumno_id" ColumnName="alumno_id" />
+          <ScalarProperty Name="pago_id" ColumnName="pago_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="V_CorteCaja">
+      <EntityTypeMapping TypeName="EscuelasSandersonSatoriModel.V_CorteCaja">
+        <MappingFragment StoreEntitySet="V_CorteCaja">
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="NombreUsuario" ColumnName="NombreUsuario" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="director" ColumnName="director" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="EscuelaNombre" ColumnName="EscuelaNombre" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="observaciones" ColumnName="observaciones" />
+          <ScalarProperty Name="saldo_final" ColumnName="saldo_final" />
+          <ScalarProperty Name="saldo_inicial" ColumnName="saldo_inicial" />
+          <ScalarProperty Name="total_gastos" ColumnName="total_gastos" />
+          <ScalarProperty Name="total_ingresos" ColumnName="total_ingresos" />
+          <ScalarProperty Name="usuario_id" ColumnName="usuario_id" />
+          <ScalarProperty Name="hora_fin" ColumnName="hora_fin" />
+          <ScalarProperty Name="hora_inicio" ColumnName="hora_inicio" />
+          <ScalarProperty Name="fecha_corte" ColumnName="fecha_corte" />
+          <ScalarProperty Name="corte_id" ColumnName="corte_id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -481,6 +642,19 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="VW_CapitalActual">
+      <EntityTypeMapping TypeName="EscuelasSandersonSatoriModel.VW_CapitalActual">
+        <MappingFragment StoreEntitySet="VW_CapitalActual">
+          <ScalarProperty Name="usuario_actualizacion" ColumnName="usuario_actualizacion" />
+          <ScalarProperty Name="fecha_actualizacion" ColumnName="fecha_actualizacion" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="total_disponible" ColumnName="total_disponible" />
+          <ScalarProperty Name="bancos_disponible" ColumnName="bancos_disponible" />
+          <ScalarProperty Name="efectivo_disponible" ColumnName="efectivo_disponible" />
+          <ScalarProperty Name="escuela_nombre" ColumnName="escuela_nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="VW_ComparacionPlanesPago">
       <EntityTypeMapping TypeName="EscuelasSandersonSatoriModel.VW_ComparacionPlanesPago">
         <MappingFragment StoreEntitySet="VW_ComparacionPlanesPago">
@@ -492,6 +666,44 @@
           <ScalarProperty Name="nivel" ColumnName="nivel" />
           <ScalarProperty Name="alumno" ColumnName="alumno" />
           <ScalarProperty Name="alumno_id" ColumnName="alumno_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_DetalleIngresos">
+      <EntityTypeMapping TypeName="EscuelasSandersonSatoriModel.VW_DetalleIngresos">
+        <MappingFragment StoreEntitySet="VW_DetalleIngresos">
+          <ScalarProperty Name="estado_corte" ColumnName="estado_corte" />
+          <ScalarProperty Name="fecha_pago" ColumnName="fecha_pago" />
+          <ScalarProperty Name="referencia" ColumnName="referencia" />
+          <ScalarProperty Name="periodo" ColumnName="periodo" />
+          <ScalarProperty Name="metodo_pago" ColumnName="metodo_pago" />
+          <ScalarProperty Name="monto_pagado" ColumnName="monto_pagado" />
+          <ScalarProperty Name="recargo" ColumnName="recargo" />
+          <ScalarProperty Name="descuento" ColumnName="descuento" />
+          <ScalarProperty Name="monto_original" ColumnName="monto_original" />
+          <ScalarProperty Name="concepto_nombre" ColumnName="concepto_nombre" />
+          <ScalarProperty Name="alumno_nombre" ColumnName="alumno_nombre" />
+          <ScalarProperty Name="escuela_nombre" ColumnName="escuela_nombre" />
+          <ScalarProperty Name="fecha_corte" ColumnName="fecha_corte" />
+          <ScalarProperty Name="detalle_id" ColumnName="detalle_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_ResumenCortes">
+      <EntityTypeMapping TypeName="EscuelasSandersonSatoriModel.VW_ResumenCortes">
+        <MappingFragment StoreEntitySet="VW_ResumenCortes">
+          <ScalarProperty Name="num_gastos" ColumnName="num_gastos" />
+          <ScalarProperty Name="num_ingresos" ColumnName="num_ingresos" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="diferencia" ColumnName="diferencia" />
+          <ScalarProperty Name="saldo_final" ColumnName="saldo_final" />
+          <ScalarProperty Name="saldo_inicial" ColumnName="saldo_inicial" />
+          <ScalarProperty Name="total_gastos" ColumnName="total_gastos" />
+          <ScalarProperty Name="total_ingresos" ColumnName="total_ingresos" />
+          <ScalarProperty Name="usuario_nombre" ColumnName="usuario_nombre" />
+          <ScalarProperty Name="fecha_corte" ColumnName="fecha_corte" />
+          <ScalarProperty Name="escuela_nombre" ColumnName="escuela_nombre" />
+          <ScalarProperty Name="corte_id" ColumnName="corte_id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -519,5 +731,29 @@
         <ScalarProperty Name="permiso_id" ColumnName="permiso_id" />
       </EndProperty>
     </AssociationSetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="EscuelasSandersonSatoriModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="EscuelasSandersonSatoriModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="EscuelasSandersonSatoriModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="EscuelasSandersonSatoriModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EscuelasSandersonSatoriModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="EscuelasSandersonSatoriModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EscuelasSandersonSatoriModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="EscuelasSandersonSatoriModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="EscuelasSandersonSatoriModel.Store.sp_upgraddiagrams" />
   </EntityContainerMapping>
 </Mapping>

@@ -62,7 +62,8 @@
                         <SettingsDetail ShowDetailRow="true" />
                         <Columns>
 
-                            <dx:GridViewDataColumn Caption="Acciones" VisibleIndex="0" Width="250">
+                            <dx:GridViewDataColumn Caption="Acciones" VisibleIndex="0" Width="250" >
+                                
                                 <DataItemTemplate>
                                     <div class="d-flex flex-wrap align-items-center" style="gap: 0.5rem;">
                                         <!-- Editar -->
@@ -113,7 +114,7 @@
                                         </a>
                                     </div>
                                 </HeaderTemplate>
-
+                                <EditFormSettings Visible="False" />
                             </dx:GridViewDataColumn>
                            
                             <dx:GridViewDataTextColumn FieldName="nombre" Caption="Nombre" VisibleIndex="1" Width="200" AdaptivePriority="1">

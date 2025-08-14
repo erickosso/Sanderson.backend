@@ -104,6 +104,14 @@
                 </li>
                 <hr class="sidebar-divider d-none d-md-block">
 
+                <li class="nav-item">
+                    <a class="nav-link" href='<%= GetRouteUrl("_cortes_caja", new {}) %>'>
+                        <i class="fas fa-cash-register"></i>
+                        <span>Cortes de Caja</span>
+                    </a>
+                </li>
+                <hr class="sidebar-divider d-none d-md-block">
+
                 <!-- Divider -->
                 <!-- Sidebar Toggler (Sidebar) -->
                 <div class="text-center d-none d-md-inline">

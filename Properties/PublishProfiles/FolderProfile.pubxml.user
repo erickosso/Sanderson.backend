@@ -13,10 +13,10 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>05/25/2025 16:30:26</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.dll">
-      <publishTime>10/09/2013 17:29:20</publishTime>
+      <publishTime>09/10/2013 17:29:20</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.pdb">
-      <publishTime>10/09/2013 17:29:20</publishTime>
+      <publishTime>09/10/2013 17:29:20</publishTime>
     </File>
     <File Include="bin/AspNet.ScriptManager.bootstrap.dll">
       <publishTime>03/15/2019 11:59:54</publishTime>
@@ -25,109 +25,109 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>05/16/2019 13:33:30</publishTime>
     </File>
     <File Include="bin/de/DevExpress.Data.v21.1.resources.dll">
-      <publishTime>03/06/2025 21:43:42</publishTime>
+      <publishTime>06/03/2025 21:43:42</publishTime>
     </File>
     <File Include="bin/de/DevExpress.DataAccess.v21.1.resources.dll">
-      <publishTime>03/06/2025 21:43:41</publishTime>
+      <publishTime>06/03/2025 21:43:41</publishTime>
     </File>
     <File Include="bin/de/DevExpress.Office.v21.1.Core.resources.dll">
-      <publishTime>03/06/2025 21:44:25</publishTime>
+      <publishTime>06/03/2025 21:44:25</publishTime>
     </File>
     <File Include="bin/de/DevExpress.Pdf.v21.1.Core.resources.dll">
-      <publishTime>03/06/2025 21:44:25</publishTime>
+      <publishTime>06/03/2025 21:44:25</publishTime>
     </File>
     <File Include="bin/de/DevExpress.PivotGrid.v21.1.Core.resources.dll">
-      <publishTime>03/06/2025 21:44:49</publishTime>
+      <publishTime>06/03/2025 21:44:49</publishTime>
     </File>
     <File Include="bin/de/DevExpress.Printing.v21.1.Core.resources.dll">
-      <publishTime>03/06/2025 21:44:25</publishTime>
+      <publishTime>06/03/2025 21:44:25</publishTime>
     </File>
     <File Include="bin/de/DevExpress.RichEdit.v21.1.Core.resources.dll">
-      <publishTime>03/06/2025 21:44:52</publishTime>
+      <publishTime>06/03/2025 21:44:52</publishTime>
     </File>
     <File Include="bin/de/DevExpress.Sparkline.v21.1.Core.resources.dll">
-      <publishTime>03/06/2025 21:44:26</publishTime>
+      <publishTime>06/03/2025 21:44:26</publishTime>
     </File>
     <File Include="bin/de/DevExpress.Web.Resources.v21.1.resources.dll">
-      <publishTime>03/06/2025 21:44:32</publishTime>
+      <publishTime>06/03/2025 21:44:32</publishTime>
     </File>
     <File Include="bin/de/DevExpress.Web.v21.1.resources.dll">
-      <publishTime>03/06/2025 21:43:27</publishTime>
+      <publishTime>06/03/2025 21:43:27</publishTime>
     </File>
     <File Include="bin/de/DevExpress.Xpo.v21.1.resources.dll">
-      <publishTime>03/06/2025 21:44:46</publishTime>
+      <publishTime>06/03/2025 21:44:46</publishTime>
     </File>
     <File Include="bin/de/DevExpress.XtraCharts.v21.1.resources.dll">
-      <publishTime>03/06/2025 21:44:47</publishTime>
+      <publishTime>06/03/2025 21:44:47</publishTime>
     </File>
     <File Include="bin/de/DevExpress.XtraGauges.v21.1.Core.resources.dll">
-      <publishTime>03/06/2025 21:44:48</publishTime>
+      <publishTime>06/03/2025 21:44:48</publishTime>
     </File>
     <File Include="bin/de/DevExpress.XtraReports.v21.1.resources.dll">
-      <publishTime>03/06/2025 21:44:49</publishTime>
+      <publishTime>06/03/2025 21:44:49</publishTime>
     </File>
     <File Include="bin/DevExpress.Charts.v21.1.Core.dll">
-      <publishTime>03/06/2025 21:44:47</publishTime>
+      <publishTime>06/03/2025 21:44:47</publishTime>
     </File>
     <File Include="bin/DevExpress.CodeParser.v21.1.dll">
-      <publishTime>03/06/2025 21:43:36</publishTime>
+      <publishTime>06/03/2025 21:43:36</publishTime>
     </File>
     <File Include="bin/DevExpress.Data.Desktop.v21.1.dll">
-      <publishTime>03/06/2025 21:43:41</publishTime>
+      <publishTime>06/03/2025 21:43:41</publishTime>
     </File>
     <File Include="bin/DevExpress.Data.v21.1.dll">
-      <publishTime>03/06/2025 21:43:42</publishTime>
+      <publishTime>06/03/2025 21:43:42</publishTime>
     </File>
     <File Include="bin/DevExpress.DataAccess.v21.1.dll">
-      <publishTime>03/06/2025 21:43:41</publishTime>
+      <publishTime>06/03/2025 21:43:41</publishTime>
     </File>
     <File Include="bin/DevExpress.DataVisualization.v21.1.Core.dll">
-      <publishTime>03/06/2025 21:43:41</publishTime>
+      <publishTime>06/03/2025 21:43:41</publishTime>
     </File>
     <File Include="bin/DevExpress.Office.v21.1.Core.dll">
-      <publishTime>03/06/2025 21:44:25</publishTime>
+      <publishTime>06/03/2025 21:44:25</publishTime>
     </File>
     <File Include="bin/DevExpress.Pdf.v21.1.Core.dll">
-      <publishTime>03/06/2025 21:44:25</publishTime>
+      <publishTime>06/03/2025 21:44:25</publishTime>
     </File>
     <File Include="bin/DevExpress.Pdf.v21.1.Drawing.dll">
-      <publishTime>03/06/2025 21:44:25</publishTime>
+      <publishTime>06/03/2025 21:44:25</publishTime>
     </File>
     <File Include="bin/DevExpress.PivotGrid.v21.1.Core.dll">
-      <publishTime>03/06/2025 21:44:49</publishTime>
+      <publishTime>06/03/2025 21:44:49</publishTime>
     </File>
     <File Include="bin/DevExpress.Printing.v21.1.Core.dll">
-      <publishTime>03/06/2025 21:44:25</publishTime>
+      <publishTime>06/03/2025 21:44:25</publishTime>
     </File>
     <File Include="bin/DevExpress.RichEdit.v21.1.Core.dll">
-      <publishTime>03/06/2025 21:44:52</publishTime>
+      <publishTime>06/03/2025 21:44:52</publishTime>
     </File>
     <File Include="bin/DevExpress.RichEdit.v21.1.Export.dll">
-      <publishTime>03/06/2025 21:44:52</publishTime>
+      <publishTime>06/03/2025 21:44:52</publishTime>
     </File>
     <File Include="bin/DevExpress.Sparkline.v21.1.Core.dll">
-      <publishTime>03/06/2025 21:44:26</publishTime>
+      <publishTime>06/03/2025 21:44:26</publishTime>
     </File>
     <File Include="bin/DevExpress.Web.ASPxThemes.v21.1.dll">
-      <publishTime>03/06/2025 21:43:28</publishTime>
+      <publishTime>06/03/2025 21:43:28</publishTime>
     </File>
     <File Include="bin/DevExpress.Web.Resources.v21.1.dll">
-      <publishTime>03/06/2025 21:44:32</publishTime>
+      <publishTime>06/03/2025 21:44:32</publishTime>
     </File>
     <File Include="bin/DevExpress.Web.v21.1.dll">
-      <publishTime>03/06/2025 21:43:27</publishTime>
+      <publishTime>06/03/2025 21:43:27</publishTime>
     </File>
     <File Include="bin/DevExpress.Xpo.v21.1.dll">
-      <publishTime>03/06/2025 21:44:46</publishTime>
+      <publishTime>06/03/2025 21:44:46</publishTime>
     </File>
     <File Include="bin/DevExpress.XtraCharts.v21.1.dll">
-      <publishTime>03/06/2025 21:44:47</publishTime>
+      <publishTime>06/03/2025 21:44:47</publishTime>
     </File>
     <File Include="bin/DevExpress.XtraGauges.v21.1.Core.dll">
-      <publishTime>03/06/2025 21:44:48</publishTime>
+      <publishTime>06/03/2025 21:44:48</publishTime>
     </File>
     <File Include="bin/DevExpress.XtraReports.v21.1.dll">
-      <publishTime>03/06/2025 21:44:49</publishTime>
+      <publishTime>06/03/2025 21:44:49</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>06/16/2024 14:46:24</publishTime>
@@ -136,109 +136,109 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>06/16/2024 14:47:02</publishTime>
     </File>
     <File Include="bin/es/DevExpress.Data.v21.1.resources.dll">
-      <publishTime>03/06/2025 21:43:42</publishTime>
+      <publishTime>06/03/2025 21:43:42</publishTime>
     </File>
     <File Include="bin/es/DevExpress.DataAccess.v21.1.resources.dll">
-      <publishTime>03/06/2025 21:43:41</publishTime>
+      <publishTime>06/03/2025 21:43:41</publishTime>
     </File>
     <File Include="bin/es/DevExpress.Office.v21.1.Core.resources.dll">
-      <publishTime>03/06/2025 21:44:25</publishTime>
+      <publishTime>06/03/2025 21:44:25</publishTime>
     </File>
     <File Include="bin/es/DevExpress.Pdf.v21.1.Core.resources.dll">
-      <publishTime>03/06/2025 21:44:25</publishTime>
+      <publishTime>06/03/2025 21:44:25</publishTime>
     </File>
     <File Include="bin/es/DevExpress.PivotGrid.v21.1.Core.resources.dll">
-      <publishTime>03/06/2025 21:44:49</publishTime>
+      <publishTime>06/03/2025 21:44:49</publishTime>
     </File>
     <File Include="bin/es/DevExpress.Printing.v21.1.Core.resources.dll">
-      <publishTime>03/06/2025 21:44:25</publishTime>
+      <publishTime>06/03/2025 21:44:25</publishTime>
     </File>
     <File Include="bin/es/DevExpress.RichEdit.v21.1.Core.resources.dll">
-      <publishTime>03/06/2025 21:44:52</publishTime>
+      <publishTime>06/03/2025 21:44:52</publishTime>
     </File>
     <File Include="bin/es/DevExpress.Sparkline.v21.1.Core.resources.dll">
-      <publishTime>03/06/2025 21:44:26</publishTime>
+      <publishTime>06/03/2025 21:44:26</publishTime>
     </File>
     <File Include="bin/es/DevExpress.Web.Resources.v21.1.resources.dll">
-      <publishTime>03/06/2025 21:44:32</publishTime>
+      <publishTime>06/03/2025 21:44:32</publishTime>
     </File>
     <File Include="bin/es/DevExpress.Web.v21.1.resources.dll">
-      <publishTime>03/06/2025 21:43:27</publishTime>
+      <publishTime>06/03/2025 21:43:27</publishTime>
     </File>
     <File Include="bin/es/DevExpress.Xpo.v21.1.resources.dll">
-      <publishTime>03/06/2025 21:44:46</publishTime>
+      <publishTime>06/03/2025 21:44:46</publishTime>
     </File>
     <File Include="bin/es/DevExpress.XtraCharts.v21.1.resources.dll">
-      <publishTime>03/06/2025 21:44:47</publishTime>
+      <publishTime>06/03/2025 21:44:47</publishTime>
     </File>
     <File Include="bin/es/DevExpress.XtraGauges.v21.1.Core.resources.dll">
-      <publishTime>03/06/2025 21:44:48</publishTime>
+      <publishTime>06/03/2025 21:44:48</publishTime>
     </File>
     <File Include="bin/es/DevExpress.XtraReports.v21.1.resources.dll">
-      <publishTime>03/06/2025 21:44:49</publishTime>
+      <publishTime>06/03/2025 21:44:49</publishTime>
     </File>
     <File Include="bin/es/Microsoft.AspNet.FriendlyUrls.resources.dll">
       <publishTime>07/30/2013 17:01:46</publishTime>
     </File>
     <File Include="bin/es/System.Web.Optimization.resources.dll">
-      <publishTime>11/02/2014 15:28:40</publishTime>
+      <publishTime>02/11/2014 15:28:40</publishTime>
     </File>
     <File Include="bin/ja/DevExpress.Data.v21.1.resources.dll">
-      <publishTime>03/06/2025 21:43:42</publishTime>
+      <publishTime>06/03/2025 21:43:42</publishTime>
     </File>
     <File Include="bin/ja/DevExpress.DataAccess.v21.1.resources.dll">
-      <publishTime>03/06/2025 21:43:41</publishTime>
+      <publishTime>06/03/2025 21:43:41</publishTime>
     </File>
     <File Include="bin/ja/DevExpress.Office.v21.1.Core.resources.dll">
-      <publishTime>03/06/2025 21:44:25</publishTime>
+      <publishTime>06/03/2025 21:44:25</publishTime>
     </File>
     <File Include="bin/ja/DevExpress.Pdf.v21.1.Core.resources.dll">
-      <publishTime>03/06/2025 21:44:25</publishTime>
+      <publishTime>06/03/2025 21:44:25</publishTime>
     </File>
     <File Include="bin/ja/DevExpress.PivotGrid.v21.1.Core.resources.dll">
-      <publishTime>03/06/2025 21:44:49</publishTime>
+      <publishTime>06/03/2025 21:44:49</publishTime>
     </File>
     <File Include="bin/ja/DevExpress.Printing.v21.1.Core.resources.dll">
-      <publishTime>03/06/2025 21:44:25</publishTime>
+      <publishTime>06/03/2025 21:44:25</publishTime>
     </File>
     <File Include="bin/ja/DevExpress.RichEdit.v21.1.Core.resources.dll">
-      <publishTime>03/06/2025 21:44:52</publishTime>
+      <publishTime>06/03/2025 21:44:52</publishTime>
     </File>
     <File Include="bin/ja/DevExpress.Sparkline.v21.1.Core.resources.dll">
-      <publishTime>03/06/2025 21:44:26</publishTime>
+      <publishTime>06/03/2025 21:44:26</publishTime>
     </File>
     <File Include="bin/ja/DevExpress.Web.Resources.v21.1.resources.dll">
-      <publishTime>03/06/2025 21:44:32</publishTime>
+      <publishTime>06/03/2025 21:44:32</publishTime>
     </File>
     <File Include="bin/ja/DevExpress.Web.v21.1.resources.dll">
-      <publishTime>03/06/2025 21:43:27</publishTime>
+      <publishTime>06/03/2025 21:43:27</publishTime>
     </File>
     <File Include="bin/ja/DevExpress.Xpo.v21.1.resources.dll">
-      <publishTime>03/06/2025 21:44:46</publishTime>
+      <publishTime>06/03/2025 21:44:46</publishTime>
     </File>
     <File Include="bin/ja/DevExpress.XtraCharts.v21.1.resources.dll">
-      <publishTime>03/06/2025 21:44:47</publishTime>
+      <publishTime>06/03/2025 21:44:47</publishTime>
     </File>
     <File Include="bin/ja/DevExpress.XtraGauges.v21.1.Core.resources.dll">
-      <publishTime>03/06/2025 21:44:48</publishTime>
+      <publishTime>06/03/2025 21:44:48</publishTime>
     </File>
     <File Include="bin/ja/DevExpress.XtraReports.v21.1.resources.dll">
-      <publishTime>03/06/2025 21:44:49</publishTime>
+      <publishTime>06/03/2025 21:44:49</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.FriendlyUrls.dll">
       <publishTime>07/30/2013 17:57:30</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Web.Optimization.WebForms.dll">
-      <publishTime>11/02/2014 15:26:04</publishTime>
+      <publishTime>02/11/2014 15:26:04</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
-      <publishTime>05/09/2018 17:10:50</publishTime>
+      <publishTime>09/05/2018 17:10:50</publishTime>
     </File>
     <File Include="bin/Microsoft.ScriptManager.MSAjax.dll">
-      <publishTime>06/09/2013 12:20:12</publishTime>
+      <publishTime>09/06/2013 12:20:12</publishTime>
     </File>
     <File Include="bin/Microsoft.ScriptManager.WebForms.dll">
-      <publishTime>06/09/2013 12:20:22</publishTime>
+      <publishTime>09/06/2013 12:20:22</publishTime>
     </File>
     <File Include="bin/Microsoft.Web.Infrastructure.dll">
       <publishTime>07/25/2012 12:48:56</publishTime>
@@ -286,10 +286,10 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>08/08/2018 13:09:42</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
-      <publishTime>05/12/2017 09:36:44</publishTime>
+      <publishTime>12/05/2017 09:36:44</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
-      <publishTime>05/12/2017 09:36:44</publishTime>
+      <publishTime>12/05/2017 09:36:44</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.Managed.Core.targets">
       <publishTime>08/08/2018 13:09:42</publishTime>
@@ -298,85 +298,85 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>08/08/2018 13:09:42</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.Win32.Primitives.dll">
-      <publishTime>05/11/2016 18:55:32</publishTime>
+      <publishTime>11/05/2016 18:55:32</publishTime>
     </File>
     <File Include="bin/roslyn/System.AppContext.dll">
-      <publishTime>05/11/2016 18:55:34</publishTime>
+      <publishTime>11/05/2016 18:55:34</publishTime>
     </File>
     <File Include="bin/roslyn/System.Collections.Immutable.dll">
       <publishTime>05/16/2018 04:29:34</publishTime>
     </File>
     <File Include="bin/roslyn/System.Console.dll">
-      <publishTime>05/11/2016 18:55:48</publishTime>
+      <publishTime>11/05/2016 18:55:48</publishTime>
     </File>
     <File Include="bin/roslyn/System.Diagnostics.DiagnosticSource.dll">
-      <publishTime>05/11/2016 18:55:52</publishTime>
+      <publishTime>11/05/2016 18:55:52</publishTime>
     </File>
     <File Include="bin/roslyn/System.Diagnostics.FileVersionInfo.dll">
-      <publishTime>05/11/2016 18:55:56</publishTime>
+      <publishTime>11/05/2016 18:55:56</publishTime>
     </File>
     <File Include="bin/roslyn/System.Diagnostics.StackTrace.dll">
-      <publishTime>05/11/2016 18:55:52</publishTime>
+      <publishTime>11/05/2016 18:55:52</publishTime>
     </File>
     <File Include="bin/roslyn/System.Globalization.Calendars.dll">
-      <publishTime>05/11/2016 18:56:02</publishTime>
+      <publishTime>11/05/2016 18:56:02</publishTime>
     </File>
     <File Include="bin/roslyn/System.IO.Compression.dll">
-      <publishTime>05/11/2016 18:56:08</publishTime>
+      <publishTime>11/05/2016 18:56:08</publishTime>
     </File>
     <File Include="bin/roslyn/System.IO.Compression.ZipFile.dll">
-      <publishTime>05/11/2016 18:56:04</publishTime>
+      <publishTime>11/05/2016 18:56:04</publishTime>
     </File>
     <File Include="bin/roslyn/System.IO.FileSystem.dll">
-      <publishTime>05/11/2016 18:56:08</publishTime>
+      <publishTime>11/05/2016 18:56:08</publishTime>
     </File>
     <File Include="bin/roslyn/System.IO.FileSystem.Primitives.dll">
-      <publishTime>05/11/2016 18:56:08</publishTime>
+      <publishTime>11/05/2016 18:56:08</publishTime>
     </File>
     <File Include="bin/roslyn/System.Net.Http.dll">
-      <publishTime>05/11/2016 18:56:30</publishTime>
+      <publishTime>11/05/2016 18:56:30</publishTime>
     </File>
     <File Include="bin/roslyn/System.Net.Sockets.dll">
-      <publishTime>05/11/2016 18:56:34</publishTime>
+      <publishTime>11/05/2016 18:56:34</publishTime>
     </File>
     <File Include="bin/roslyn/System.Reflection.Metadata.dll">
       <publishTime>05/16/2018 04:29:44</publishTime>
     </File>
     <File Include="bin/roslyn/System.Runtime.InteropServices.RuntimeInformation.dll">
-      <publishTime>05/11/2016 18:57:00</publishTime>
+      <publishTime>11/05/2016 18:57:00</publishTime>
     </File>
     <File Include="bin/roslyn/System.Security.Cryptography.Algorithms.dll">
-      <publishTime>05/11/2016 18:57:14</publishTime>
+      <publishTime>11/05/2016 18:57:14</publishTime>
     </File>
     <File Include="bin/roslyn/System.Security.Cryptography.Encoding.dll">
-      <publishTime>05/11/2016 18:57:08</publishTime>
+      <publishTime>11/05/2016 18:57:08</publishTime>
     </File>
     <File Include="bin/roslyn/System.Security.Cryptography.Primitives.dll">
-      <publishTime>05/11/2016 18:57:18</publishTime>
+      <publishTime>11/05/2016 18:57:18</publishTime>
     </File>
     <File Include="bin/roslyn/System.Security.Cryptography.X509Certificates.dll">
-      <publishTime>05/11/2016 18:57:18</publishTime>
+      <publishTime>11/05/2016 18:57:18</publishTime>
     </File>
     <File Include="bin/roslyn/System.Text.Encoding.CodePages.dll">
-      <publishTime>05/11/2016 18:57:20</publishTime>
+      <publishTime>11/05/2016 18:57:20</publishTime>
     </File>
     <File Include="bin/roslyn/System.Threading.Tasks.Extensions.dll">
-      <publishTime>05/11/2016 18:57:24</publishTime>
+      <publishTime>11/05/2016 18:57:24</publishTime>
     </File>
     <File Include="bin/roslyn/System.ValueTuple.dll">
-      <publishTime>05/11/2016 18:57:30</publishTime>
+      <publishTime>11/05/2016 18:57:30</publishTime>
     </File>
     <File Include="bin/roslyn/System.Xml.ReaderWriter.dll">
-      <publishTime>05/11/2016 18:57:36</publishTime>
+      <publishTime>11/05/2016 18:57:36</publishTime>
     </File>
     <File Include="bin/roslyn/System.Xml.XmlDocument.dll">
-      <publishTime>05/11/2016 18:57:34</publishTime>
+      <publishTime>11/05/2016 18:57:34</publishTime>
     </File>
     <File Include="bin/roslyn/System.Xml.XPath.dll">
-      <publishTime>05/11/2016 18:57:40</publishTime>
+      <publishTime>11/05/2016 18:57:40</publishTime>
     </File>
     <File Include="bin/roslyn/System.Xml.XPath.XDocument.dll">
-      <publishTime>05/11/2016 18:57:34</publishTime>
+      <publishTime>11/05/2016 18:57:34</publishTime>
     </File>
     <File Include="bin/roslyn/vbc.exe">
       <publishTime>08/08/2018 06:38:48</publishTime>
@@ -394,55 +394,55 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>08/08/2018 13:18:16</publishTime>
     </File>
     <File Include="bin/ru/DevExpress.Data.v21.1.resources.dll">
-      <publishTime>03/06/2025 21:43:42</publishTime>
+      <publishTime>06/03/2025 21:43:42</publishTime>
     </File>
     <File Include="bin/ru/DevExpress.DataAccess.v21.1.resources.dll">
-      <publishTime>03/06/2025 21:43:41</publishTime>
+      <publishTime>06/03/2025 21:43:41</publishTime>
     </File>
     <File Include="bin/ru/DevExpress.Office.v21.1.Core.resources.dll">
-      <publishTime>03/06/2025 21:44:25</publishTime>
+      <publishTime>06/03/2025 21:44:25</publishTime>
     </File>
     <File Include="bin/ru/DevExpress.Pdf.v21.1.Core.resources.dll">
-      <publishTime>03/06/2025 21:44:25</publishTime>
+      <publishTime>06/03/2025 21:44:25</publishTime>
     </File>
     <File Include="bin/ru/DevExpress.PivotGrid.v21.1.Core.resources.dll">
-      <publishTime>03/06/2025 21:44:49</publishTime>
+      <publishTime>06/03/2025 21:44:49</publishTime>
     </File>
     <File Include="bin/ru/DevExpress.Printing.v21.1.Core.resources.dll">
-      <publishTime>03/06/2025 21:44:25</publishTime>
+      <publishTime>06/03/2025 21:44:25</publishTime>
     </File>
     <File Include="bin/ru/DevExpress.RichEdit.v21.1.Core.resources.dll">
-      <publishTime>03/06/2025 21:44:52</publishTime>
+      <publishTime>06/03/2025 21:44:52</publishTime>
     </File>
     <File Include="bin/ru/DevExpress.Sparkline.v21.1.Core.resources.dll">
-      <publishTime>03/06/2025 21:44:26</publishTime>
+      <publishTime>06/03/2025 21:44:26</publishTime>
     </File>
     <File Include="bin/ru/DevExpress.Web.Resources.v21.1.resources.dll">
-      <publishTime>03/06/2025 21:44:32</publishTime>
+      <publishTime>06/03/2025 21:44:32</publishTime>
     </File>
     <File Include="bin/ru/DevExpress.Web.v21.1.resources.dll">
-      <publishTime>03/06/2025 21:43:27</publishTime>
+      <publishTime>06/03/2025 21:43:27</publishTime>
     </File>
     <File Include="bin/ru/DevExpress.Xpo.v21.1.resources.dll">
-      <publishTime>03/06/2025 21:44:46</publishTime>
+      <publishTime>06/03/2025 21:44:46</publishTime>
     </File>
     <File Include="bin/ru/DevExpress.XtraCharts.v21.1.resources.dll">
-      <publishTime>03/06/2025 21:44:47</publishTime>
+      <publishTime>06/03/2025 21:44:47</publishTime>
     </File>
     <File Include="bin/ru/DevExpress.XtraGauges.v21.1.Core.resources.dll">
-      <publishTime>03/06/2025 21:44:48</publishTime>
+      <publishTime>06/03/2025 21:44:48</publishTime>
     </File>
     <File Include="bin/ru/DevExpress.XtraReports.v21.1.resources.dll">
-      <publishTime>03/06/2025 21:44:49</publishTime>
+      <publishTime>06/03/2025 21:44:49</publishTime>
     </File>
     <File Include="bin/sanderson.backend.dll">
-      <publishTime>06/10/2025 23:32:39</publishTime>
+      <publishTime>08/12/2025 09:04:34</publishTime>
     </File>
     <File Include="bin/sanderson.backend.pdb">
-      <publishTime>06/10/2025 23:32:39</publishTime>
+      <publishTime>08/12/2025 09:04:34</publishTime>
     </File>
     <File Include="bin/System.Web.Optimization.dll">
-      <publishTime>11/02/2014 15:26:04</publishTime>
+      <publishTime>02/11/2014 15:26:04</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>01/23/2014 13:57:34</publishTime>
@@ -451,10 +451,10 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>05/15/2025 21:44:02</publishTime>
     </File>
     <File Include="Content/css/datatables.css">
-      <publishTime>12/05/2025 06:17:06</publishTime>
+      <publishTime>05/12/2025 06:17:06</publishTime>
     </File>
     <File Include="Content/css/datatables.min.css">
-      <publishTime>12/05/2025 06:17:06</publishTime>
+      <publishTime>05/12/2025 06:17:06</publishTime>
     </File>
     <File Include="Content/css/sb-admin-2.css">
       <publishTime>04/28/2021 18:21:04</publishTime>
@@ -6055,13 +6055,13 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>04/28/2021 18:21:04</publishTime>
     </File>
     <File Include="DAL/EscuelasSandersonSatoriModel.edmx.diagram">
-      <publishTime>04/06/2025 20:57:20</publishTime>
+      <publishTime>07/09/2025 21:07:55</publishTime>
     </File>
     <File Include="Default.aspx">
       <publishTime>05/15/2025 13:04:40</publishTime>
     </File>
     <File Include="favicon.ico">
-      <publishTime>04/05/2025 18:19:13</publishTime>
+      <publishTime>05/04/2025 18:19:13</publishTime>
     </File>
     <File Include="Global.asax">
       <publishTime>05/08/2025 22:01:52</publishTime>
@@ -6069,23 +6069,26 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
     <File Include="handler/handlerReport.ashx">
       <publishTime>05/15/2025 23:59:33</publishTime>
     </File>
+    <File Include="handler/handlerReportCorte.ashx">
+      <publishTime>08/01/2025 16:17:48</publishTime>
+    </File>
     <File Include="packages/Antlr.3.5.0.2/.signature.p7s">
       <publishTime>10/14/2018 22:05:56</publishTime>
     </File>
     <File Include="packages/Antlr.3.5.0.2/Antlr.3.5.0.2.nupkg">
-      <publishTime>04/05/2025 18:19:30</publishTime>
+      <publishTime>05/04/2025 18:19:30</publishTime>
     </File>
     <File Include="packages/Antlr.3.5.0.2/lib/Antlr3.Runtime.dll">
-      <publishTime>10/09/2013 17:29:20</publishTime>
+      <publishTime>09/10/2013 17:29:20</publishTime>
     </File>
     <File Include="packages/Antlr.3.5.0.2/lib/Antlr3.Runtime.pdb">
-      <publishTime>10/09/2013 17:29:20</publishTime>
+      <publishTime>09/10/2013 17:29:20</publishTime>
     </File>
     <File Include="packages/AspNet.ScriptManager.bootstrap.3.4.1/.signature.p7s">
       <publishTime>03/15/2019 12:01:54</publishTime>
     </File>
     <File Include="packages/AspNet.ScriptManager.bootstrap.3.4.1/AspNet.ScriptManager.bootstrap.3.4.1.nupkg">
-      <publishTime>04/05/2025 18:19:31</publishTime>
+      <publishTime>05/04/2025 18:19:31</publishTime>
     </File>
     <File Include="packages/AspNet.ScriptManager.bootstrap.3.4.1/lib/net40/AspNet.ScriptManager.bootstrap.dll">
       <publishTime>03/15/2019 11:59:54</publishTime>
@@ -6097,7 +6100,7 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>05/20/2019 12:04:14</publishTime>
     </File>
     <File Include="packages/AspNet.ScriptManager.jQuery.3.4.1/AspNet.ScriptManager.jQuery.3.4.1.nupkg">
-      <publishTime>04/05/2025 18:19:31</publishTime>
+      <publishTime>05/04/2025 18:19:31</publishTime>
     </File>
     <File Include="packages/AspNet.ScriptManager.jQuery.3.4.1/lib/net40/AspNet.ScriptManager.jQuery.dll">
       <publishTime>05/16/2019 13:33:30</publishTime>
@@ -6109,7 +6112,7 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>02/13/2019 13:32:18</publishTime>
     </File>
     <File Include="packages/bootstrap.3.4.1/bootstrap.3.4.1.nupkg">
-      <publishTime>04/05/2025 18:19:29</publishTime>
+      <publishTime>05/04/2025 18:19:29</publishTime>
     </File>
     <File Include="packages/bootstrap.3.4.1/content/Content/bootstrap-theme.css">
       <publishTime>02/13/2019 20:54:46</publishTime>
@@ -6355,40 +6358,40 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>06/16/2024 14:46:28</publishTime>
     </File>
     <File Include="packages/jQuery.3.4.1/.signature.p7s">
-      <publishTime>02/05/2019 12:18:12</publishTime>
+      <publishTime>05/02/2019 12:18:12</publishTime>
     </File>
     <File Include="packages/jQuery.3.4.1/Content/Scripts/jquery-3.4.1.js">
-      <publishTime>02/05/2019 12:15:24</publishTime>
+      <publishTime>05/02/2019 12:15:24</publishTime>
     </File>
     <File Include="packages/jQuery.3.4.1/Content/Scripts/jquery-3.4.1.min.js">
-      <publishTime>02/05/2019 12:15:24</publishTime>
+      <publishTime>05/02/2019 12:15:24</publishTime>
     </File>
     <File Include="packages/jQuery.3.4.1/Content/Scripts/jquery-3.4.1.min.map">
-      <publishTime>02/05/2019 12:15:24</publishTime>
+      <publishTime>05/02/2019 12:15:24</publishTime>
     </File>
     <File Include="packages/jQuery.3.4.1/Content/Scripts/jquery-3.4.1.slim.js">
-      <publishTime>02/05/2019 12:15:24</publishTime>
+      <publishTime>05/02/2019 12:15:24</publishTime>
     </File>
     <File Include="packages/jQuery.3.4.1/Content/Scripts/jquery-3.4.1.slim.min.js">
-      <publishTime>02/05/2019 12:15:24</publishTime>
+      <publishTime>05/02/2019 12:15:24</publishTime>
     </File>
     <File Include="packages/jQuery.3.4.1/Content/Scripts/jquery-3.4.1.slim.min.map">
-      <publishTime>02/05/2019 12:15:24</publishTime>
+      <publishTime>05/02/2019 12:15:24</publishTime>
     </File>
     <File Include="packages/jQuery.3.4.1/jQuery.3.4.1.nupkg">
-      <publishTime>04/05/2025 18:19:23</publishTime>
+      <publishTime>05/04/2025 18:19:23</publishTime>
     </File>
     <File Include="packages/jQuery.3.4.1/Tools/common.ps1">
-      <publishTime>02/05/2019 12:15:24</publishTime>
+      <publishTime>05/02/2019 12:15:24</publishTime>
     </File>
     <File Include="packages/jQuery.3.4.1/Tools/install.ps1">
-      <publishTime>02/05/2019 12:15:24</publishTime>
+      <publishTime>05/02/2019 12:15:24</publishTime>
     </File>
     <File Include="packages/jQuery.3.4.1/Tools/uninstall.ps1">
-      <publishTime>02/05/2019 12:15:24</publishTime>
+      <publishTime>05/02/2019 12:15:24</publishTime>
     </File>
     <File Include="packages/Microsoft.AspNet.FriendlyUrls.1.0.2/.signature.p7s">
-      <publishTime>07/10/2018 18:39:46</publishTime>
+      <publishTime>10/07/2018 18:39:46</publishTime>
     </File>
     <File Include="packages/Microsoft.AspNet.FriendlyUrls.1.0.2/Content/App_Start/RouteConfig.cs.pp">
       <publishTime>07/30/2013 17:57:30</publishTime>
@@ -6412,13 +6415,13 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>07/30/2013 17:57:30</publishTime>
     </File>
     <File Include="packages/Microsoft.AspNet.FriendlyUrls.1.0.2/Microsoft.AspNet.FriendlyUrls.1.0.2.nupkg">
-      <publishTime>04/05/2025 18:19:33</publishTime>
+      <publishTime>05/04/2025 18:19:33</publishTime>
     </File>
     <File Include="packages/Microsoft.AspNet.FriendlyUrls.1.0.2/readme.txt">
       <publishTime>07/30/2013 17:57:30</publishTime>
     </File>
     <File Include="packages/Microsoft.AspNet.FriendlyUrls.Core.1.0.2/.signature.p7s">
-      <publishTime>07/10/2018 08:19:58</publishTime>
+      <publishTime>10/07/2018 08:19:58</publishTime>
     </File>
     <File Include="packages/Microsoft.AspNet.FriendlyUrls.Core.1.0.2/lib/net40/es/Microsoft.AspNet.FriendlyUrls.resources.dll">
       <publishTime>07/30/2013 17:01:46</publishTime>
@@ -6442,10 +6445,10 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>07/30/2013 17:57:30</publishTime>
     </File>
     <File Include="packages/Microsoft.AspNet.FriendlyUrls.Core.1.0.2/Microsoft.AspNet.FriendlyUrls.Core.1.0.2.nupkg">
-      <publishTime>04/05/2025 18:19:33</publishTime>
+      <publishTime>05/04/2025 18:19:33</publishTime>
     </File>
     <File Include="packages/Microsoft.AspNet.FriendlyUrls.Core.es.1.0.2/.signature.p7s">
-      <publishTime>12/10/2018 06:33:34</publishTime>
+      <publishTime>10/12/2018 06:33:34</publishTime>
     </File>
     <File Include="packages/Microsoft.AspNet.FriendlyUrls.Core.es.1.0.2/lib/net40/es/Microsoft.AspNet.FriendlyUrls.resources.dll">
       <publishTime>07/30/2013 18:01:46</publishTime>
@@ -6460,172 +6463,172 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>07/30/2013 18:01:46</publishTime>
     </File>
     <File Include="packages/Microsoft.AspNet.FriendlyUrls.Core.es.1.0.2/Microsoft.AspNet.FriendlyUrls.Core.es.1.0.2.nupkg">
-      <publishTime>04/05/2025 18:19:34</publishTime>
+      <publishTime>05/04/2025 18:19:34</publishTime>
     </File>
     <File Include="packages/Microsoft.AspNet.ScriptManager.MSAjax.5.0.0/.signature.p7s">
-      <publishTime>07/10/2018 12:14:52</publishTime>
+      <publishTime>10/07/2018 12:14:52</publishTime>
     </File>
     <File Include="packages/Microsoft.AspNet.ScriptManager.MSAjax.5.0.0/content/Scripts/WebForms/MSAjax/MicrosoftAjax.js">
-      <publishTime>06/09/2013 12:20:12</publishTime>
+      <publishTime>09/06/2013 12:20:12</publishTime>
     </File>
     <File Include="packages/Microsoft.AspNet.ScriptManager.MSAjax.5.0.0/content/Scripts/WebForms/MSAjax/MicrosoftAjaxApplicationServices.js">
-      <publishTime>06/09/2013 12:20:12</publishTime>
+      <publishTime>09/06/2013 12:20:12</publishTime>
     </File>
     <File Include="packages/Microsoft.AspNet.ScriptManager.MSAjax.5.0.0/content/Scripts/WebForms/MSAjax/MicrosoftAjaxComponentModel.js">
-      <publishTime>06/09/2013 12:20:12</publishTime>
+      <publishTime>09/06/2013 12:20:12</publishTime>
     </File>
     <File Include="packages/Microsoft.AspNet.ScriptManager.MSAjax.5.0.0/content/Scripts/WebForms/MSAjax/MicrosoftAjaxCore.js">
-      <publishTime>06/09/2013 12:20:12</publishTime>
+      <publishTime>09/06/2013 12:20:12</publishTime>
     </File>
     <File Include="packages/Microsoft.AspNet.ScriptManager.MSAjax.5.0.0/content/Scripts/WebForms/MSAjax/MicrosoftAjaxGlobalization.js">
-      <publishTime>06/09/2013 12:20:12</publishTime>
+      <publishTime>09/06/2013 12:20:12</publishTime>
     </File>
     <File Include="packages/Microsoft.AspNet.ScriptManager.MSAjax.5.0.0/content/Scripts/WebForms/MSAjax/MicrosoftAjaxHistory.js">
-      <publishTime>06/09/2013 12:20:12</publishTime>
+      <publishTime>09/06/2013 12:20:12</publishTime>
     </File>
     <File Include="packages/Microsoft.AspNet.ScriptManager.MSAjax.5.0.0/content/Scripts/WebForms/MSAjax/MicrosoftAjaxNetwork.js">
-      <publishTime>06/09/2013 12:20:12</publishTime>
+      <publishTime>09/06/2013 12:20:12</publishTime>
     </File>
     <File Include="packages/Microsoft.AspNet.ScriptManager.MSAjax.5.0.0/content/Scripts/WebForms/MSAjax/MicrosoftAjaxSerialization.js">
-      <publishTime>06/09/2013 12:20:12</publishTime>
+      <publishTime>09/06/2013 12:20:12</publishTime>
     </File>
     <File Include="packages/Microsoft.AspNet.ScriptManager.MSAjax.5.0.0/content/Scripts/WebForms/MSAjax/MicrosoftAjaxTimer.js">
-      <publishTime>06/09/2013 12:20:12</publishTime>
+      <publishTime>09/06/2013 12:20:12</publishTime>
     </File>
     <File Include="packages/Microsoft.AspNet.ScriptManager.MSAjax.5.0.0/content/Scripts/WebForms/MSAjax/MicrosoftAjaxWebForms.js">
-      <publishTime>06/09/2013 12:20:12</publishTime>
+      <publishTime>09/06/2013 12:20:12</publishTime>
     </File>
     <File Include="packages/Microsoft.AspNet.ScriptManager.MSAjax.5.0.0/content/Scripts/WebForms/MSAjax/MicrosoftAjaxWebServices.js">
-      <publishTime>06/09/2013 12:20:12</publishTime>
+      <publishTime>09/06/2013 12:20:12</publishTime>
     </File>
     <File Include="packages/Microsoft.AspNet.ScriptManager.MSAjax.5.0.0/lib/net45/Microsoft.ScriptManager.MSAjax.dll">
-      <publishTime>06/09/2013 12:20:12</publishTime>
+      <publishTime>09/06/2013 12:20:12</publishTime>
     </File>
     <File Include="packages/Microsoft.AspNet.ScriptManager.MSAjax.5.0.0/Microsoft.AspNet.ScriptManager.MSAjax.5.0.0.nupkg">
-      <publishTime>04/05/2025 18:19:31</publishTime>
+      <publishTime>05/04/2025 18:19:31</publishTime>
     </File>
     <File Include="packages/Microsoft.AspNet.ScriptManager.WebForms.5.0.0/.signature.p7s">
-      <publishTime>07/10/2018 12:08:10</publishTime>
+      <publishTime>10/07/2018 12:08:10</publishTime>
     </File>
     <File Include="packages/Microsoft.AspNet.ScriptManager.WebForms.5.0.0/content/Scripts/WebForms/DetailsView.js">
-      <publishTime>06/09/2013 12:20:22</publishTime>
+      <publishTime>09/06/2013 12:20:22</publishTime>
     </File>
     <File Include="packages/Microsoft.AspNet.ScriptManager.WebForms.5.0.0/content/Scripts/WebForms/Focus.js">
-      <publishTime>06/09/2013 12:20:22</publishTime>
+      <publishTime>09/06/2013 12:20:22</publishTime>
     </File>
     <File Include="packages/Microsoft.AspNet.ScriptManager.WebForms.5.0.0/content/Scripts/WebForms/GridView.js">
-      <publishTime>06/09/2013 12:20:22</publishTime>
+      <publishTime>09/06/2013 12:20:22</publishTime>
     </File>
     <File Include="packages/Microsoft.AspNet.ScriptManager.WebForms.5.0.0/content/Scripts/WebForms/Menu.js">
-      <publishTime>06/09/2013 12:20:22</publishTime>
+      <publishTime>09/06/2013 12:20:22</publishTime>
     </File>
     <File Include="packages/Microsoft.AspNet.ScriptManager.WebForms.5.0.0/content/Scripts/WebForms/MenuStandards.js">
-      <publishTime>06/09/2013 12:20:22</publishTime>
+      <publishTime>09/06/2013 12:20:22</publishTime>
     </File>
     <File Include="packages/Microsoft.AspNet.ScriptManager.WebForms.5.0.0/content/Scripts/WebForms/SmartNav.js">
-      <publishTime>06/09/2013 12:20:22</publishTime>
+      <publishTime>09/06/2013 12:20:22</publishTime>
     </File>
     <File Include="packages/Microsoft.AspNet.ScriptManager.WebForms.5.0.0/content/Scripts/WebForms/TreeView.js">
-      <publishTime>06/09/2013 12:20:22</publishTime>
+      <publishTime>09/06/2013 12:20:22</publishTime>
     </File>
     <File Include="packages/Microsoft.AspNet.ScriptManager.WebForms.5.0.0/content/Scripts/WebForms/WebForms.js">
-      <publishTime>06/09/2013 12:20:22</publishTime>
+      <publishTime>09/06/2013 12:20:22</publishTime>
     </File>
     <File Include="packages/Microsoft.AspNet.ScriptManager.WebForms.5.0.0/content/Scripts/WebForms/WebParts.js">
-      <publishTime>06/09/2013 12:20:22</publishTime>
+      <publishTime>09/06/2013 12:20:22</publishTime>
     </File>
     <File Include="packages/Microsoft.AspNet.ScriptManager.WebForms.5.0.0/content/Scripts/WebForms/WebUIValidation.js">
-      <publishTime>06/09/2013 12:20:22</publishTime>
+      <publishTime>09/06/2013 12:20:22</publishTime>
     </File>
     <File Include="packages/Microsoft.AspNet.ScriptManager.WebForms.5.0.0/lib/net45/Microsoft.ScriptManager.WebForms.dll">
-      <publishTime>06/09/2013 12:20:22</publishTime>
+      <publishTime>09/06/2013 12:20:22</publishTime>
     </File>
     <File Include="packages/Microsoft.AspNet.ScriptManager.WebForms.5.0.0/Microsoft.AspNet.ScriptManager.WebForms.5.0.0.nupkg">
-      <publishTime>04/05/2025 18:19:32</publishTime>
+      <publishTime>05/04/2025 18:19:32</publishTime>
     </File>
     <File Include="packages/Microsoft.AspNet.Web.Optimization.1.1.3/.signature.p7s">
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="packages/Microsoft.AspNet.Web.Optimization.1.1.3/lib/net40/es/System.Web.Optimization.resources.dll">
-      <publishTime>11/02/2014 15:28:40</publishTime>
+      <publishTime>02/11/2014 15:28:40</publishTime>
     </File>
     <File Include="packages/Microsoft.AspNet.Web.Optimization.1.1.3/lib/net40/System.Web.Optimization.dll">
-      <publishTime>11/02/2014 15:26:04</publishTime>
+      <publishTime>02/11/2014 15:26:04</publishTime>
     </File>
     <File Include="packages/Microsoft.AspNet.Web.Optimization.1.1.3/Microsoft.AspNet.Web.Optimization.1.1.3.nupkg">
-      <publishTime>04/05/2025 18:19:30</publishTime>
+      <publishTime>05/04/2025 18:19:30</publishTime>
     </File>
     <File Include="packages/Microsoft.AspNet.Web.Optimization.es.1.1.3/.signature.p7s">
       <publishTime>10/10/2018 23:18:52</publishTime>
     </File>
     <File Include="packages/Microsoft.AspNet.Web.Optimization.es.1.1.3/lib/net40/es/System.Web.Optimization.resources.dll">
-      <publishTime>11/02/2014 15:28:40</publishTime>
+      <publishTime>02/11/2014 15:28:40</publishTime>
     </File>
     <File Include="packages/Microsoft.AspNet.Web.Optimization.es.1.1.3/Microsoft.AspNet.Web.Optimization.es.1.1.3.nupkg">
-      <publishTime>04/05/2025 18:19:34</publishTime>
+      <publishTime>05/04/2025 18:19:34</publishTime>
     </File>
     <File Include="packages/Microsoft.AspNet.Web.Optimization.WebForms.1.1.3/.signature.p7s">
-      <publishTime>07/10/2018 07:35:44</publishTime>
+      <publishTime>10/07/2018 07:35:44</publishTime>
     </File>
     <File Include="packages/Microsoft.AspNet.Web.Optimization.WebForms.1.1.3/content/web.config.transform">
-      <publishTime>11/02/2014 15:26:04</publishTime>
+      <publishTime>02/11/2014 15:26:04</publishTime>
     </File>
     <File Include="packages/Microsoft.AspNet.Web.Optimization.WebForms.1.1.3/lib/net45/Microsoft.AspNet.Web.Optimization.WebForms.dll">
-      <publishTime>11/02/2014 15:26:04</publishTime>
+      <publishTime>02/11/2014 15:26:04</publishTime>
     </File>
     <File Include="packages/Microsoft.AspNet.Web.Optimization.WebForms.1.1.3/Microsoft.AspNet.Web.Optimization.WebForms.1.1.3.nupkg">
-      <publishTime>04/05/2025 18:19:33</publishTime>
+      <publishTime>05/04/2025 18:19:33</publishTime>
     </File>
     <File Include="packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/.signature.p7s">
       <publishTime>12/17/2018 16:01:52</publishTime>
     </File>
     <File Include="packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/build/net45/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.Extensions.props">
-      <publishTime>05/09/2018 17:04:32</publishTime>
+      <publishTime>09/05/2018 17:04:32</publishTime>
     </File>
     <File Include="packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/build/net45/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props">
-      <publishTime>05/09/2018 17:04:32</publishTime>
+      <publishTime>09/05/2018 17:04:32</publishTime>
     </File>
     <File Include="packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/build/net46/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.Extensions.props">
-      <publishTime>05/09/2018 17:04:32</publishTime>
+      <publishTime>09/05/2018 17:04:32</publishTime>
     </File>
     <File Include="packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/build/net46/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props">
-      <publishTime>05/09/2018 17:04:32</publishTime>
+      <publishTime>09/05/2018 17:04:32</publishTime>
     </File>
     <File Include="packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/content/net45/app.config.install.xdt">
-      <publishTime>05/09/2018 17:04:34</publishTime>
+      <publishTime>09/05/2018 17:04:34</publishTime>
     </File>
     <File Include="packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/content/net45/app.config.uninstall.xdt">
-      <publishTime>05/09/2018 17:04:34</publishTime>
+      <publishTime>09/05/2018 17:04:34</publishTime>
     </File>
     <File Include="packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/content/net45/web.config.install.xdt">
-      <publishTime>05/09/2018 17:04:34</publishTime>
+      <publishTime>09/05/2018 17:04:34</publishTime>
     </File>
     <File Include="packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/content/net45/web.config.uninstall.xdt">
-      <publishTime>05/09/2018 17:04:34</publishTime>
+      <publishTime>09/05/2018 17:04:34</publishTime>
     </File>
     <File Include="packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/content/net46/app.config.install.xdt">
-      <publishTime>05/09/2018 17:04:34</publishTime>
+      <publishTime>09/05/2018 17:04:34</publishTime>
     </File>
     <File Include="packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/content/net46/app.config.uninstall.xdt">
-      <publishTime>05/09/2018 17:04:34</publishTime>
+      <publishTime>09/05/2018 17:04:34</publishTime>
     </File>
     <File Include="packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/content/net46/web.config.install.xdt">
-      <publishTime>05/09/2018 17:04:34</publishTime>
+      <publishTime>09/05/2018 17:04:34</publishTime>
     </File>
     <File Include="packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/content/net46/web.config.uninstall.xdt">
-      <publishTime>05/09/2018 17:04:34</publishTime>
+      <publishTime>09/05/2018 17:04:34</publishTime>
     </File>
     <File Include="packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/lib/net45/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
-      <publishTime>05/09/2018 17:10:50</publishTime>
+      <publishTime>09/05/2018 17:10:50</publishTime>
     </File>
     <File Include="packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1.nupkg">
-      <publishTime>04/05/2025 18:19:36</publishTime>
+      <publishTime>05/04/2025 18:19:36</publishTime>
     </File>
     <File Include="packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/net45/install.ps1">
-      <publishTime>05/09/2018 17:15:16</publishTime>
+      <publishTime>09/05/2018 17:15:16</publishTime>
     </File>
     <File Include="packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/net45/uninstall.ps1">
-      <publishTime>05/09/2018 17:13:46</publishTime>
+      <publishTime>09/05/2018 17:13:46</publishTime>
     </File>
     <File Include="packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/Roslyn45/csc.exe">
       <publishTime>06/27/2016 22:50:24</publishTime>
@@ -6745,10 +6748,10 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>08/08/2018 13:09:42</publishTime>
     </File>
     <File Include="packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/Microsoft.DiaSymReader.Native.amd64.dll">
-      <publishTime>05/12/2017 09:36:44</publishTime>
+      <publishTime>12/05/2017 09:36:44</publishTime>
     </File>
     <File Include="packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/Microsoft.DiaSymReader.Native.x86.dll">
-      <publishTime>05/12/2017 09:36:44</publishTime>
+      <publishTime>12/05/2017 09:36:44</publishTime>
     </File>
     <File Include="packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/Microsoft.Managed.Core.targets">
       <publishTime>08/08/2018 13:09:42</publishTime>
@@ -6757,85 +6760,85 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>08/08/2018 13:09:42</publishTime>
     </File>
     <File Include="packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/Microsoft.Win32.Primitives.dll">
-      <publishTime>05/11/2016 18:55:32</publishTime>
+      <publishTime>11/05/2016 18:55:32</publishTime>
     </File>
     <File Include="packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.AppContext.dll">
-      <publishTime>05/11/2016 18:55:34</publishTime>
+      <publishTime>11/05/2016 18:55:34</publishTime>
     </File>
     <File Include="packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.Collections.Immutable.dll">
       <publishTime>05/16/2018 04:29:34</publishTime>
     </File>
     <File Include="packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.Console.dll">
-      <publishTime>05/11/2016 18:55:48</publishTime>
+      <publishTime>11/05/2016 18:55:48</publishTime>
     </File>
     <File Include="packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.Diagnostics.DiagnosticSource.dll">
-      <publishTime>05/11/2016 18:55:52</publishTime>
+      <publishTime>11/05/2016 18:55:52</publishTime>
     </File>
     <File Include="packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.Diagnostics.FileVersionInfo.dll">
-      <publishTime>05/11/2016 18:55:56</publishTime>
+      <publishTime>11/05/2016 18:55:56</publishTime>
     </File>
     <File Include="packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.Diagnostics.StackTrace.dll">
-      <publishTime>05/11/2016 18:55:52</publishTime>
+      <publishTime>11/05/2016 18:55:52</publishTime>
     </File>
     <File Include="packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.Globalization.Calendars.dll">
-      <publishTime>05/11/2016 18:56:02</publishTime>
+      <publishTime>11/05/2016 18:56:02</publishTime>
     </File>
     <File Include="packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.IO.Compression.dll">
-      <publishTime>05/11/2016 18:56:08</publishTime>
+      <publishTime>11/05/2016 18:56:08</publishTime>
     </File>
     <File Include="packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.IO.Compression.ZipFile.dll">
-      <publishTime>05/11/2016 18:56:04</publishTime>
+      <publishTime>11/05/2016 18:56:04</publishTime>
     </File>
     <File Include="packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.IO.FileSystem.dll">
-      <publishTime>05/11/2016 18:56:08</publishTime>
+      <publishTime>11/05/2016 18:56:08</publishTime>
     </File>
     <File Include="packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.IO.FileSystem.Primitives.dll">
-      <publishTime>05/11/2016 18:56:08</publishTime>
+      <publishTime>11/05/2016 18:56:08</publishTime>
     </File>
     <File Include="packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.Net.Http.dll">
-      <publishTime>05/11/2016 18:56:30</publishTime>
+      <publishTime>11/05/2016 18:56:30</publishTime>
     </File>
     <File Include="packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.Net.Sockets.dll">
-      <publishTime>05/11/2016 18:56:34</publishTime>
+      <publishTime>11/05/2016 18:56:34</publishTime>
     </File>
     <File Include="packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.Reflection.Metadata.dll">
       <publishTime>05/16/2018 04:29:44</publishTime>
     </File>
     <File Include="packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.Runtime.InteropServices.RuntimeInformation.dll">
-      <publishTime>05/11/2016 18:57:00</publishTime>
+      <publishTime>11/05/2016 18:57:00</publishTime>
     </File>
     <File Include="packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.Security.Cryptography.Algorithms.dll">
-      <publishTime>05/11/2016 18:57:14</publishTime>
+      <publishTime>11/05/2016 18:57:14</publishTime>
     </File>
     <File Include="packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.Security.Cryptography.Encoding.dll">
-      <publishTime>05/11/2016 18:57:08</publishTime>
+      <publishTime>11/05/2016 18:57:08</publishTime>
     </File>
     <File Include="packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.Security.Cryptography.Primitives.dll">
-      <publishTime>05/11/2016 18:57:18</publishTime>
+      <publishTime>11/05/2016 18:57:18</publishTime>
     </File>
     <File Include="packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.Security.Cryptography.X509Certificates.dll">
-      <publishTime>05/11/2016 18:57:18</publishTime>
+      <publishTime>11/05/2016 18:57:18</publishTime>
     </File>
     <File Include="packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.Text.Encoding.CodePages.dll">
-      <publishTime>05/11/2016 18:57:20</publishTime>
+      <publishTime>11/05/2016 18:57:20</publishTime>
     </File>
     <File Include="packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.Threading.Tasks.Extensions.dll">
-      <publishTime>05/11/2016 18:57:24</publishTime>
+      <publishTime>11/05/2016 18:57:24</publishTime>
     </File>
     <File Include="packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.ValueTuple.dll">
-      <publishTime>05/11/2016 18:57:30</publishTime>
+      <publishTime>11/05/2016 18:57:30</publishTime>
     </File>
     <File Include="packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.Xml.ReaderWriter.dll">
-      <publishTime>05/11/2016 18:57:36</publishTime>
+      <publishTime>11/05/2016 18:57:36</publishTime>
     </File>
     <File Include="packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.Xml.XmlDocument.dll">
-      <publishTime>05/11/2016 18:57:34</publishTime>
+      <publishTime>11/05/2016 18:57:34</publishTime>
     </File>
     <File Include="packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.Xml.XPath.dll">
-      <publishTime>05/11/2016 18:57:40</publishTime>
+      <publishTime>11/05/2016 18:57:40</publishTime>
     </File>
     <File Include="packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.Xml.XPath.XDocument.dll">
-      <publishTime>05/11/2016 18:57:34</publishTime>
+      <publishTime>11/05/2016 18:57:34</publishTime>
     </File>
     <File Include="packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/vbc.exe">
       <publishTime>08/08/2018 06:38:48</publishTime>
@@ -6859,7 +6862,7 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>07/25/2012 12:48:56</publishTime>
     </File>
     <File Include="packages/Microsoft.Web.Infrastructure.1.0.0.0/Microsoft.Web.Infrastructure.1.0.0.0.nupkg">
-      <publishTime>04/05/2025 18:19:22</publishTime>
+      <publishTime>05/04/2025 18:19:22</publishTime>
     </File>
     <File Include="packages/Modernizr.2.8.3/.signature.p7s">
       <publishTime>10/14/2018 22:04:42</publishTime>
@@ -6868,7 +6871,7 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>08/19/2014 22:50:30</publishTime>
     </File>
     <File Include="packages/Modernizr.2.8.3/Modernizr.2.8.3.nupkg">
-      <publishTime>04/05/2025 18:19:28</publishTime>
+      <publishTime>05/04/2025 18:19:28</publishTime>
     </File>
     <File Include="packages/Modernizr.2.8.3/Tools/common.ps1">
       <publishTime>08/19/2014 22:50:30</publishTime>
@@ -6937,7 +6940,7 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>04/22/2019 01:53:56</publishTime>
     </File>
     <File Include="packages/Newtonsoft.Json.12.0.2/Newtonsoft.Json.12.0.2.nupkg">
-      <publishTime>04/05/2025 18:19:23</publishTime>
+      <publishTime>05/04/2025 18:19:23</publishTime>
     </File>
     <File Include="packages/WebGrease.1.6.0/.signature.p7s">
       <publishTime>12/13/2018 13:58:30</publishTime>
@@ -6949,7 +6952,10 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>01/23/2014 13:57:34</publishTime>
     </File>
     <File Include="packages/WebGrease.1.6.0/WebGrease.1.6.0.nupkg">
-      <publishTime>04/05/2025 18:19:30</publishTime>
+      <publishTime>05/04/2025 18:19:30</publishTime>
+    </File>
+    <File Include="Pages/Cortes/_cortes_caja.aspx">
+      <publishTime>08/10/2025 18:04:16</publishTime>
     </File>
     <File Include="sanderson.backend.csproj.bak">
       <publishTime>05/26/2025 11:00:16</publishTime>
@@ -6964,13 +6970,13 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>05/12/2025 12:22:22</publishTime>
     </File>
     <File Include="Site.Master">
-      <publishTime>05/28/2025 22:16:01</publishTime>
+      <publishTime>06/23/2025 19:15:40</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>06/10/2025 23:30:28</publishTime>
+      <publishTime>08/04/2025 08:49:34</publishTime>
     </File>
     <File Include="_alumnos.aspx">
-      <publishTime>06/10/2025 22:55:11</publishTime>
+      <publishTime>06/15/2025 13:12:08</publishTime>
     </File>
     <File Include="_becas.aspx">
       <publishTime>05/26/2025 22:21:02</publishTime>
@@ -6979,7 +6985,7 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>05/26/2025 22:21:02</publishTime>
     </File>
     <File Include="_conceptos_pago.aspx">
-      <publishTime>05/26/2025 22:21:02</publishTime>
+      <publishTime>07/01/2025 22:28:03</publishTime>
     </File>
     <File Include="_gastos.aspx">
       <publishTime>06/10/2025 23:12:51</publishTime>

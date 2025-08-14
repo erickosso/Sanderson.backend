@@ -187,16 +187,16 @@ namespace sanderson.backend.Services
             var query = _db.Pagos
                 .Include(p => p.Alumnos)
                 .Include(p => p.ConceptosPago)
-                .Where(p => p.estado == "Pendiente");
+                .Where(p => p.estado == "Pendiente"  ).ToList();
 
             if (IdAlumno!=null)
             {
-                query = query.Where(p =>p.alumno_id==IdAlumno);
+                query = query.Where(p =>p.alumno_id==IdAlumno).ToList();
             }
 
             if (escuelaId.HasValue)
             {
-                query = query.Where(p => p.escuela_id == escuelaId.Value);
+                query = query.Where(p => p.escuela_id == escuelaId.Value).ToList();
             }
 
             return query
@@ -214,7 +214,7 @@ namespace sanderson.backend.Services
                     FechaVencimiento = p.fecha_vencimiento,
                     DiasVencidos = Math.Max(0, (DateTime.Today - (p.fecha_vencimiento ?? DateTime.Today)).Days),
                      escuela_id = p.escuela_id // Añadir esta propiedad al ViewModel
-        }).ToList();
+                }).ToList();
         }
         public void RegistrarPago(Guid pagoId, string metodoPago, string referencia ,decimal Montopagado)
         {

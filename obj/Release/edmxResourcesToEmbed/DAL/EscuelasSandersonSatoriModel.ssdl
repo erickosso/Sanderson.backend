@@ -96,6 +96,58 @@
     <Property Name="monto_11_meses" Type="decimal" Precision="10" Scale="2" />
     <Property Name="monto_12_meses" Type="decimal" Precision="10" Scale="2" />
   </EntityType>
+  <EntityType Name="CorteCajaGastos">
+    <Key>
+      <PropertyRef Name="detalle_id" />
+    </Key>
+    <Property Name="detalle_id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="corte_id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="gasto_id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="concepto" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="monto" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="tipo_gasto" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="justificacion" Type="nvarchar" MaxLength="500" />
+    <Property Name="es_gasto_general" Type="bit" Nullable="false" />
+    <Property Name="fecha_gasto" Type="datetime" Nullable="false" />
+    <Property Name="usuario_registro" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CorteCajaIngresos">
+    <Key>
+      <PropertyRef Name="detalle_id" />
+    </Key>
+    <Property Name="detalle_id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="corte_id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="pago_id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="alumno_id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="concepto_id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="alumno_nombre" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="concepto_nombre" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="monto_original" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="descuento" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="recargo" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="monto_pagado" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="metodo_pago" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="periodo" Type="nvarchar" MaxLength="20" />
+    <Property Name="referencia" Type="nvarchar" MaxLength="100" />
+    <Property Name="fecha_pago" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CortesCaja">
+    <Key>
+      <PropertyRef Name="corte_id" />
+    </Key>
+    <Property Name="corte_id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="escuela_id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="fecha_corte" Type="date" Nullable="false" />
+    <Property Name="hora_inicio" Type="time" Precision="7" />
+    <Property Name="hora_fin" Type="time" Precision="7" />
+    <Property Name="usuario_id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="total_ingresos" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="total_gastos" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="saldo_inicial" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="saldo_final" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="observaciones" Type="nvarchar(max)" />
+    <Property Name="estado" Type="nvarchar" MaxLength="20" Nullable="false" />
+  </EntityType>
   <EntityType Name="EscuelaConceptosPago">
     <Key>
       <PropertyRef Name="escuela_id" />
@@ -268,6 +320,30 @@
     <Property Name="porcentaje" Type="decimal" Precision="5" Scale="2" Nullable="false" />
     <Property Name="descripcion" Type="nvarchar" MaxLength="200" Nullable="false" />
   </EntityType>
+  <EntityType Name="ResumenDiario">
+    <Key>
+      <PropertyRef Name="resumen_id" />
+    </Key>
+    <Property Name="resumen_id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="escuela_id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="fecha" Type="date" Nullable="false" />
+    <Property Name="total_ingresos" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="total_gastos" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="saldo_neto" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ingresos_efectivo" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ingresos_tarjeta" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ingresos_transferencia" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ingresos_cheque" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ingresos_colegiatura" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ingresos_inscripcion" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ingresos_uniformes" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ingresos_talleres" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ingresos_otros" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="numero_pagos" Type="int" Nullable="false" />
+    <Property Name="numero_gastos" Type="int" Nullable="false" />
+    <Property Name="numero_cortes" Type="int" Nullable="false" />
+    <Property Name="fecha_actualizacion" Type="datetime" Nullable="false" />
+  </EntityType>
   <EntityType Name="Roles">
     <Key>
       <PropertyRef Name="rol_id" />
@@ -283,6 +359,16 @@
     </Key>
     <Property Name="rol_id" Type="int" Nullable="false" />
     <Property Name="permiso_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
   <EntityType Name="Talleres">
     <Key>
@@ -358,6 +444,102 @@
     <Property Name="fecha_asignacion" Type="datetime" />
   </EntityType>
   <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'EscuelasSandersonSatori.dbo.GastosNoRegistrados' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="GastosNoRegistrados">
+    <Key>
+      <PropertyRef Name="IdGasto" />
+      <PropertyRef Name="IdTipoGasto" />
+      <PropertyRef Name="Concepto" />
+      <PropertyRef Name="Monto" />
+      <PropertyRef Name="EsGastoGeneral" />
+      <PropertyRef Name="FechaRegistro" />
+      <PropertyRef Name="UsuarioRegistro" />
+    </Key>
+    <Property Name="IdGasto" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdEscuela" Type="uniqueidentifier" />
+    <Property Name="IdTipoGasto" Type="int" Nullable="false" />
+    <Property Name="Concepto" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Monto" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Justificacion" Type="nvarchar" MaxLength="500" />
+    <Property Name="EsGastoGeneral" Type="bit" Nullable="false" />
+    <Property Name="FechaGasto" Type="datetime" />
+    <Property Name="FechaRegistro" Type="datetime" Nullable="false" />
+    <Property Name="UsuarioRegistro" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" />
+    <Property Name="UsuarioModificacion" Type="nvarchar" MaxLength="100" />
+    <Property Name="corte_id" Type="uniqueidentifier" />
+    <Property Name="detalle_id" Type="uniqueidentifier" />
+    <Property Name="gasto_id" Type="uniqueidentifier" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'EscuelasSandersonSatori.dbo.IngresosNoRegistrados' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="IngresosNoRegistrados">
+    <Key>
+      <PropertyRef Name="pago_id" />
+      <PropertyRef Name="alumno_id" />
+      <PropertyRef Name="concepto_id" />
+      <PropertyRef Name="monto" />
+      <PropertyRef Name="fecha_aplicacion" />
+      <PropertyRef Name="ciclo_escolar" />
+    </Key>
+    <Property Name="pago_id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="alumno_id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="concepto_id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="monto" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="descuento" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="recargo" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="beca_id" Type="uniqueidentifier" />
+    <Property Name="fecha_pago" Type="datetime" />
+    <Property Name="fecha_aplicacion" Type="date" Nullable="false" />
+    <Property Name="fecha_vencimiento" Type="date" />
+    <Property Name="periodo" Type="nvarchar" MaxLength="20" />
+    <Property Name="metodo_pago" Type="nvarchar" MaxLength="20" />
+    <Property Name="referencia" Type="nvarchar" MaxLength="100" />
+    <Property Name="observaciones" Type="nvarchar(max)" />
+    <Property Name="estado" Type="nvarchar" MaxLength="20" />
+    <Property Name="usuario_registro" Type="nvarchar" MaxLength="100" />
+    <Property Name="escuela_id" Type="uniqueidentifier" />
+    <Property Name="ciclo_escolar" Type="nvarchar" MaxLength="9" Nullable="false" />
+    <Property Name="monto_pagado" Type="decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'EscuelasSandersonSatori.dbo.V_CorteCaja' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="V_CorteCaja">
+    <Key>
+      <PropertyRef Name="corte_id" />
+      <PropertyRef Name="fecha_corte" />
+      <PropertyRef Name="usuario_id" />
+      <PropertyRef Name="total_ingresos" />
+      <PropertyRef Name="total_gastos" />
+      <PropertyRef Name="saldo_inicial" />
+      <PropertyRef Name="saldo_final" />
+      <PropertyRef Name="estado" />
+      <PropertyRef Name="EscuelaNombre" />
+      <PropertyRef Name="username" />
+      <PropertyRef Name="NombreUsuario" />
+      <PropertyRef Name="email" />
+    </Key>
+    <Property Name="corte_id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="fecha_corte" Type="date" Nullable="false" />
+    <Property Name="hora_inicio" Type="time" Precision="7" />
+    <Property Name="hora_fin" Type="time" Precision="7" />
+    <Property Name="usuario_id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="total_ingresos" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="total_gastos" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="saldo_inicial" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="saldo_final" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="observaciones" Type="nvarchar(max)" />
+    <Property Name="estado" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="EscuelaNombre" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="direccion" Type="nvarchar" MaxLength="200" />
+    <Property Name="telefono" Type="nvarchar" MaxLength="20" />
+    <Property Name="director" Type="nvarchar" MaxLength="100" />
+    <Property Name="activo" Type="bit" />
+    <Property Name="username" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="NombreUsuario" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="email" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
 advertencia 6002: La tabla o vista 'EscuelasSandersonSatori.dbo.VAlumnos' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
   <EntityType Name="VAlumnos">
     <Key>
@@ -382,7 +564,7 @@ advertencia 6002: La tabla o vista 'EscuelasSandersonSatori.dbo.VAlumnos' no tie
     <Property Name="nivel_id" Type="int" Nullable="false" />
     <Property Name="Nivel" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="Grado" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="GradoNivel" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="GradoNivel" Type="varchar" MaxLength="24" Nullable="false" />
     <Property Name="grado_id" Type="int" Nullable="false" />
     <Property Name="alergias" Type="nvarchar(max)" />
     <Property Name="observaciones" Type="nvarchar(max)" />
@@ -492,6 +674,26 @@ advertencia 6002: La tabla o vista 'EscuelasSandersonSatori.dbo.VW_AlumnosBecasA
     <Property Name="fecha_vencimiento" Type="date" />
   </EntityType>
   <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'EscuelasSandersonSatori.dbo.VW_CapitalActual' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="VW_CapitalActual">
+    <Key>
+      <PropertyRef Name="escuela_nombre" />
+      <PropertyRef Name="efectivo_disponible" />
+      <PropertyRef Name="bancos_disponible" />
+      <PropertyRef Name="total_disponible" />
+      <PropertyRef Name="fecha" />
+      <PropertyRef Name="fecha_actualizacion" />
+      <PropertyRef Name="usuario_actualizacion" />
+    </Key>
+    <Property Name="escuela_nombre" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="efectivo_disponible" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="bancos_disponible" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="total_disponible" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="fecha" Type="date" Nullable="false" />
+    <Property Name="fecha_actualizacion" Type="datetime" Nullable="false" />
+    <Property Name="usuario_actualizacion" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
 advertencia 6002: La tabla o vista 'EscuelasSandersonSatori.dbo.VW_ComparacionPlanesPago' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
   <EntityType Name="VW_ComparacionPlanesPago">
     <Key>
@@ -509,6 +711,66 @@ advertencia 6002: La tabla o vista 'EscuelasSandersonSatori.dbo.VW_ComparacionPl
     <Property Name="total_11_meses" Type="decimal" Precision="38" Scale="2" />
     <Property Name="total_12_meses" Type="decimal" Precision="38" Scale="2" />
     <Property Name="mes_sin_pago" Type="int" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'EscuelasSandersonSatori.dbo.VW_DetalleIngresos' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="VW_DetalleIngresos">
+    <Key>
+      <PropertyRef Name="detalle_id" />
+      <PropertyRef Name="fecha_corte" />
+      <PropertyRef Name="escuela_nombre" />
+      <PropertyRef Name="alumno_nombre" />
+      <PropertyRef Name="concepto_nombre" />
+      <PropertyRef Name="monto_original" />
+      <PropertyRef Name="descuento" />
+      <PropertyRef Name="recargo" />
+      <PropertyRef Name="monto_pagado" />
+      <PropertyRef Name="metodo_pago" />
+      <PropertyRef Name="fecha_pago" />
+      <PropertyRef Name="estado_corte" />
+    </Key>
+    <Property Name="detalle_id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="fecha_corte" Type="date" Nullable="false" />
+    <Property Name="escuela_nombre" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="alumno_nombre" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="concepto_nombre" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="monto_original" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="descuento" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="recargo" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="monto_pagado" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="metodo_pago" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="periodo" Type="nvarchar" MaxLength="20" />
+    <Property Name="referencia" Type="nvarchar" MaxLength="100" />
+    <Property Name="fecha_pago" Type="datetime" Nullable="false" />
+    <Property Name="estado_corte" Type="nvarchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'EscuelasSandersonSatori.dbo.VW_ResumenCortes' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="VW_ResumenCortes">
+    <Key>
+      <PropertyRef Name="corte_id" />
+      <PropertyRef Name="escuela_nombre" />
+      <PropertyRef Name="fecha_corte" />
+      <PropertyRef Name="usuario_nombre" />
+      <PropertyRef Name="total_ingresos" />
+      <PropertyRef Name="total_gastos" />
+      <PropertyRef Name="saldo_inicial" />
+      <PropertyRef Name="saldo_final" />
+      <PropertyRef Name="diferencia" />
+      <PropertyRef Name="estado" />
+    </Key>
+    <Property Name="corte_id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="escuela_nombre" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="fecha_corte" Type="date" Nullable="false" />
+    <Property Name="usuario_nombre" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="total_ingresos" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="total_gastos" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="saldo_inicial" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="saldo_final" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="diferencia" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="estado" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="num_ingresos" Type="int" />
+    <Property Name="num_gastos" Type="int" />
   </EntityType>
   <!--Errores durante la generación:
 advertencia 6002: La tabla o vista 'EscuelasSandersonSatori.dbo.VW_SeguimientoCambiosCiclo' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
@@ -871,6 +1133,102 @@ advertencia 6002: La tabla o vista 'EscuelasSandersonSatori.dbo.VW_SeguimientoCa
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_CorteCajaGastos_Corte">
+    <End Role="CortesCaja" Type="Self.CortesCaja" Multiplicity="1" />
+    <End Role="CorteCajaGastos" Type="Self.CorteCajaGastos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CortesCaja">
+        <PropertyRef Name="corte_id" />
+      </Principal>
+      <Dependent Role="CorteCajaGastos">
+        <PropertyRef Name="corte_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CorteCajaGastos_Gasto">
+    <End Role="Gastos" Type="Self.Gastos" Multiplicity="1" />
+    <End Role="CorteCajaGastos" Type="Self.CorteCajaGastos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Gastos">
+        <PropertyRef Name="IdGasto" />
+      </Principal>
+      <Dependent Role="CorteCajaGastos">
+        <PropertyRef Name="gasto_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CorteCajaIngresos_Alumno">
+    <End Role="Alumnos" Type="Self.Alumnos" Multiplicity="1" />
+    <End Role="CorteCajaIngresos" Type="Self.CorteCajaIngresos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Alumnos">
+        <PropertyRef Name="alumno_id" />
+      </Principal>
+      <Dependent Role="CorteCajaIngresos">
+        <PropertyRef Name="alumno_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CorteCajaIngresos_Concepto">
+    <End Role="ConceptosPago" Type="Self.ConceptosPago" Multiplicity="1" />
+    <End Role="CorteCajaIngresos" Type="Self.CorteCajaIngresos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ConceptosPago">
+        <PropertyRef Name="concepto_id" />
+      </Principal>
+      <Dependent Role="CorteCajaIngresos">
+        <PropertyRef Name="concepto_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CorteCajaIngresos_Corte">
+    <End Role="CortesCaja" Type="Self.CortesCaja" Multiplicity="1" />
+    <End Role="CorteCajaIngresos" Type="Self.CorteCajaIngresos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CortesCaja">
+        <PropertyRef Name="corte_id" />
+      </Principal>
+      <Dependent Role="CorteCajaIngresos">
+        <PropertyRef Name="corte_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CorteCajaIngresos_Pago">
+    <End Role="Pagos" Type="Self.Pagos" Multiplicity="1" />
+    <End Role="CorteCajaIngresos" Type="Self.CorteCajaIngresos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pagos">
+        <PropertyRef Name="pago_id" />
+      </Principal>
+      <Dependent Role="CorteCajaIngresos">
+        <PropertyRef Name="pago_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CortesCaja_Escuelas">
+    <End Role="Escuelas" Type="Self.Escuelas" Multiplicity="1" />
+    <End Role="CortesCaja" Type="Self.CortesCaja" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Escuelas">
+        <PropertyRef Name="escuela_id" />
+      </Principal>
+      <Dependent Role="CortesCaja">
+        <PropertyRef Name="escuela_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CortesCaja_Usuarios">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
+    <End Role="CortesCaja" Type="Self.CortesCaja" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="usuario_id" />
+      </Principal>
+      <Dependent Role="CortesCaja">
+        <PropertyRef Name="usuario_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_EvidenciaGasto_Gastos">
     <End Role="Gastos" Type="Self.Gastos" Multiplicity="1">
       <OnDelete Action="Cascade" />
@@ -909,6 +1267,18 @@ advertencia 6002: La tabla o vista 'EscuelasSandersonSatori.dbo.VW_SeguimientoCa
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_ResumenDiario_Escuela">
+    <End Role="Escuelas" Type="Self.Escuelas" Multiplicity="1" />
+    <End Role="ResumenDiario" Type="Self.ResumenDiario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Escuelas">
+        <PropertyRef Name="escuela_id" />
+      </Principal>
+      <Dependent Role="ResumenDiario">
+        <PropertyRef Name="escuela_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_UsuariosEscuelas_Escuelas">
     <End Role="Escuelas" Type="Self.Escuelas" Multiplicity="1" />
     <End Role="UsuariosEscuelas" Type="Self.UsuariosEscuelas" Multiplicity="*" />
@@ -933,16 +1303,48 @@ advertencia 6002: La tabla o vista 'EscuelasSandersonSatori.dbo.VW_SeguimientoCa
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Function Name="FN_CapitalActual" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="decimal">
+    <Parameter Name="escuela_id" Type="uniqueidentifier" Mode="In" />
+  </Function>
+  <Function Name="FN_CorteAbierto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="bit">
+    <Parameter Name="escuela_id" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="fecha" Type="date" Mode="In" />
+  </Function>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
   <Function Name="sp_CambiarPlanPago" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="alumno_id" Type="uniqueidentifier" Mode="In" />
     <Parameter Name="nuevo_plan" Type="nvarchar" Mode="In" />
     <Parameter Name="mes_sin_pago" Type="int" Mode="In" />
     <Parameter Name="usuario_registro" Type="nvarchar" Mode="In" />
   </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
   <Function Name="sp_GenerarColegiaturasMensuales" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="escuela_id" Type="uniqueidentifier" Mode="In" />
     <Parameter Name="anio" Type="int" Mode="In" />
     <Parameter Name="usuario_registro" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
   </Function>
   <Function Name="sp_MarcarRepitencia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="alumno_id" Type="uniqueidentifier" Mode="In" />
@@ -952,18 +1354,12 @@ advertencia 6002: La tabla o vista 'EscuelasSandersonSatori.dbo.VW_SeguimientoCa
     <Parameter Name="nuevo_ciclo" Type="nvarchar" Mode="In" />
     <Parameter Name="usuario_registro" Type="nvarchar" Mode="In" />
   </Function>
-  <Function Name="sp_RegistrarPago" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="alumno_id" Type="uniqueidentifier" Mode="In" />
-    <Parameter Name="concepto_id" Type="uniqueidentifier" Mode="In" />
-    <Parameter Name="monto" Type="decimal" Mode="In" />
-    <Parameter Name="fecha_aplicacion" Type="date" Mode="In" />
-    <Parameter Name="usuario_registro" Type="nvarchar" Mode="In" />
-    <Parameter Name="metodo_pago" Type="nvarchar" Mode="In" />
-    <Parameter Name="descuento" Type="decimal" Mode="In" />
-    <Parameter Name="beca_id" Type="uniqueidentifier" Mode="In" />
-    <Parameter Name="observaciones" Type="nvarchar(max)" Mode="In" />
-    <Parameter Name="referencia" Type="nvarchar" Mode="In" />
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
   </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <EntityContainer Name="EscuelasSandersonSatoriModelStoreContainer">
     <EntitySet Name="Alumnos" EntityType="Self.Alumnos" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="AlumnosBecas" EntityType="Self.AlumnosBecas" Schema="dbo" store:Type="Tables" />
@@ -972,6 +1368,9 @@ advertencia 6002: La tabla o vista 'EscuelasSandersonSatori.dbo.VW_SeguimientoCa
     <EntitySet Name="Becas" EntityType="Self.Becas" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CiclosEscolares" EntityType="Self.CiclosEscolares" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ConceptosPago" EntityType="Self.ConceptosPago" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CorteCajaGastos" EntityType="Self.CorteCajaGastos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CorteCajaIngresos" EntityType="Self.CorteCajaIngresos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CortesCaja" EntityType="Self.CortesCaja" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="EscuelaConceptosPago" EntityType="Self.EscuelaConceptosPago" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Escuelas" EntityType="Self.Escuelas" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="EvidenciaGasto" EntityType="Self.EvidenciaGasto" Schema="dbo" store:Type="Tables" />
@@ -987,14 +1386,81 @@ advertencia 6002: La tabla o vista 'EscuelasSandersonSatori.dbo.VW_SeguimientoCa
     <EntitySet Name="Permisos" EntityType="Self.Permisos" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PersonasAutorizadas" EntityType="Self.PersonasAutorizadas" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="RecargosConfig" EntityType="Self.RecargosConfig" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ResumenDiario" EntityType="Self.ResumenDiario" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="RolesPermisos" EntityType="Self.RolesPermisos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Talleres" EntityType="Self.Talleres" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TiposGasto" EntityType="Self.TiposGasto" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Tutores" EntityType="Self.Tutores" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Uniformes" EntityType="Self.Uniformes" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="UsuariosEscuelas" EntityType="Self.UsuariosEscuelas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GastosNoRegistrados" EntityType="Self.GastosNoRegistrados" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [GastosNoRegistrados].[IdGasto] AS [IdGasto], 
+    [GastosNoRegistrados].[IdEscuela] AS [IdEscuela], 
+    [GastosNoRegistrados].[IdTipoGasto] AS [IdTipoGasto], 
+    [GastosNoRegistrados].[Concepto] AS [Concepto], 
+    [GastosNoRegistrados].[Monto] AS [Monto], 
+    [GastosNoRegistrados].[Justificacion] AS [Justificacion], 
+    [GastosNoRegistrados].[EsGastoGeneral] AS [EsGastoGeneral], 
+    [GastosNoRegistrados].[FechaGasto] AS [FechaGasto], 
+    [GastosNoRegistrados].[FechaRegistro] AS [FechaRegistro], 
+    [GastosNoRegistrados].[UsuarioRegistro] AS [UsuarioRegistro], 
+    [GastosNoRegistrados].[FechaModificacion] AS [FechaModificacion], 
+    [GastosNoRegistrados].[UsuarioModificacion] AS [UsuarioModificacion], 
+    [GastosNoRegistrados].[corte_id] AS [corte_id], 
+    [GastosNoRegistrados].[detalle_id] AS [detalle_id], 
+    [GastosNoRegistrados].[gasto_id] AS [gasto_id]
+    FROM [dbo].[GastosNoRegistrados] AS [GastosNoRegistrados]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="IngresosNoRegistrados" EntityType="Self.IngresosNoRegistrados" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [IngresosNoRegistrados].[pago_id] AS [pago_id], 
+    [IngresosNoRegistrados].[alumno_id] AS [alumno_id], 
+    [IngresosNoRegistrados].[concepto_id] AS [concepto_id], 
+    [IngresosNoRegistrados].[monto] AS [monto], 
+    [IngresosNoRegistrados].[descuento] AS [descuento], 
+    [IngresosNoRegistrados].[recargo] AS [recargo], 
+    [IngresosNoRegistrados].[beca_id] AS [beca_id], 
+    [IngresosNoRegistrados].[fecha_pago] AS [fecha_pago], 
+    [IngresosNoRegistrados].[fecha_aplicacion] AS [fecha_aplicacion], 
+    [IngresosNoRegistrados].[fecha_vencimiento] AS [fecha_vencimiento], 
+    [IngresosNoRegistrados].[periodo] AS [periodo], 
+    [IngresosNoRegistrados].[metodo_pago] AS [metodo_pago], 
+    [IngresosNoRegistrados].[referencia] AS [referencia], 
+    [IngresosNoRegistrados].[observaciones] AS [observaciones], 
+    [IngresosNoRegistrados].[estado] AS [estado], 
+    [IngresosNoRegistrados].[usuario_registro] AS [usuario_registro], 
+    [IngresosNoRegistrados].[escuela_id] AS [escuela_id], 
+    [IngresosNoRegistrados].[ciclo_escolar] AS [ciclo_escolar], 
+    [IngresosNoRegistrados].[monto_pagado] AS [monto_pagado]
+    FROM [dbo].[IngresosNoRegistrados] AS [IngresosNoRegistrados]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="V_CorteCaja" EntityType="Self.V_CorteCaja" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [V_CorteCaja].[corte_id] AS [corte_id], 
+    [V_CorteCaja].[fecha_corte] AS [fecha_corte], 
+    [V_CorteCaja].[hora_inicio] AS [hora_inicio], 
+    [V_CorteCaja].[hora_fin] AS [hora_fin], 
+    [V_CorteCaja].[usuario_id] AS [usuario_id], 
+    [V_CorteCaja].[total_ingresos] AS [total_ingresos], 
+    [V_CorteCaja].[total_gastos] AS [total_gastos], 
+    [V_CorteCaja].[saldo_inicial] AS [saldo_inicial], 
+    [V_CorteCaja].[saldo_final] AS [saldo_final], 
+    [V_CorteCaja].[observaciones] AS [observaciones], 
+    [V_CorteCaja].[estado] AS [estado], 
+    [V_CorteCaja].[EscuelaNombre] AS [EscuelaNombre], 
+    [V_CorteCaja].[direccion] AS [direccion], 
+    [V_CorteCaja].[telefono] AS [telefono], 
+    [V_CorteCaja].[director] AS [director], 
+    [V_CorteCaja].[activo] AS [activo], 
+    [V_CorteCaja].[username] AS [username], 
+    [V_CorteCaja].[NombreUsuario] AS [NombreUsuario], 
+    [V_CorteCaja].[email] AS [email]
+    FROM [dbo].[V_CorteCaja] AS [V_CorteCaja]</DefiningQuery>
+    </EntitySet>
     <EntitySet Name="VAlumnos" EntityType="Self.VAlumnos" store:Type="Views" store:Schema="dbo">
       <DefiningQuery>SELECT 
     [VAlumnos].[alumno_id] AS [alumno_id], 
@@ -1081,6 +1547,17 @@ advertencia 6002: La tabla o vista 'EscuelasSandersonSatori.dbo.VW_SeguimientoCa
     [VW_AlumnosBecasActivas].[fecha_vencimiento] AS [fecha_vencimiento]
     FROM [dbo].[VW_AlumnosBecasActivas] AS [VW_AlumnosBecasActivas]</DefiningQuery>
     </EntitySet>
+    <EntitySet Name="VW_CapitalActual" EntityType="Self.VW_CapitalActual" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VW_CapitalActual].[escuela_nombre] AS [escuela_nombre], 
+    [VW_CapitalActual].[efectivo_disponible] AS [efectivo_disponible], 
+    [VW_CapitalActual].[bancos_disponible] AS [bancos_disponible], 
+    [VW_CapitalActual].[total_disponible] AS [total_disponible], 
+    [VW_CapitalActual].[fecha] AS [fecha], 
+    [VW_CapitalActual].[fecha_actualizacion] AS [fecha_actualizacion], 
+    [VW_CapitalActual].[usuario_actualizacion] AS [usuario_actualizacion]
+    FROM [dbo].[VW_CapitalActual] AS [VW_CapitalActual]</DefiningQuery>
+    </EntitySet>
     <EntitySet Name="VW_ComparacionPlanesPago" EntityType="Self.VW_ComparacionPlanesPago" store:Type="Views" store:Schema="dbo">
       <DefiningQuery>SELECT 
     [VW_ComparacionPlanesPago].[alumno_id] AS [alumno_id], 
@@ -1092,6 +1569,40 @@ advertencia 6002: La tabla o vista 'EscuelasSandersonSatori.dbo.VW_SeguimientoCa
     [VW_ComparacionPlanesPago].[total_12_meses] AS [total_12_meses], 
     [VW_ComparacionPlanesPago].[mes_sin_pago] AS [mes_sin_pago]
     FROM [dbo].[VW_ComparacionPlanesPago] AS [VW_ComparacionPlanesPago]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VW_DetalleIngresos" EntityType="Self.VW_DetalleIngresos" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VW_DetalleIngresos].[detalle_id] AS [detalle_id], 
+    [VW_DetalleIngresos].[fecha_corte] AS [fecha_corte], 
+    [VW_DetalleIngresos].[escuela_nombre] AS [escuela_nombre], 
+    [VW_DetalleIngresos].[alumno_nombre] AS [alumno_nombre], 
+    [VW_DetalleIngresos].[concepto_nombre] AS [concepto_nombre], 
+    [VW_DetalleIngresos].[monto_original] AS [monto_original], 
+    [VW_DetalleIngresos].[descuento] AS [descuento], 
+    [VW_DetalleIngresos].[recargo] AS [recargo], 
+    [VW_DetalleIngresos].[monto_pagado] AS [monto_pagado], 
+    [VW_DetalleIngresos].[metodo_pago] AS [metodo_pago], 
+    [VW_DetalleIngresos].[periodo] AS [periodo], 
+    [VW_DetalleIngresos].[referencia] AS [referencia], 
+    [VW_DetalleIngresos].[fecha_pago] AS [fecha_pago], 
+    [VW_DetalleIngresos].[estado_corte] AS [estado_corte]
+    FROM [dbo].[VW_DetalleIngresos] AS [VW_DetalleIngresos]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VW_ResumenCortes" EntityType="Self.VW_ResumenCortes" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VW_ResumenCortes].[corte_id] AS [corte_id], 
+    [VW_ResumenCortes].[escuela_nombre] AS [escuela_nombre], 
+    [VW_ResumenCortes].[fecha_corte] AS [fecha_corte], 
+    [VW_ResumenCortes].[usuario_nombre] AS [usuario_nombre], 
+    [VW_ResumenCortes].[total_ingresos] AS [total_ingresos], 
+    [VW_ResumenCortes].[total_gastos] AS [total_gastos], 
+    [VW_ResumenCortes].[saldo_inicial] AS [saldo_inicial], 
+    [VW_ResumenCortes].[saldo_final] AS [saldo_final], 
+    [VW_ResumenCortes].[diferencia] AS [diferencia], 
+    [VW_ResumenCortes].[estado] AS [estado], 
+    [VW_ResumenCortes].[num_ingresos] AS [num_ingresos], 
+    [VW_ResumenCortes].[num_gastos] AS [num_gastos]
+    FROM [dbo].[VW_ResumenCortes] AS [VW_ResumenCortes]</DefiningQuery>
     </EntitySet>
     <EntitySet Name="VW_SeguimientoCambiosCiclo" EntityType="Self.VW_SeguimientoCambiosCiclo" store:Type="Views" store:Schema="dbo">
       <DefiningQuery>SELECT 
@@ -1219,6 +1730,38 @@ advertencia 6002: La tabla o vista 'EscuelasSandersonSatori.dbo.VW_SeguimientoCa
       <End Role="Escuelas" EntitySet="Escuelas" />
       <End Role="ConceptosPago" EntitySet="ConceptosPago" />
     </AssociationSet>
+    <AssociationSet Name="FK_CorteCajaGastos_Corte" Association="Self.FK_CorteCajaGastos_Corte">
+      <End Role="CortesCaja" EntitySet="CortesCaja" />
+      <End Role="CorteCajaGastos" EntitySet="CorteCajaGastos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CorteCajaGastos_Gasto" Association="Self.FK_CorteCajaGastos_Gasto">
+      <End Role="Gastos" EntitySet="Gastos" />
+      <End Role="CorteCajaGastos" EntitySet="CorteCajaGastos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CorteCajaIngresos_Alumno" Association="Self.FK_CorteCajaIngresos_Alumno">
+      <End Role="Alumnos" EntitySet="Alumnos" />
+      <End Role="CorteCajaIngresos" EntitySet="CorteCajaIngresos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CorteCajaIngresos_Concepto" Association="Self.FK_CorteCajaIngresos_Concepto">
+      <End Role="ConceptosPago" EntitySet="ConceptosPago" />
+      <End Role="CorteCajaIngresos" EntitySet="CorteCajaIngresos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CorteCajaIngresos_Corte" Association="Self.FK_CorteCajaIngresos_Corte">
+      <End Role="CortesCaja" EntitySet="CortesCaja" />
+      <End Role="CorteCajaIngresos" EntitySet="CorteCajaIngresos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CorteCajaIngresos_Pago" Association="Self.FK_CorteCajaIngresos_Pago">
+      <End Role="Pagos" EntitySet="Pagos" />
+      <End Role="CorteCajaIngresos" EntitySet="CorteCajaIngresos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CortesCaja_Escuelas" Association="Self.FK_CortesCaja_Escuelas">
+      <End Role="Escuelas" EntitySet="Escuelas" />
+      <End Role="CortesCaja" EntitySet="CortesCaja" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CortesCaja_Usuarios" Association="Self.FK_CortesCaja_Usuarios">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="CortesCaja" EntitySet="CortesCaja" />
+    </AssociationSet>
     <AssociationSet Name="FK_EvidenciaGasto_Gastos" Association="Self.FK_EvidenciaGasto_Gastos">
       <End Role="Gastos" EntitySet="Gastos" />
       <End Role="EvidenciaGasto" EntitySet="EvidenciaGasto" />
@@ -1230,6 +1773,10 @@ advertencia 6002: La tabla o vista 'EscuelasSandersonSatori.dbo.VW_SeguimientoCa
     <AssociationSet Name="FK_Pagos_Escuelas" Association="Self.FK_Pagos_Escuelas">
       <End Role="Escuelas" EntitySet="Escuelas" />
       <End Role="Pagos" EntitySet="Pagos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ResumenDiario_Escuela" Association="Self.FK_ResumenDiario_Escuela">
+      <End Role="Escuelas" EntitySet="Escuelas" />
+      <End Role="ResumenDiario" EntitySet="ResumenDiario" />
     </AssociationSet>
     <AssociationSet Name="FK_UsuariosEscuelas_Escuelas" Association="Self.FK_UsuariosEscuelas_Escuelas">
       <End Role="Escuelas" EntitySet="Escuelas" />

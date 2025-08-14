@@ -98,7 +98,7 @@ namespace sanderson.backend
             var db = new EscuelasSandersonSatoriEntities();
             e.KeyExpression = "escuela_id";
 
-            e.QueryableSource = db.Escuelas.Select(x => x).OrderBy(c => c.nombre).Where(x => UserInfo.EscuelasByUsuario.Contains(x.escuela_id));
+            e.QueryableSource = db.Escuelas.Where(x => x.activo == true).Select(x => x).OrderBy(c => c.nombre).Where(x => UserInfo.EscuelasByUsuario.Contains(x.escuela_id));
 
         }
 

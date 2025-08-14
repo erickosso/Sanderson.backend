@@ -1928,6 +1928,7 @@
     </Content>
     <Content Include="handler\handlerReport.ashx" />
     <Content Include="Content\img\Sanderson\LogoCompleto [Recuperado].ai" />
+    <Content Include="handler\handlerReportCorte.ashx" />
     <None Include="packages\jQuery.3.4.1\Content\Scripts\jquery-3.4.1-vsdoc.js" />
     <Content Include="packages\jQuery.3.4.1\Content\Scripts\jquery-3.4.1.js" />
     <Content Include="packages\jQuery.3.4.1\Content\Scripts\jquery-3.4.1.min.js" />
@@ -2256,6 +2257,12 @@
     </Compile>
     <Compile Include="handler\HttpHandlerArchivos.cs" />
     <Compile Include="handler\RouteHandlerArchivos.cs" />
+    <Compile Include="Reports\xrCorteCaja.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\xrCorteCaja.Designer.cs">
+      <DependentUpon>xrCorteCaja.cs</DependentUpon>
+    </Compile>
     <Compile Include="_gastos.aspx.cs">
       <DependentUpon>_gastos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2656,6 +2663,9 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\xrCorteCaja.resx">
+      <DependentUpon>xrCorteCaja.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\xrPago.resx">
       <DependentUpon>xrPago.cs</DependentUpon>

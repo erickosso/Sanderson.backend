@@ -526,3 +526,4 @@ D:\Desarrollo\sanderson.backend\obj\Release\sanderson.backend.csproj.CoreCompile
 D:\Desarrollo\sanderson.backend\obj\Release\sanderson.backend.csproj.CopyComplete
 D:\Desarrollo\sanderson.backend\obj\Release\sanderson.backend.dll
 D:\Desarrollo\sanderson.backend\obj\Release\sanderson.backend.pdb
+D:\Desarrollo\sanderson.backend\obj\Release\sanderson.backend.Reports.xrCorteCaja.resources

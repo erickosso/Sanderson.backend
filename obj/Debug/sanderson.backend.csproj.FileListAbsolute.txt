@@ -608,3 +608,4 @@ D:\Desarrollo\sanderson.backend\obj\Debug\sanderson.backend.csproj.CoreCompileIn
 D:\Desarrollo\sanderson.backend\obj\Debug\sanderson.backend.csproj.CopyComplete
 D:\Desarrollo\sanderson.backend\obj\Debug\sanderson.backend.dll
 D:\Desarrollo\sanderson.backend\obj\Debug\sanderson.backend.pdb
+D:\Desarrollo\sanderson.backend\obj\Debug\sanderson.backend.Reports.xrCorteCaja.resources

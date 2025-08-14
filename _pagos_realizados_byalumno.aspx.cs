@@ -62,7 +62,7 @@ namespace sanderson.backend
                 var desde = deFechaDesde.Date;
                 var Hasta = deFechaHasta.Date.AddDays(1).AddSeconds(-1);
 
-                var query = context.VistaPagosAlumno.Where(x => x.fecha_pago >= desde && x.fecha_pago <= Hasta).ToList();
+                var query = context.VistaPagosAlumno.Where(x => x.alumno_id==alumno_id&& x.fecha_pago >= desde && x.fecha_pago <= Hasta).ToList();
                 gvPagos.DataSource = query.ToList();
                 gvPagos.KeyFieldName = "pago_id;alumno_id";
                 gvPagos.DataBind();

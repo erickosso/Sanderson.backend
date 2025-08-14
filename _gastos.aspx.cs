@@ -128,7 +128,7 @@ namespace sanderson.backend
         {
 
             e.KeyExpression = "escuela_id";
-            e.QueryableSource = new EscuelasSandersonSatoriEntities().Escuelas.OrderBy(x => x.nombre);
+            e.QueryableSource = new EscuelasSandersonSatoriEntities().Escuelas.Where(x => x.activo == true).OrderBy(x => x.nombre);
         }
 
         protected void dsTiposGasto_Selecting(object sender, DevExpress.Data.Linq.LinqServerModeDataSourceSelectEventArgs e)

@@ -21,7 +21,8 @@ namespace sanderson.backend
             servicio.GenerarPagosAutomaticos(DateTime.Now.Date,UserInfo.EscuelasByUsuario);
             servicio.AplicarRecargosAutomaticos( UserInfo.EscuelasByUsuario);
 
-            servicio.CargarConceptosUnicosEnLote(Guid.Parse("EACF30B4-F692-4168-BB18-5B6B60B4C7DE"),  UserInfo.EscuelasByUsuario, 2, 1);
+            servicio.CargarConceptosUnicosEnLote(Guid.Parse("2C230E25-F5E5-4E07-B58C-A99C5044B9B3"),  UserInfo.EscuelasByUsuario);
+            servicio.CargarConceptosUnicosEnLote(Guid.Parse("B272CF33-C78C-4751-91A8-F3DB6F81E025"),  UserInfo.EscuelasByUsuario);
             CargarPagosPendientes();
         }
 
